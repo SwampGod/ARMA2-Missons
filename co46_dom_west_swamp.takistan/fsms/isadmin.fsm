@@ -1,0 +1,229 @@
+class FSM
+{
+  fsmName = "IsAdmin";
+  class States
+  {
+    class Start
+    {
+      name = "Start";
+      init = "private [""_no"",""_timenow"",""_vec"",""_iddspect""];" \n
+       "d_admin_idd = -9999;" \n
+       "d_adm_currentvec = objNull;" \n
+       "d_adm_currentvec_lockstate = false;" \n
+       "_vec = objNull;" \n
+       "_timenow = time + 7;";
+      precondition = "";
+      class Links
+      {
+        class Delay
+        {
+          priority = 0.000000;
+          to="Loop";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Loop
+    {
+      name = "Loop";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class alive_player
+        {
+          priority = 0.000000;
+          to="Dummy";
+          precondition = "";
+          condition="alive player";
+          action="";
+        };
+      };
+    };
+    class Dummy
+    {
+      name = "Dummy";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class Wait_until_login
+        {
+          priority = 0.000000;
+          to="Spectating";
+          precondition = "";
+          condition="(serverCommandAvailable ""#shutdown"") || !isMultiplayer";
+          action="";
+        };
+      };
+    };
+    class Check_for_nearestObjects
+    {
+      name = "Check_for_nearestObjects";
+      init = "_no = nearestObjects [player, [""Air"",""Car"",""Motorcycle"",""Tank""],8];" \n
+       "_vec = if (count _no > 0) then {_no select 0} else {objNull};" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Logged_out_or__a
+        {
+          priority = 2.000000;
+          to="Reset";
+          precondition = "";
+          condition="(isMultiplayer && !(serverCommandAvailable ""#shutdown"")) || !alive player";
+          action="";
+        };
+        class isNull__vec
+        {
+          priority = 1.000000;
+          to="Check_1";
+          precondition = "";
+          condition="isNull _vec";
+          action="";
+        };
+        class __isNull__vec
+        {
+          priority = 1.000000;
+          to="Check";
+          precondition = "";
+          condition="!isNull _vec";
+          action="";
+        };
+      };
+    };
+    class Reset
+    {
+      name = "Reset";
+      init = "if (d_admin_idd != -9999) then {" \n
+       "	if (!isNull d_adm_currentvec) then {" \n
+       "		d_adm_currentvec removeAction d_admin_idd;" \n
+       "	};" \n
+       "	d_admin_idd =  -9999;" \n
+       "};" \n
+       "d_adm_currentvec = objNull;" \n
+       "d_adm_currentvec_lockstate = false;" \n
+       "player removeAction _iddspect;" \n
+       "player setVariable [""d_p_isadmin"", false];" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class alive_player
+        {
+          priority = 0.000000;
+          to="Dummy";
+          precondition = "";
+          condition="alive player";
+          action="";
+        };
+      };
+    };
+    class Check
+    {
+      name = "Check";
+      init = "if (alive _vec) then {" \n
+       "	if (_vec != d_adm_currentvec) then {" \n
+       "		if (d_admin_idd != -9999) then {" \n
+       "			if (!isNull d_adm_currentvec) then {" \n
+       "				d_adm_currentvec removeAction d_admin_idd;" \n
+       "			};" \n
+       "			d_admin_idd = -9999;" \n
+       "		};" \n
+       "		if (locked _vec) then {" \n
+       "			d_admin_idd = _vec addAction [""Unlock Vehicle"" call XBlueText,""x_client\x_lockc.sqf"",1,-1,false];" \n
+       "			d_adm_currentvec_lockstate = true;" \n
+       "		} else {" \n
+       "			d_admin_idd = _vec addAction [""Lock Vehicle"" call XBlueText,""x_client\x_lockc.sqf"",0,-1,false];" \n
+       "			d_adm_currentvec_lockstate = false;" \n
+       "		};" \n
+       "		d_adm_currentvec = _vec;" \n
+       "	} else {" \n
+       "		if (d_adm_currentvec_lockstate && !(locked _vec)) then {" \n
+       "			d_adm_currentvec removeAction d_admin_idd;" \n
+       "			d_admin_idd = _vec addAction [""Lock Vehicle"" call XBlueText,""x_client\x_lockc.sqf"",0,-1,false];" \n
+       "			d_adm_currentvec_lockstate = false;" \n
+       "		} else {" \n
+       "			if (!d_adm_currentvec_lockstate && locked _vec) then {" \n
+       "				d_adm_currentvec removeAction d_admin_idd;" \n
+       "				d_admin_idd = _vec addAction [""Unlock Vehicle"" call XBlueText,""x_client\x_lockc.sqf"",1,-1,false];" \n
+       "				d_adm_currentvec_lockstate = true;" \n
+       "			};" \n
+       "		};" \n
+       "	};" \n
+       "} else {" \n
+       "	if (d_admin_idd != -9999) then {" \n
+       "		if (!isNull d_adm_currentvec) then {" \n
+       "			d_adm_currentvec removeAction d_admin_idd;" \n
+       "		};" \n
+       "		d_admin_idd = -9999;" \n
+       "	};" \n
+       "	d_adm_currentvec = objNull;" \n
+       "	d_adm_currentvec_lockstate = false;" \n
+       "};" \n
+       "_timenow = time + 2;" \n
+       "			";
+      precondition = "";
+      class Links
+      {
+        class Delay_2s
+        {
+          priority = 0.000000;
+          to="Check_for_nearestObjects";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Check_1
+    {
+      name = "Check_1";
+      init = "if (d_admin_idd != -9999) then {" \n
+       "	if (!isNull d_adm_currentvec) then {" \n
+       "		d_adm_currentvec removeAction d_admin_idd;" \n
+       "		d_admin_idd = -9999;" \n
+       "	};" \n
+       "};" \n
+       "d_adm_currentvec = objNull;" \n
+       "d_adm_currentvec_lockstate = false;" \n
+       "_timenow = time + 2;";
+      precondition = "";
+      class Links
+      {
+        class Delay_2s
+        {
+          priority = 0.000000;
+          to="Check_for_nearestObjects";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Spectating
+    {
+      name = "Spectating";
+      init = "_iddspect = player addAction [""Admin Spectate"" call XBlueText,""x_client\x_adminspectate.sqf"",1,-1,false];" \n
+       "player setVariable [""d_p_isadmin"", true];";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Check_for_nearestObjects";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start";
+  finalStates[] =
+  {
+  };
+};

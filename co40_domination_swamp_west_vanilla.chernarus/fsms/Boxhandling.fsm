@@ -1,0 +1,90 @@
+class FSM
+{
+  fsmName = "Boxhandling";
+  class States
+  {
+    class Start_
+    {
+      name = "Start_";
+      init = "private [""_timenow""];" \n
+       "_timenow = time + 6;";
+      precondition = "";
+      class Links
+      {
+        class Delay_
+        {
+          priority = 0.000000;
+          to="Loop_";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Loop_
+    {
+      name = "Loop_";
+      init = "_timenow = time + 3.01;" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Process_Boxes_
+        {
+          priority = 1.000000;
+          to="Handle_Boxes";
+          precondition = "";
+          condition="count (X_JIPH getVariable ""d_ammo_boxes"") > 0";
+          action="";
+        };
+        class Delay
+        {
+          priority = 0.000000;
+          to="Loop_";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Handle_Boxes
+    {
+      name = "Handle_Boxes";
+      init = "private [""_i"", ""_boxa"", ""_boxpos"", ""_mname""];" \n
+       "_boxes = X_JIPH getVariable ""d_ammo_boxes"";" \n
+       "private ""_forEachIndex"";" \n
+       "if (""A2"" in d_version) then {" \n
+       "	_forEachIndex = 0;" \n
+       "};" \n
+       "{" \n
+       "	_boxpos = _x select 0;" \n
+       "	if (count _boxpos == 0) then {" \n
+       "		_mname = _x select 1;" \n
+       "		deleteMarker _mname;" \n
+       "		_boxes set [_forEachIndex, -1];" \n
+       "		X_JIPH setVariable [""ammo_boxes"", (X_JIPH getVariable ""ammo_boxes"") - 1,true];" \n
+       "	};" \n
+       "	if (""A2"" in d_version) then {_forEachIndex = _forEachIndex + 1};" \n
+       "} forEach _boxes;" \n
+       "_boxes = _boxes - [-1];" \n
+       "X_JIPH setVariable [""d_ammo_boxes"",_boxes,true];" \n
+       "_timenow = time + 3.01;";
+      precondition = "";
+      class Links
+      {
+        class Delay
+        {
+          priority = 0.000000;
+          to="Loop_";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start_";
+  finalStates[] =
+  {
+  };
+};

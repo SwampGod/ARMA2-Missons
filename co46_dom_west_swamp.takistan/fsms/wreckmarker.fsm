@@ -1,0 +1,342 @@
+class FSM
+{
+  fsmName = "Wreckmarker";
+  class States
+  {
+    class Start
+    {
+      name = "Start";
+      init = "private [""_vehicle"", ""_mname"", ""_sav_pos"", ""_type_name"", ""_marker"", ""_i"", ""_element"",""_timenow"",""_rantime"", ""_timedelete""];" \n
+       "" \n
+       "_vehicle = _this;" \n
+       "" \n
+       "_timenow = time + 30 + random 5;" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Not_Server
+        {
+          priority = 1.000000;
+          to="End";
+          precondition = "";
+          condition="!isServer";
+          action="";
+        };
+        class Delay
+        {
+          priority = 0.000000;
+          to="Init";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class End
+    {
+      name = "End";
+      init = "";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+    class Init
+    {
+      name = "Init";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class Allways
+        {
+          priority = 0.000000;
+          to="Loop_alive";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class Loop_alive
+    {
+      name = "Loop_alive";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class isNull__vehicle
+        {
+          priority = 3.000000;
+          to="_";
+          precondition = "";
+          condition="isNull _vehicle";
+          action="";
+        };
+        class alive_vehicle
+        {
+          priority = 1.000000;
+          to="Sleep";
+          precondition = "";
+          condition="alive _vehicle";
+          action="";
+        };
+        class Vehicle_not_aliv
+        {
+          priority = 0.000000;
+          to="Loop_speed";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class Sleep
+    {
+      name = "Sleep";
+      init = "_timenow = time + (1.5 +  random 2.2);" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Delay_2
+        {
+          priority = 0.000000;
+          to="Loop_alive";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Loop_speed
+    {
+      name = "Loop_speed";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class Speed_to_high
+        {
+          priority = 1.000000;
+          to="Sleep_1";
+          precondition = "";
+          condition="(speed _vehicle) > 4";
+          action="";
+        };
+        class Speed_ok
+        {
+          priority = 0.000000;
+          to="Saftey_Speed_Che";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Sleep_1
+    {
+      name = "Sleep_1";
+      init = "_timenow = time + (1.5 +  random 2.2);";
+      precondition = "";
+      class Links
+      {
+        class Delay_2
+        {
+          priority = 0.000000;
+          to="Loop_speed";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Saftey_Speed_Che
+    {
+      name = "Saftey_Speed_Che";
+      init = "if ((vectorUp _vehicle) select 2 < 0) then {_vehicle setVectorUp [0,0,1]};";
+      precondition = "";
+      class Links
+      {
+        class Speed_to_high
+        {
+          priority = 1.000000;
+          to="Sleep_2";
+          precondition = "";
+          condition="(speed _vehicle) > 4";
+          action="";
+        };
+        class Speed_ok
+        {
+          priority = 0.000000;
+          to="Create_Marker";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Sleep_2
+    {
+      name = "Sleep_2";
+      init = "_timenow = time + (0.532 +  random 1.1);";
+      precondition = "";
+      class Links
+      {
+        class Delay_1
+        {
+          priority = 0.000000;
+          to="Saftey_Speed_Che";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Create_Marker
+    {
+      name = "Create_Marker";
+      init = "_mname = str(_vehicle);" \n
+       "_sav_pos = [position _vehicle select 0,position _vehicle select 1,position _vehicle select 2];" \n
+       "_type_name = [typeOf (_vehicle),0] call XfGetDisplayName;" \n
+       "_d_wreck_marker = X_JIPH getVariable ""d_wreck_marker"";" \n
+       "if (""TT"" in d_version) then {" \n
+       "	_pside = switch (_vehicle getVariable ""D_VEC_SIDE"") do {case 1: {east};case 2: {west};default {civilian};};" \n
+       "	[""d_w_m_c"", [_mname,_sav_pos,_type_name,_pside]] call XNetCallEvent;" \n
+       "	_d_wreck_marker set [count _d_wreck_marker,  [_mname,_sav_pos,_type_name,_pside]];" \n
+       "} else {" \n
+       "	[""d_w_m_c"", [_mname,_sav_pos,_type_name]] call XNetCallEvent;" \n
+       "	_d_wreck_marker set [count _d_wreck_marker,  [_mname,_sav_pos,_type_name]];" \n
+       "};" \n
+       "X_JIPH setVariable [""d_wreck_marker"",_d_wreck_marker,true];" \n
+       "_timedelete = if (d_WreckDeleteTime != -1) then {time + d_WreckDeleteTime} else {time + 1e+011};" \n
+       "" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Pickup
+        {
+          priority = 0.000000;
+          to="Pickup_loop";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Sleep_3
+    {
+      name = "Sleep_3";
+      init = "_timenow = time + (3.321 +  random 2.2);" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Delay_3
+        {
+          priority = 0.000000;
+          to="Pickup_loop";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Pickup_loop
+    {
+      name = "Pickup_loop";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class isNull__vehicle
+        {
+          priority = 3.000000;
+          to="_";
+          precondition = "";
+          condition="isNull _vehicle";
+          action="";
+        };
+        class timecheck_for_de
+        {
+          priority = 2.000000;
+          to="Main_End";
+          precondition = "";
+          condition="time >= _timedelete";
+          action="";
+        };
+        class Wait_for_Pickup
+        {
+          priority = 1.000000;
+          to="Sleep_3";
+          precondition = "";
+          condition="!isNull _vehicle && (_vehicle distance _sav_pos < 30)";
+          action="";
+        };
+        class Picked_up
+        {
+          priority = 0.000000;
+          to="Main_End";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Main_End
+    {
+      name = "Main_End";
+      init = "_d_wreck_marker = X_JIPH getVariable ""d_wreck_marker"";" \n
+       "for ""_i"" from 0 to (count _d_wreck_marker - 1) do {" \n
+       "	_element = _d_wreck_marker select _i;" \n
+       "	if ((_element select 0) == _mname && str(_element select 1) == str(_sav_pos)) exitWith {" \n
+       "		_d_wreck_marker set [_i, -1];" \n
+       "	};" \n
+       "};" \n
+       "[""d_w_ma"",_mname] call XNetCallEvent;" \n
+       "_d_wreck_marker = _d_wreck_marker - [-1];" \n
+       "X_JIPH setVariable [""d_wreck_marker"",_d_wreck_marker,true];" \n
+       "if (time >= _timedelete && _vehicle distance _sav_pos < 30) then {" \n
+       "	deleteVehicle _vehicle;" \n
+       "} else {" \n
+       "	_vehicle execVM ""x_server\x_wreckmarker2.sqf"";" \n
+       "};";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+    class _
+    {
+      name = "_";
+      init = "_d_wreck_marker = X_JIPH getVariable ""d_wreck_marker"";" \n
+       "for ""_i"" from 0 to (count _d_wreck_marker - 1) do {" \n
+       "	_element = _d_wreck_marker select _i;" \n
+       "	if ((_element select 0) == _mname && str(_element select 1) == str(_sav_pos)) exitWith {_d_wreck_marker set [_i, -1]};" \n
+       "};" \n
+       "deleteMarker _mname;" \n
+       "_d_wreck_marker = _d_wreck_marker - [-1];" \n
+       "X_JIPH setVariable [""d_wreck_marker"",_d_wreck_marker,true];";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="End";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "End",
+    "Main_End",
+  };
+};

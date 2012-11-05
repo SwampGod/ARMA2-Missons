@@ -1,0 +1,82 @@
+class FSM
+{
+  fsmName = "DeleteEmpty";
+  class States
+  {
+    class Start
+    {
+      name = "Start";
+      init = "private [""_tpos"", ""_tradius"", ""_delpos"", ""_delfirebase_objects"", ""_vecs"", ""_no"", ""_vehicle"",""_endtime""];" \n
+       "_tpos = _this select 0;" \n
+       "_tradius = (_this select 1) select 0;" \n
+       "" \n
+       "_delpos =+ _tpos;" \n
+       "" \n
+       "_delfirebase_objects =+ d_delfirebase_objects;" \n
+       "_delfirebase_objects = [_delfirebase_objects, d_del_camps_stuff] call X_fnc_arrayPushStack;" \n
+       "d_del_camps_stuff = [];" \n
+       "" \n
+       "_endtime = time + (300 + (random 100));";
+      precondition = "";
+      class Links
+      {
+        class Delay
+        {
+          priority = 0.000000;
+          to="End";
+          precondition = "";
+          condition="time > _endtime";
+          action="";
+        };
+      };
+    };
+    class End
+    {
+      name = "End";
+      init = "_vecs = [];" \n
+       "switch (d_enemy_side) do {" \n
+       "	case ""EAST"" : {{[_vecs, _x] call X_fnc_arrayPushStack} forEach d_veh_a_E};" \n
+       "	case ""WEST"" : {{[_vecs, _x] call X_fnc_arrayPushStack} forEach d_veh_a_W};" \n
+       "	case ""GUER"" : {{[_vecs, _x] call X_fnc_arrayPushStack} forEach d_veh_a_G};" \n
+       "};" \n
+       "" \n
+       "if (""ACE"" in d_version) then {" \n
+       "	_vecs = [_vecs, [""ACE_BombCrater"",""ACE_HEShellCrater"",""ACE_ArtyShellCrater"",""ACE_HERocketCrater""]] call X_fnc_arrayPushStack;" \n
+       "};" \n
+       "" \n
+       "_no = nearestObjects [_delpos, _vecs, _tradius];" \n
+       "" \n
+       "if (count _no > 0) then {" \n
+       "	{" \n
+       "		_vehicle = _x;" \n
+       "		if (!isNull _vehicle) then {" \n
+       "			if ((_vehicle call XfGetAliveCrew) == 0) then {" \n
+       "				deleteVehicle _vehicle;" \n
+       "			};" \n
+       "		};" \n
+       "	} forEach _no;" \n
+       "};" \n
+       "" \n
+       "_no = nil;" \n
+       "" \n
+       "if (count _delfirebase_objects > 0) then {" \n
+       "	{" \n
+       "		if (!isNull _x) then {" \n
+       "			deleteVehicle _x;" \n
+       "		};" \n
+       "	} forEach _delfirebase_objects;" \n
+       "};" \n
+       "" \n
+       "_delfirebase_objects = nil;";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "End",
+  };
+};

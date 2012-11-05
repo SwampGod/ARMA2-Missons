@@ -1,0 +1,128 @@
+class FSM
+{
+  fsmName = "HPatrol";
+  class States
+  {
+    class Start_
+    {
+      name = "Start_";
+      init = "private [""_timenow"",""_house_pat_grps"",""_grp""];" \n
+       "_timenow = time + 20;" \n
+       "_house_pat_grps = [];";
+      precondition = "";
+      class Links
+      {
+        class Delay_
+        {
+          priority = 0.000000;
+          to="Loop";
+          precondition = "";
+          condition="time > _timenow && count d_house_pat_grps > 0";
+          action="";
+        };
+      };
+    };
+    class Loop
+    {
+      name = "Loop";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Add_new";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class _
+    {
+      name = "_";
+      init = "_timenow = time + 20 + random 20;";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Loop";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Add_new
+    {
+      name = "Add_new";
+      init = "if (count d_house_pat_grps > 0) then {" \n
+       "	[_house_pat_grps, d_house_pat_grps] call X_fnc_arrayPushStack;" \n
+       "	d_house_pat_grps = [];" \n
+       "};";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 1.000000;
+          to="_";
+          precondition = "";
+          condition="count _house_pat_grps == 0";
+          action="";
+        };
+        class __1
+        {
+          priority = 0.000000;
+          to="Action";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class Action
+    {
+      name = "Action";
+      init = "_grp = _house_pat_grps select (floor random (count _house_pat_grps));" \n
+       "if ((_grp call XfGetAliveUnitsGrp) > 0 &&  time > (_grp getVariable ""X_CREATED"")) then {" \n
+       "	_leader = leader _grp;" \n
+       "	_units = (_grp call XfGetAllAlive) - [_leader];" \n
+       "	if (count _units > 0) then {" \n
+       "		_pu = _units select (floor (random (count _units)));" \n
+       "		_ispat = _pu getVariable ""d_hpatrol"";" \n
+       "		if (isNil ""_ispat"") then {_ispat = false};" \n
+       "		if (!_ispat) then {" \n
+       "			[_pu] spawn t_housepatrol;" \n
+       "			_pu setVariable [""d_hpatrol"", true];" \n
+       "		};" \n
+       "	};" \n
+       "} else {" \n
+       "	if ((_grp call XfGetAliveUnitsGrp) == 0 && time > (_grp getVariable ""X_CREATED"")) then {" \n
+       "		_house_pat_grps = _house_pat_grps - [_grp];" \n
+       "	};" \n
+       "};" \n
+       "" \n
+       "_timenow = time + 20 + random 20;";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Loop";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start_";
+  finalStates[] =
+  {
+  };
+};

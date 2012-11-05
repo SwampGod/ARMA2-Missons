@@ -1,0 +1,135 @@
+class FSM
+{
+  fsmName = "RetakeCamp";
+  class States
+  {
+    class Start
+    {
+      name = "Start";
+      init = "private [""_wf"",""_counter"",""_patgrps"",""_timenow""];" \n
+       "_wf = _this select 0;" \n
+       "_patgrps = [];";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Check";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class Check
+    {
+      name = "Check";
+      init = "_counter = 0;" \n
+       "{" \n
+       "	_grp = _x;" \n
+       "	if ((_grp call XfGetAliveUnitsGrp) > 0) then {" \n
+       "		_lead = leader _grp;" \n
+       "		if (side _lead == d_side_enemy) then {" \n
+       "			if (_lead distance _wf < 200) then {" \n
+       "				if ((position _lead) select 2 < 10) then {" \n
+       "					_ispat = _grp getVariable ""D_PATR"";" \n
+       "					if (!isNil ""_ispat"") then {_patgrps set [count _patgrps, _grp]};" \n
+       "					if (_lead distance _wf > 10) then {" \n
+       "						_grp move (position _wf);" \n
+       "					};" \n
+       "					_counter = _counter + 1;" \n
+       "				};" \n
+       "			};" \n
+       "		};" \n
+       "	};" \n
+       "	if (_counter == 3) exitWith {};" \n
+       "} forEach allGroups;";
+      precondition = "";
+      class Links
+      {
+        class __count__patgrps
+        {
+          priority = 1.000000;
+          to="_";
+          precondition = "";
+          condition="(count _patgrps) > 0";
+          action="";
+        };
+        class _
+        {
+          priority = 0.000000;
+          to="End";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class End
+    {
+      name = "End";
+      init = "";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+    class _
+    {
+      name = "_";
+      init = "_timenow = time + 180;";
+      precondition = "";
+      class Links
+      {
+        class Delay
+        {
+          priority = 0.000000;
+          to="__1";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class __1
+    {
+      name = "__1";
+      init = "{" \n
+       "	if (!isNull _x) then {" \n
+       "		_grp = _x;" \n
+       "		if ((_grp call XfGetAliveUnitsGrp) > 0) then {" \n
+       "			_current_target_index = X_JIPH getVariable ""current_target_index"";" \n
+       "			if (_current_target_index != -1) then {" \n
+       "				_dummy = d_target_names select _current_target_index;" \n
+       "				_current_target_pos = _dummy select 0;" \n
+       "				_current_target_radius = _dummy select 2;" \n
+       "				if (isNil {_grp getVariable ""D_PATR_ISLE""}) then {" \n
+       "					[_grp, _current_target_pos , [_current_target_pos,_current_target_radius]] spawn XMakePatrolWPX;" \n
+       "				} else {" \n
+       "					[_grp, _current_target_pos, [d_with_isledefense select 0,d_with_isledefense select 1,d_with_isledefense select 2,d_with_isledefense select 3]] spawn XMakePatrolWPX;" \n
+       "				};" \n
+       "			};" \n
+       "		};" \n
+       "	};" \n
+       "} forEach _patgrps;";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="End";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "End",
+  };
+};
