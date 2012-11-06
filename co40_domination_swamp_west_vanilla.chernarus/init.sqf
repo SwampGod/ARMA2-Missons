@@ -2,6 +2,9 @@
 diag_log format ["############################# %1 #############################", missionName];
 diag_log [diag_frameno, diag_ticktime, time, "Executing Dom init.sqf"];
 
+// Short Takeoff for C-130 at northern airfield
+[c130Drop] execVM "scripts\sto_init.sqf";
+
 #include "x_setup.sqf"
 
 // just a check to prevent init.sqf running more than once

@@ -35,7 +35,8 @@ class Mission
 		"caweapons",
 		"caweapons_kord",
 		"CATracked2_2S6M_Tunguska",
-		"caweapons_ammoboxes"
+		"caweapons_ammoboxes",
+		"CAAir2_C130J"
 	};
 	addOnsAuto[]=
 	{
@@ -68,12 +69,13 @@ class Mission
 		"Arma2_Ka52",
 		"CAAir2",
 		"caweapons_ammoboxes",
+		"CAAir2_C130J",
 		"chernarus"
 	};
 	randomSeed=2244484;
 	class Intel
 	{
-		briefingName="Coop Domination Revive - Swamp's Hellish Mess 1.61";
+		briefingName="Coop Domination Revive - Swamp's Hellish Mess 1.62";
 		briefingDescription="by Xeno modified by Swamp";
 		startWeather=0;
 		forecastWeather=0;
@@ -3055,7 +3057,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=104;
+		items=105;
 		class Item0
 		{
 			position[]={4689.0762,339,10277.31};
@@ -4218,6 +4220,21 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			description="Rog Group";
+		};
+		class Item104
+		{
+			position[]={11787.499,158.8,12828.125};
+			azimut=110;
+			special="NONE";
+			id=311;
+			side="EMPTY";
+			vehicle="C130J";
+			skill=0.2;
+			text="c130Drop";
+//			init="handle = [this] execVM ""scripts\c130cargo.sqf"";";
+//			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"", handle = [this] execVM ""scripts\c130cargo.sqf"";";
+
 		};
 	};
 	class Markers

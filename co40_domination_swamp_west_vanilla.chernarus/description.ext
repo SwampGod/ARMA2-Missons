@@ -157,7 +157,7 @@ class Params {
 	class GVAR(MissionType) {
 		title = "Mission Type:";
 		values[] = {0,1,2};
-		default = 1;
+		default = 0;
 		texts[] = {"Default Mission Type","Main Targets Only","Side Missions Only"};
 	};
 	
@@ -238,7 +238,7 @@ class Params {
 	class GVAR(IllumMainTarget) {
 		title = "Illumination main target:";
 		values[] = {0,1};
-		default = 1;
+		default = 0;
 		texts[] = {"Yes","No"};
 	};
 	
