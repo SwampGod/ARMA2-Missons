@@ -133,7 +133,7 @@ GVAR(points_needed) = [
 	10, // Corporal
 	25, // Sergeant
 	50, // Lieutenant
-	150, // Captain
+	125, // Captain
 	250, // Major
 	300 // Colonel
 ];
@@ -142,7 +142,7 @@ GVAR(points_needed) = [
 	10, // Corporal
 	25, // Sergeant
 	50, // Lieutenant
-	150, // Captain
+	125, // Captain
 	250, // Major
 	300 // Colonel
 ];
@@ -158,7 +158,7 @@ if (GVAR(with_ranked)) then {
 		1,
 #endif
 		1, // points in the AI version for recruiting one soldier
-		1, // points a player needs for an AAHALO parajump
+		0, // points a player needs for an AAHALO parajump
 #ifndef __TT__
 		0, // points that get subtracted for creating a vehicle at a MHQ
 #else
@@ -169,17 +169,17 @@ if (GVAR(with_ranked)) then {
 		["Sergeant","Lieutenant","Captain","Major"], // Ranks needed to drive different vehicles, starting with: kindof wheeled APC, kindof Tank, kindof Helicopter (except the inital 4 helis), Plane
 		30, // points that get added if a player is xxx m in range of a main target when it gets cleared
 		400, // range the player has to be in to get the main target extra points
-		10, // points that get added if a player is xxx m in range of a sidemission when the sidemission is resolved
-		200, // range the player has to be in to get the sidemission extra points
+		15, // points that get added if a player is xxx m in range of a sidemission when the sidemission is resolved
+		300, // range the player has to be in to get the sidemission extra points
 		0, // points needed for an egineer to rebuild the support buildings at base
-		1, // points needed to build a mg nest
-		1, // points needed in AI Ranked to call in an airtaxi
+		0, // points needed to build a mg nest
+		0, // points needed in AI Ranked to call in an airtaxi
 		2, // points needed to call in an air drop
-		2, // points a medic gets when he heals another unit
+		1, // points a medic gets when he heals another unit
 		1, // points that a player gets when transporting others
 		1, // points needed for activating satellite view
 		1, // points needed to build a FARP (engineer)
-		2 // points a player gets for reviving another player
+		1 // points a player gets for reviving another player
 	];
 
 	// distance a player has to transport others to get points

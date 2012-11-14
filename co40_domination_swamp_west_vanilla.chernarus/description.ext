@@ -238,7 +238,7 @@ class Params {
 	class GVAR(IllumMainTarget) {
 		title = "Illumination main target:";
 		values[] = {0,1};
-		default = 0;
+		default = 1;
 		texts[] = {"Yes","No"};
 	};
 	
@@ -720,7 +720,7 @@ class Params {
 	class GVAR(kick_base_satchel) {
 		title = "Kick for base satchel:";
 		values[] = {0,1};
-		default = 1;
+		default = 0;
 		texts[] = {"Yes","No"};
 	};
 

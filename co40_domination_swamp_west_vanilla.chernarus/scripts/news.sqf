@@ -6,8 +6,7 @@
 "Grass is now turned off by default. If you want to turn it on use the 'SHOW STATUS' mouse menu.",
 "Also note that everyone is both a medic and an engineer.",
 "Repair vehicles and have people heal at your MASH tents for points.",
-"Side missions are now off by default to improve server stability. Too many AI were being spawned.",
-"Server is also now set to realtime instead of 4X.",
+"Side missions are back on by default so server stability might get iffy.",
+"Added more garrisons to mountain tops so flying is dangerous :)",
 ""
-
 ]
