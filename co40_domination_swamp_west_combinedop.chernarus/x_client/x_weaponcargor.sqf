@@ -12,11 +12,13 @@ if (isNil "x_ranked_weapons") then {
 			[
 				// private rifles
 				[
-					["M16A2",5],["M16A4",5],["MP5A5",5],["MP5SD",5],["M4A1",5]
+					["M16A2",5],["M16A4",5],["MP5A5",5],["MP5SD",5],["M4A1",5],["SCAR_L_CQC",5],["LeeEnfield",5],
+					["FN_FAL",5],["G36C_camo",5],["M14_EP1",5],["Sa58P_EP1",5]
 				],
 				// corporal rifles (gets added to private rifles)
 				[
-					["M16A2GL",5],["M16A4_GL",5],["M16A4_ACG",5],["M16A4_ACG_GL",5]
+					["M16A2GL",5],["M16A4_GL",5],["M16A4_ACG",5],["M16A4_ACG_GL",5],["FN_FAL_ANPVS4",5],["G36A_camo",5],
+					["M4A3_CCO_EP1",5],["SCAR_L_CQC_CCO_SD",5]
 				],
 				// sergeant rifles (gets added to corporal and private rifles)
 				[
@@ -126,21 +128,23 @@ if (isNil "x_ranked_weapons") then {
 			[
 				// private pistols
 				[
-					["M9",5],["M9SD",5]
+					["M9",5],["M9SD",5],["glock17_EP1",5]
 				],
 				// corporal pistols
 				[
-					
+					["UZI_EP1",5],["Sa61_EP1",5]
 				],
 				// sergeant pistols
 				[
-					["Colt1911",5]
+					["Colt1911",5],["UZI_SD_EP1",5]
 				],
 				// lieutenant pistols
 				[
+					["revolver_EP1",5]
 				],
 				// captain pistols
 				[
+					["revolver_gold_EP1",5]
 				],
 				// major pistols
 				[
