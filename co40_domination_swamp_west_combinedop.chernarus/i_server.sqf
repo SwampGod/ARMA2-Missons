@@ -707,7 +707,7 @@ GVAR(airki_attack_plane) = switch (true) do {
 	};
 	case (__COVer): {
 		switch (GVAR(enemy_side)) do {
-			case "EAST": {["Su34","Su39","Su25_TK_EP1","L39_TK_EP1"]};
+			case "EAST": {["Su34","Su39"]};
 			case "WEST": {["A10","AV8B2","AV8B","F35B"]};
 			default {[]};
 		};
