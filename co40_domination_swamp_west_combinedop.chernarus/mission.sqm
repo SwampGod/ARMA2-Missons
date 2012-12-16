@@ -113,7 +113,7 @@ class Mission
 	randomSeed=2244484;
 	class Intel
 	{
-		briefingName="Coop Domination Revive - Swamp's Hellish Mess 1.71";
+		briefingName="Coop Domination Revive - Swamp's Hellish Mess 1.72";
 		briefingDescription="by Xeno modified by Swamp";
 		startWeather=0;
 		forecastWeather=0;
@@ -3431,7 +3431,7 @@ class Mission
 				items=12;
 				class Item0
 				{
-					position[]={10433.635,6,2261.7529};
+					position[]={4733.5386,339,10332.414};
 					id=388;
 					side="GUER";
 					vehicle="Soldier_GL_PMC";
@@ -3440,7 +3440,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={10436.635,6,2256.7529};
+					position[]={4736.5386,339,10327.414};
 					id=389;
 					side="GUER";
 					vehicle="Soldier_GL_M16A2_PMC";
@@ -3449,7 +3449,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={10438.635,6,2256.7529};
+					position[]={4738.5386,339,10327.414};
 					id=390;
 					side="GUER";
 					vehicle="Soldier_M4A3_PMC";
@@ -3457,7 +3457,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={10440.635,6.1019988,2256.7529};
+					position[]={4740.5386,339,10327.414};
 					id=391;
 					side="GUER";
 					vehicle="Soldier_M4A3_PMC";
@@ -3465,17 +3465,18 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={10432.999,6,2257.8755};
+					position[]={4732.9028,339,10328.536};
 					id=392;
 					side="GUER";
 					vehicle="Soldier_TL_PMC";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
+					description="PMC Group";
 				};
 				class Item5
 				{
-					position[]={10437.907,6,2251.8687};
+					position[]={4737.811,339,10322.529};
 					id=393;
 					side="GUER";
 					vehicle="Soldier_Sniper_KSVK_PMC";
@@ -3484,7 +3485,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={10443.563,6,2247.5757};
+					position[]={4743.4673,339,10318.236};
 					id=394;
 					side="GUER";
 					vehicle="Soldier_AT_PMC";
@@ -3493,7 +3494,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={10438.039,6,2247.0466};
+					position[]={4737.9429,339,10317.707};
 					id=395;
 					side="GUER";
 					vehicle="Soldier_MG_PMC";
@@ -3502,7 +3503,7 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={10440.304,6,2248.7429};
+					position[]={4740.2075,339,10319.404};
 					id=396;
 					side="GUER";
 					vehicle="Soldier_PMC";
@@ -3510,7 +3511,7 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={10448.332,6,2247.301};
+					position[]={4748.2358,339,10317.961};
 					azimut=3330;
 					id=385;
 					side="GUER";
@@ -3520,7 +3521,7 @@ class Mission
 				};
 				class Item10
 				{
-					position[]={10443.332,6,2242.301};
+					position[]={4743.2358,339,10312.961};
 					azimut=3330;
 					id=387;
 					side="GUER";
@@ -3530,7 +3531,7 @@ class Mission
 				};
 				class Item11
 				{
-					position[]={10443.332,6,2244.301};
+					position[]={4743.2358,339,10314.961};
 					azimut=3330;
 					id=386;
 					side="GUER";
@@ -3543,7 +3544,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=147;
+		items=149;
 		class Item0
 		{
 			position[]={4689.0762,339,10277.31};
@@ -5174,10 +5175,32 @@ class Mission
 			skill=0.60000002;
 			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"";";
 		};
+		class Item147
+		{
+			position[]={6894.4932,394.45581,11443.816};
+			special="NONE";
+			id=397;
+			side="EMPTY";
+			vehicle="RUSpecialWeaponsBox";
+			leader=1;
+			skill=0.60000002;
+			description="Zub Group";
+		};
+		class Item148
+		{
+			position[]={6894.3823,394.46426,11441.635};
+			special="NONE";
+			id=398;
+			side="EMPTY";
+			vehicle="RUBasicWeaponsBox";
+			leader=1;
+			skill=0.60000002;
+			description="Zub Group";
+		};
 	};
 	class Markers
 	{
-		items=47;
+		items=48;
 		class Item0
 		{
 			position[]={15298.26,264.03619,15331.15};
@@ -5343,7 +5366,7 @@ class Mission
 		};
 		class Item22
 		{
-			position[]={4808.7451,339,10196.49};
+			position[]={4822.3882,339,10173.007};
 			name="d_bonus_air_positions_1";
 			type="Empty";
 			angle=-121.911;
@@ -5364,14 +5387,14 @@ class Mission
 		};
 		class Item25
 		{
-			position[]={4833.27,338.99979,10155.16};
+			position[]={4844.9004,339,10134.583};
 			name="d_bonus_air_positions_2";
 			type="Empty";
 			angle=-121.911;
 		};
 		class Item26
 		{
-			position[]={4857.5361,339,10114.88};
+			position[]={4869.3901,339,10092.962};
 			name="d_bonus_air_positions_3";
 			type="Empty";
 			angle=-121.911;
@@ -5522,6 +5545,14 @@ class Mission
 			position[]={15298.26,264.03619,15331.15};
 			name="xr_playerparkmarker";
 			type="Empty";
+		};
+		class Item47
+		{
+			position[]={6930.0815,392.03302,11443.531};
+			name="DevilsCastle";
+			text="AA Garrison";
+			type="mil_warning";
+			colorName="ColorRed";
 		};
 	};
 	class Sensors
