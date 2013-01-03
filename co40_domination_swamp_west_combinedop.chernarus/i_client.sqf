@@ -104,7 +104,7 @@ GVAR(current_truck_cargo_array) = 0;
 #ifdef __OWN_SIDE_WEST__
 GVAR(check_ammo_load_vecs) = switch (true) do {
 	case (__OAVer): {["M1133_MEV_EP1","UH60M_EP1","UH1H_TK_GUE_EP1","BMP2_HQ_TK_EP1","Mi17_TK_EP1","CH_47F_BAF","BAF_Merlin_HC3_D"]};
-	case (__COVer): {["LAV25_HQ","MH60S"]};
+	case (__COVer): {["LAV25_HQ","MH60S","M1133_MEV_EP1","UH60M_EP1","UH1H_TK_GUE_EP1","BMP2_HQ_TK_EP1","Mi17_TK_EP1","CH_47F_BAF","Ka137_PMC","BAF_Merlin_HC3_D","UH1Y","Offroad_DSHKM_Gue","BAF_FV510_D","BAF_FV510_W","Offroad_DSHKM_TK_GUE_EP1"]};
 };
 #endif
 #ifdef __OWN_SIDE_EAST__
