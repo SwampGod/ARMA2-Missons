@@ -74,11 +74,10 @@ class Mission
 		"caweapons",
 		"CATracked2_2S6M_Tunguska",
 		"CATracked",
-		"cacharacters_pmc",
 		"CATracked2_BMP3",
 		"CATracked2_T90",
 		"CAWheeled2_Kamaz",
-		"CAWeapons_2b14_82mm_Mortar",
+		"cacharacters_pmc",
 		"cawheeled_pmc_armoredsuv",
 		"CAAir",
 		"CAAir2_UH1Y",
@@ -121,7 +120,7 @@ class Mission
 	randomSeed=2244484;
 	class Intel
 	{
-		briefingName="Coop Domination Revive - Swamp's Hellish Mess 1.78";
+		briefingName="Coop Domination Revive - Swamp's Hellish Mess 1.80";
 		briefingDescription="by Xeno modified by Swamp";
 		startWeather=0;
 		forecastWeather=0;
@@ -133,7 +132,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=66;
+		items=59;
 		class Item0
 		{
 			side="WEST";
@@ -163,7 +162,7 @@ class Mission
 					special="NONE";
 					id=1;
 					side="WEST";
-					vehicle="FR_Commander";
+					vehicle="Soldier_GL_PMC";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -178,7 +177,7 @@ class Mission
 					special="NONE";
 					id=2;
 					side="WEST";
-					vehicle="USMC_Soldier_SL";
+					vehicle="Soldier_Sniper_PMC";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="alpha_1";
@@ -192,7 +191,7 @@ class Mission
 					special="NONE";
 					id=3;
 					side="WEST";
-					vehicle="USMC_Soldier_GL";
+					vehicle="Soldier_Sniper_PMC";
 					player="PLAY CDG";
 					skill=0.46666661;
 					text="alpha_2";
@@ -206,7 +205,7 @@ class Mission
 					special="NONE";
 					id=4;
 					side="WEST";
-					vehicle="USMC_Soldier_LAT";
+					vehicle="Soldier_TL_PMC";
 					player="PLAY CDG";
 					skill=0.33333331;
 					text="alpha_4";
@@ -1145,7 +1144,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="nul=[this,""DevilPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[this,""DevilPatrol"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",2] execVM ""ups.sqf"";";
 					description="Devil's Castle Group";
 				};
 				class Item1
@@ -1463,6 +1462,7 @@ class Mission
 					side="EAST";
 					vehicle="D30_RU";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Devil's Castle Group";
 				};
 				class Item4
@@ -1503,6 +1503,7 @@ class Mission
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Devil's Castle Group";
 				};
 				class Item2
@@ -1513,6 +1514,7 @@ class Mission
 					side="EAST";
 					vehicle="KORD_high";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Devil's Castle Group";
 				};
 				class Item3
@@ -1523,6 +1525,7 @@ class Mission
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Devil's Castle Group";
 				};
 				class Item4
@@ -1572,6 +1575,7 @@ class Mission
 					vehicle="2S6M_Tunguska";
 					leader=1;
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Devil's Castle Group";
 				};
 			};
@@ -1591,7 +1595,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="nul=[this,""ZubPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[this,""ZubPatrol"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",2] execVM ""ups.sqf"";";
 					description="Zub Group";
 				};
 				class Item1
@@ -1721,19 +1725,19 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={6523.5625,385.74109,5593.8179};
+					position[]={6552.8809,413.67664,5597.1592};
 					id=204;
 					side="EAST";
 					vehicle="RUS_Soldier_TL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="nul=[this,""ZubPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Zub Group";
 				};
 				class Item1
 				{
-					position[]={6528.4653,389.83252,5608.9688};
+					position[]={6542.3862,393.17905,5607.7729};
 					id=205;
 					side="EAST";
 					vehicle="RUS_Soldier_GL";
@@ -1744,7 +1748,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={6530.4653,390.35519,5608.9688};
+					position[]={6544.3862,393.44037,5607.7729};
 					id=206;
 					side="EAST";
 					vehicle="RUS_Soldier_Marksman";
@@ -1755,7 +1759,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={6532.4653,390.87784,5608.9688};
+					position[]={6546.3862,393.70169,5607.7729};
 					id=207;
 					side="EAST";
 					vehicle="RUS_Soldier3";
@@ -1766,7 +1770,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={6534.4653,391.45599,5608.9688};
+					position[]={6548.3862,393.91339,5607.7729};
 					id=208;
 					side="EAST";
 					vehicle="RUS_Soldier1";
@@ -1777,7 +1781,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={6536.4653,391.96799,5608.9688};
+					position[]={6550.3862,393.98438,5607.7729};
 					id=209;
 					side="EAST";
 					vehicle="RUS_Soldier2";
@@ -1793,70 +1797,15 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=6;
+				items=1;
 				class Item0
 				{
-					position[]={6553.8428,413.67657,5598.437};
+					position[]={6528.5859,388.86096,5602.8267};
+					special="NONE";
 					id=210;
 					side="EAST";
-					vehicle="RUS_Soldier_TL";
+					vehicle="Igla_AA_pod_East";
 					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					init="nul=[this,""ZubPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
-					description="Zub Group";
-				};
-				class Item1
-				{
-					position[]={6534.6152,391.24503,5607.0708};
-					id=211;
-					side="EAST";
-					vehicle="RUS_Soldier_GL";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Zub Group";
-				};
-				class Item2
-				{
-					position[]={6536.6152,391.80905,5607.0708};
-					id=212;
-					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Zub Group";
-				};
-				class Item3
-				{
-					position[]={6538.6152,392.32104,5607.0708};
-					id=213;
-					side="EAST";
-					vehicle="RUS_Soldier3";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Zub Group";
-				};
-				class Item4
-				{
-					position[]={6540.6152,392.7887,5607.0708};
-					id=214;
-					side="EAST";
-					vehicle="RUS_Soldier1";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Zub Group";
-				};
-				class Item5
-				{
-					position[]={6542.6152,393.15668,5607.0708};
-					id=215;
-					side="EAST";
-					vehicle="RUS_Soldier2";
-					rank="CORPORAL";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Zub Group";
@@ -1868,15 +1817,50 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=1;
+				items=4;
 				class Item0
 				{
-					position[]={6528.5859,388.86096,5602.8267};
+					position[]={6533.3477,380.9313,5566.2017};
+					azimut=180;
+					special="NONE";
+					id=217;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Zub Group";
+				};
+				class Item1
+				{
+					position[]={6533.6582,378.54193,5556.7705};
+					azimut=180;
 					special="NONE";
 					id=216;
 					side="EAST";
+					vehicle="D30_RU";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Zub Group";
+				};
+				class Item2
+				{
+					position[]={6564.6982,386.08304,5566.0986};
+					special="NONE";
+					id=215;
+					side="EAST";
+					vehicle="D30_RU";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Zub Group";
+				};
+				class Item3
+				{
+					position[]={6513.5684,378.09314,5575.3828};
+					special="NONE";
+					id=211;
+					side="EAST";
 					vehicle="Igla_AA_pod_East";
-					leader=1;
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Zub Group";
@@ -1888,63 +1872,12 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=4;
-				class Item0
-				{
-					position[]={6533.3477,380.9313,5566.2017};
-					azimut=180;
-					special="NONE";
-					id=223;
-					side="EAST";
-					vehicle="KORD_high";
-					leader=1;
-					skill=0.60000002;
-					description="Zub Group";
-				};
-				class Item1
-				{
-					position[]={6533.6582,378.54193,5556.7705};
-					azimut=180;
-					special="NONE";
-					id=222;
-					side="EAST";
-					vehicle="D30_RU";
-					skill=0.60000002;
-					description="Zub Group";
-				};
-				class Item2
-				{
-					position[]={6564.6982,386.08304,5566.0986};
-					special="NONE";
-					id=221;
-					side="EAST";
-					vehicle="D30_RU";
-					skill=0.60000002;
-					description="Zub Group";
-				};
-				class Item3
-				{
-					position[]={6513.5684,378.09314,5575.3828};
-					special="NONE";
-					id=217;
-					side="EAST";
-					vehicle="Igla_AA_pod_East";
-					skill=0.60000002;
-					description="Zub Group";
-				};
-			};
-		};
-		class Item36
-		{
-			side="EAST";
-			class Vehicles
-			{
 				items=3;
 				class Item0
 				{
 					position[]={6586.8281,383.34781,5592.0625};
 					special="NONE";
-					id=224;
+					id=218;
 					side="EAST";
 					vehicle="KORD_high";
 					leader=1;
@@ -1956,25 +1889,27 @@ class Mission
 				{
 					position[]={6569.1885,387.98285,5576.5591};
 					special="NONE";
-					id=218;
+					id=212;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Zub Group";
 				};
 				class Item2
 				{
 					position[]={6578.8813,385.83798,5611.6133};
 					special="NONE";
-					id=220;
+					id=214;
 					side="EAST";
 					vehicle="D30_RU";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Zub Group";
 				};
 			};
 		};
-		class Item37
+		class Item36
 		{
 			side="EAST";
 			class Vehicles
@@ -1984,7 +1919,7 @@ class Mission
 				{
 					position[]={6538.0767,385.534,5628.3965};
 					special="NONE";
-					id=225;
+					id=219;
 					side="EAST";
 					vehicle="KORD_high";
 					leader=1;
@@ -1996,10 +1931,31 @@ class Mission
 				{
 					position[]={6511.603,382.37778,5627.3745};
 					special="NONE";
-					id=219;
+					id=213;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Zub Group";
+				};
+			};
+		};
+		class Item37
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6494.2949,371.79822,5611.4844};
+					special="NONE";
+					id=220;
+					side="EAST";
+					vehicle="ZSU_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Zub Group";
 				};
 			};
@@ -2012,11 +1968,11 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6494.2949,371.79822,5611.4844};
+					position[]={6576.3828,386.88101,5599.0059};
 					special="NONE";
-					id=226;
+					id=221;
 					side="EAST";
-					vehicle="ZSU_INS";
+					vehicle="2S6M_Tunguska";
 					leader=1;
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
@@ -2029,42 +1985,23 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=1;
-				class Item0
-				{
-					position[]={6576.3828,386.88101,5599.0059};
-					special="NONE";
-					id=227;
-					side="EAST";
-					vehicle="2S6M_Tunguska";
-					leader=1;
-					skill=0.60000002;
-					description="Zub Group";
-				};
-			};
-		};
-		class Item40
-		{
-			side="EAST";
-			class Vehicles
-			{
 				items=12;
 				class Item0
 				{
 					position[]={11462.377,233.27237,7483.6221};
-					id=230;
+					id=224;
 					side="EAST";
 					vehicle="RU_Soldier_SL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="nul=[this,""FactoryPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[this,""FactoryPatrol"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",2] execVM ""ups.sqf"";";
 					description="Factory Group";
 				};
 				class Item1
 				{
 					position[]={11450.429,236.42751,7472.3325};
-					id=231;
+					id=225;
 					side="EAST";
 					vehicle="RU_Soldier_MG";
 					rank="SERGEANT";
@@ -2075,7 +2012,7 @@ class Mission
 				class Item2
 				{
 					position[]={11452.429,225.42004,7472.3325};
-					id=232;
+					id=226;
 					side="EAST";
 					vehicle="RU_Soldier_AT";
 					rank="SERGEANT";
@@ -2086,7 +2023,7 @@ class Mission
 				class Item3
 				{
 					position[]={11454.429,233.42126,7472.3325};
-					id=233;
+					id=227;
 					side="EAST";
 					vehicle="RU_Soldier_LAT";
 					rank="CORPORAL";
@@ -2097,7 +2034,7 @@ class Mission
 				class Item4
 				{
 					position[]={11456.429,233.41722,7472.3325};
-					id=234;
+					id=228;
 					side="EAST";
 					vehicle="RU_Soldier_GL";
 					rank="CORPORAL";
@@ -2108,7 +2045,7 @@ class Mission
 				class Item5
 				{
 					position[]={11458.429,233.4198,7472.3325};
-					id=235;
+					id=229;
 					side="EAST";
 					vehicle="RU_Soldier_Marksman";
 					rank="CORPORAL";
@@ -2119,7 +2056,7 @@ class Mission
 				class Item6
 				{
 					position[]={11460.429,233.42435,7472.3325};
-					id=236;
+					id=230;
 					side="EAST";
 					vehicle="RU_Soldier_MG";
 					rank="CORPORAL";
@@ -2130,7 +2067,7 @@ class Mission
 				class Item7
 				{
 					position[]={11462.429,233.42299,7472.3325};
-					id=237;
+					id=231;
 					side="EAST";
 					vehicle="RU_Soldier_AT";
 					rank="CORPORAL";
@@ -2141,7 +2078,7 @@ class Mission
 				class Item8
 				{
 					position[]={11464.429,233.41391,7472.3325};
-					id=238;
+					id=232;
 					side="EAST";
 					vehicle="RU_Soldier_AR";
 					skill=0.60000002;
@@ -2151,7 +2088,7 @@ class Mission
 				class Item9
 				{
 					position[]={11466.429,233.3858,7472.3325};
-					id=239;
+					id=233;
 					side="EAST";
 					vehicle="RU_Soldier_LAT";
 					skill=0.60000002;
@@ -2161,7 +2098,7 @@ class Mission
 				class Item10
 				{
 					position[]={11468.429,233.35771,7472.3325};
-					id=240;
+					id=234;
 					side="EAST";
 					vehicle="RU_Soldier_GL";
 					skill=0.60000002;
@@ -2171,9 +2108,84 @@ class Mission
 				class Item11
 				{
 					position[]={11470.429,233.34322,7472.3325};
-					id=241;
+					id=235;
 					side="EAST";
 					vehicle="RU_Soldier";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+			};
+		};
+		class Item40
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={11446.876,233.42212,7477.6475};
+					id=236;
+					side="EAST";
+					vehicle="RUS_Soldier_TL";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+				class Item1
+				{
+					position[]={11451.779,233.40234,7492.7983};
+					id=237;
+					side="EAST";
+					vehicle="RUS_Soldier_GL";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+				class Item2
+				{
+					position[]={11453.779,233.38629,7492.7983};
+					id=238;
+					side="EAST";
+					vehicle="RUS_Soldier_Marksman";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+				class Item3
+				{
+					position[]={11455.779,233.37952,7492.7983};
+					id=239;
+					side="EAST";
+					vehicle="RUS_Soldier3";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+				class Item4
+				{
+					position[]={11457.779,233.38484,7492.7983};
+					id=240;
+					side="EAST";
+					vehicle="RUS_Soldier1";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+				class Item5
+				{
+					position[]={11459.779,233.39455,7492.7983};
+					id=241;
+					side="EAST";
+					vehicle="RUS_Soldier2";
+					rank="CORPORAL";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Factory Group";
@@ -2185,162 +2197,12 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=6;
-				class Item0
-				{
-					position[]={11446.876,233.42212,7477.6475};
-					id=242;
-					side="EAST";
-					vehicle="RUS_Soldier_TL";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					init="nul=[this,""FactoryPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item1
-				{
-					position[]={11451.779,233.40234,7492.7983};
-					id=243;
-					side="EAST";
-					vehicle="RUS_Soldier_GL";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item2
-				{
-					position[]={11453.779,233.38629,7492.7983};
-					id=244;
-					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item3
-				{
-					position[]={11455.779,233.37952,7492.7983};
-					id=245;
-					side="EAST";
-					vehicle="RUS_Soldier3";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item4
-				{
-					position[]={11457.779,233.38484,7492.7983};
-					id=246;
-					side="EAST";
-					vehicle="RUS_Soldier1";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item5
-				{
-					position[]={11459.779,233.39455,7492.7983};
-					id=247;
-					side="EAST";
-					vehicle="RUS_Soldier2";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-			};
-		};
-		class Item42
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=6;
-				class Item0
-				{
-					position[]={11477.157,229.44048,7482.2666};
-					id=248;
-					side="EAST";
-					vehicle="RUS_Soldier_TL";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					init="nul=[this,""FactoryPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item1
-				{
-					position[]={11457.929,233.3595,7490.9004};
-					id=249;
-					side="EAST";
-					vehicle="RUS_Soldier_GL";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item2
-				{
-					position[]={11459.929,233.37012,7490.9004};
-					id=250;
-					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item3
-				{
-					position[]={11461.929,233.38246,7490.9004};
-					id=251;
-					side="EAST";
-					vehicle="RUS_Soldier3";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item4
-				{
-					position[]={11463.929,233.39842,7490.9004};
-					id=252;
-					side="EAST";
-					vehicle="RUS_Soldier1";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-				class Item5
-				{
-					position[]={11465.929,233.41704,7490.9004};
-					id=253;
-					side="EAST";
-					vehicle="RUS_Soldier2";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Factory Group";
-				};
-			};
-		};
-		class Item43
-		{
-			side="EAST";
-			class Vehicles
-			{
 				items=4;
 				class Item0
 				{
 					position[]={11444.311,221,7529.0962};
 					special="NONE";
-					id=257;
+					id=244;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					leader=1;
@@ -2352,35 +2214,38 @@ class Mission
 				{
 					position[]={11425.507,220.96764,7450.8716};
 					special="NONE";
-					id=254;
+					id=242;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Factory Group";
 				};
 				class Item2
 				{
 					position[]={11445.063,221,7564.1162};
 					special="NONE";
-					id=263;
+					id=248;
 					side="EAST";
 					vehicle="KORD_high";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Factory Group";
 				};
 				class Item3
 				{
 					position[]={11485.999,220.41789,7557.7329};
 					special="NONE";
-					id=259;
+					id=246;
 					side="EAST";
 					vehicle="D30_RU";
 					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Factory Group";
 				};
 			};
 		};
-		class Item44
+		class Item42
 		{
 			side="EAST";
 			class Vehicles
@@ -2390,7 +2255,7 @@ class Mission
 				{
 					position[]={11513.378,220.89214,7452.0522};
 					special="NONE";
-					id=258;
+					id=245;
 					side="EAST";
 					vehicle="D30_RU";
 					leader=1;
@@ -2402,7 +2267,7 @@ class Mission
 				{
 					position[]={11494.964,221,7448.3101};
 					special="NONE";
-					id=256;
+					id=243;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					skill=0.60000002;
@@ -2414,56 +2279,16 @@ class Mission
 					position[]={11492.894,221,7488.0522};
 					azimut=180;
 					special="NONE";
-					id=261;
+					id=247;
 					side="EAST";
 					vehicle="KORD_high";
-					skill=0.60000002;
-					description="Factory Group";
-				};
-			};
-		};
-		class Item45
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={11434.434,228.95596,7610.125};
-					azimut=180;
-					special="NONE";
-					id=260;
-					side="EAST";
-					vehicle="D30_RU";
-					leader=1;
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Factory Group";
 				};
-				class Item1
-				{
-					position[]={11441.744,227.51299,7598.9521};
-					special="NONE";
-					id=255;
-					side="EAST";
-					vehicle="Igla_AA_pod_East";
-					skill=0.60000002;
-					description="Factory Group";
-				};
-				class Item2
-				{
-					position[]={11424.731,230.91679,7622.1445};
-					special="NONE";
-					id=262;
-					side="EAST";
-					vehicle="KORD_high";
-					skill=0.60000002;
-					description="Factory Group";
-				};
 			};
 		};
-		class Item46
+		class Item43
 		{
 			side="EAST";
 			class Vehicles
@@ -2473,13 +2298,245 @@ class Mission
 				{
 					position[]={11471.287,221,7441.4116};
 					special="NONE";
-					id=264;
+					id=249;
 					side="EAST";
 					vehicle="ZSU_INS";
 					leader=1;
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Factory Group";
+				};
+			};
+		};
+		class Item44
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11469.279,221,7527.1206};
+					special="NONE";
+					id=250;
+					side="EAST";
+					vehicle="ZSU_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Factory Group";
+				};
+			};
+		};
+		class Item45
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=12;
+				class Item0
+				{
+					position[]={11255.211,291.4285,4284.1147};
+					id=253;
+					side="EAST";
+					vehicle="RU_Soldier_SL";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item1
+				{
+					position[]={11243.263,293.8226,4272.8252};
+					id=254;
+					side="EAST";
+					vehicle="RU_Soldier_MG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item2
+				{
+					position[]={11245.263,293.6106,4272.8252};
+					id=255;
+					side="EAST";
+					vehicle="RU_Soldier_AT";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item3
+				{
+					position[]={11247.263,313.3342,4272.8252};
+					id=256;
+					side="EAST";
+					vehicle="RU_Soldier_LAT";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item4
+				{
+					position[]={11249.263,313.33026,4272.8252};
+					id=257;
+					side="EAST";
+					vehicle="RU_Soldier_GL";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item5
+				{
+					position[]={11251.263,313.328,4272.8252};
+					id=258;
+					side="EAST";
+					vehicle="RU_Soldier_Marksman";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item6
+				{
+					position[]={11253.263,313.32947,4272.8252};
+					id=259;
+					side="EAST";
+					vehicle="RU_Soldier_MG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item7
+				{
+					position[]={11255.263,313.33334,4272.8252};
+					id=260;
+					side="EAST";
+					vehicle="RU_Soldier_AT";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item8
+				{
+					position[]={11257.263,292.02316,4272.8252};
+					id=261;
+					side="EAST";
+					vehicle="RU_Soldier_AR";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item9
+				{
+					position[]={11259.263,291.59418,4272.8252};
+					id=262;
+					side="EAST";
+					vehicle="RU_Soldier_LAT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item10
+				{
+					position[]={11261.263,291.16571,4272.8252};
+					id=263;
+					side="EAST";
+					vehicle="RU_Soldier_GL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item11
+				{
+					position[]={11263.263,290.74179,4272.8252};
+					id=264;
+					side="EAST";
+					vehicle="RU_Soldier";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+			};
+		};
+		class Item46
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={11239.71,293.45206,4278.1401};
+					id=265;
+					side="EAST";
+					vehicle="RUS_Soldier_TL";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="nul=[this,""RogPatrol"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",2] execVM ""ups.sqf"";";
+					description="Rog Group";
+				};
+				class Item1
+				{
+					position[]={11244.613,291.16769,4293.291};
+					id=266;
+					side="EAST";
+					vehicle="RUS_Soldier_GL";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item2
+				{
+					position[]={11246.613,291.12506,4293.291};
+					id=267;
+					side="EAST";
+					vehicle="RUS_Soldier_Marksman";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item3
+				{
+					position[]={11248.613,290.96906,4293.291};
+					id=268;
+					side="EAST";
+					vehicle="RUS_Soldier3";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item4
+				{
+					position[]={11250.613,290.79962,4293.291};
+					id=269;
+					side="EAST";
+					vehicle="RUS_Soldier1";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item5
+				{
+					position[]={11252.613,290.61298,4293.291};
+					id=270;
+					side="EAST";
+					vehicle="RUS_Soldier2";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
 				};
 			};
 		};
@@ -2491,14 +2548,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11469.279,221,7527.1206};
+					position[]={11244.733,292.04242,4287.1489};
 					special="NONE";
-					id=265;
+					id=271;
 					side="EAST";
-					vehicle="ZSU_INS";
+					vehicle="Igla_AA_pod_East";
 					leader=1;
 					skill=0.60000002;
-					description="Factory Group";
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
 				};
 			};
 		};
@@ -2507,132 +2565,39 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=12;
+				items=3;
 				class Item0
 				{
-					position[]={11255.211,291.4285,4284.1147};
-					id=268;
+					position[]={11228.15,302.09772,4242.4829};
+					special="NONE";
+					id=272;
 					side="EAST";
-					vehicle="RU_Soldier_SL";
+					vehicle="Igla_AA_pod_East";
 					leader=1;
-					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="nul=[this,""RogPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
 				};
 				class Item1
 				{
-					position[]={11243.263,293.8226,4272.8252};
-					id=269;
+					position[]={11223.773,293.83484,4262.1538};
+					azimut=180;
+					special="NONE";
+					id=278;
 					side="EAST";
-					vehicle="RU_Soldier_MG";
-					rank="SERGEANT";
+					vehicle="KORD_high";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
 				};
 				class Item2
 				{
-					position[]={11245.263,293.6106,4272.8252};
-					id=270;
-					side="EAST";
-					vehicle="RU_Soldier_AT";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item3
-				{
-					position[]={11247.263,313.3342,4272.8252};
-					id=271;
-					side="EAST";
-					vehicle="RU_Soldier_LAT";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item4
-				{
-					position[]={11249.263,313.33026,4272.8252};
-					id=272;
-					side="EAST";
-					vehicle="RU_Soldier_GL";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item5
-				{
-					position[]={11251.263,313.328,4272.8252};
-					id=273;
-					side="EAST";
-					vehicle="RU_Soldier_Marksman";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item6
-				{
-					position[]={11253.263,313.32947,4272.8252};
-					id=274;
-					side="EAST";
-					vehicle="RU_Soldier_MG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item7
-				{
-					position[]={11255.263,313.33334,4272.8252};
-					id=275;
-					side="EAST";
-					vehicle="RU_Soldier_AT";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item8
-				{
-					position[]={11257.263,292.02316,4272.8252};
-					id=276;
-					side="EAST";
-					vehicle="RU_Soldier_AR";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item9
-				{
-					position[]={11259.263,291.59418,4272.8252};
+					position[]={11259.423,290.2576,4250.9336};
+					azimut=180;
+					special="NONE";
 					id=277;
 					side="EAST";
-					vehicle="RU_Soldier_LAT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item10
-				{
-					position[]={11261.263,291.16571,4272.8252};
-					id=278;
-					side="EAST";
-					vehicle="RU_Soldier_GL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item11
-				{
-					position[]={11263.263,290.74179,4272.8252};
-					id=279;
-					side="EAST";
-					vehicle="RU_Soldier";
+					vehicle="D30_RU";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
@@ -2644,70 +2609,15 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=6;
+				items=1;
 				class Item0
 				{
-					position[]={11239.71,293.45206,4278.1401};
-					id=280;
+					position[]={11274.154,287.90707,4264.2358};
+					special="NONE";
+					id=273;
 					side="EAST";
-					vehicle="RUS_Soldier_TL";
+					vehicle="Igla_AA_pod_East";
 					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					init="nul=[this,""RogPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item1
-				{
-					position[]={11244.613,291.16769,4293.291};
-					id=281;
-					side="EAST";
-					vehicle="RUS_Soldier_GL";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item2
-				{
-					position[]={11246.613,291.12506,4293.291};
-					id=282;
-					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item3
-				{
-					position[]={11248.613,290.96906,4293.291};
-					id=283;
-					side="EAST";
-					vehicle="RUS_Soldier3";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item4
-				{
-					position[]={11250.613,290.79962,4293.291};
-					id=284;
-					side="EAST";
-					vehicle="RUS_Soldier1";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item5
-				{
-					position[]={11252.613,290.61298,4293.291};
-					id=285;
-					side="EAST";
-					vehicle="RUS_Soldier2";
-					rank="CORPORAL";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
@@ -2719,70 +2629,26 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=6;
+				items=2;
 				class Item0
 				{
-					position[]={11269.991,289.54474,4282.7593};
-					id=286;
+					position[]={11227.304,289.67484,4299.395};
+					special="NONE";
+					id=274;
 					side="EAST";
-					vehicle="RUS_Soldier_TL";
+					vehicle="Igla_AA_pod_East";
 					leader=1;
-					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="nul=[this,""RogPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
 				};
 				class Item1
 				{
-					position[]={11250.763,291.07578,4291.3931};
-					id=287;
+					position[]={11221.669,289.81467,4288.7778};
+					special="NONE";
+					id=275;
 					side="EAST";
-					vehicle="RUS_Soldier_GL";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item2
-				{
-					position[]={11252.763,290.8891,4291.3931};
-					id=288;
-					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item3
-				{
-					position[]={11254.763,290.70236,4291.3931};
-					id=289;
-					side="EAST";
-					vehicle="RUS_Soldier3";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item4
-				{
-					position[]={11256.763,290.577,4291.3931};
-					id=290;
-					side="EAST";
-					vehicle="RUS_Soldier1";
-					rank="CORPORAL";
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item5
-				{
-					position[]={11258.763,290.38834,4291.3931};
-					id=291;
-					side="EAST";
-					vehicle="RUS_Soldier2";
-					rank="CORPORAL";
+					vehicle="D30_RU";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
@@ -2794,15 +2660,37 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=1;
+				items=3;
 				class Item0
 				{
-					position[]={11244.733,292.04242,4287.1489};
+					position[]={11277.044,286.81729,4320.6509};
 					special="NONE";
-					id=292;
+					id=276;
 					side="EAST";
-					vehicle="Igla_AA_pod_East";
+					vehicle="D30_RU";
 					leader=1;
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item1
+				{
+					position[]={11279.716,287.51474,4276.1606};
+					special="NONE";
+					id=279;
+					side="EAST";
+					vehicle="KORD_high";
+					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					description="Rog Group";
+				};
+				class Item2
+				{
+					position[]={11256.461,299.7533,4326.8096};
+					special="NONE";
+					id=280;
+					side="EAST";
+					vehicle="KORD_high";
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
@@ -2814,38 +2702,17 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=3;
+				items=1;
 				class Item0
 				{
-					position[]={11228.15,302.09772,4242.4829};
+					position[]={11217.152,291.40668,4270.7573};
 					special="NONE";
-					id=293;
+					id=281;
 					side="EAST";
-					vehicle="Igla_AA_pod_East";
+					vehicle="ZSU_INS";
 					leader=1;
 					skill=0.60000002;
-					description="Rog Group";
-				};
-				class Item1
-				{
-					position[]={11223.773,293.83484,4262.1538};
-					azimut=180;
-					special="NONE";
-					id=299;
-					side="EAST";
-					vehicle="KORD_high";
-					skill=0.60000002;
-					description="Rog Group";
-				};
-				class Item2
-				{
-					position[]={11259.423,290.2576,4250.9336};
-					azimut=180;
-					special="NONE";
-					id=298;
-					side="EAST";
-					vehicle="D30_RU";
-					skill=0.60000002;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 					description="Rog Group";
 				};
 			};
@@ -2858,11 +2725,11 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11274.154,287.90707,4264.2358};
+					position[]={11259.429,290.21375,4304.3525};
 					special="NONE";
-					id=294;
+					id=282;
 					side="EAST";
-					vehicle="Igla_AA_pod_East";
+					vehicle="ZSU_INS";
 					leader=1;
 					skill=0.60000002;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
@@ -2875,261 +2742,24 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=2;
-				class Item0
-				{
-					position[]={11227.304,289.67484,4299.395};
-					special="NONE";
-					id=295;
-					side="EAST";
-					vehicle="Igla_AA_pod_East";
-					leader=1;
-					skill=0.60000002;
-					description="Rog Group";
-				};
-				class Item1
-				{
-					position[]={11221.669,289.81467,4288.7778};
-					special="NONE";
-					id=296;
-					side="EAST";
-					vehicle="D30_RU";
-					skill=0.60000002;
-					description="Rog Group";
-				};
-			};
-		};
-		class Item55
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={11277.044,286.81729,4320.6509};
-					special="NONE";
-					id=297;
-					side="EAST";
-					vehicle="D30_RU";
-					leader=1;
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-				class Item1
-				{
-					position[]={11279.716,287.51474,4276.1606};
-					special="NONE";
-					id=300;
-					side="EAST";
-					vehicle="KORD_high";
-					skill=0.60000002;
-					description="Rog Group";
-				};
-				class Item2
-				{
-					position[]={11256.461,299.7533,4326.8096};
-					special="NONE";
-					id=301;
-					side="EAST";
-					vehicle="KORD_high";
-					skill=0.60000002;
-					description="Rog Group";
-				};
-			};
-		};
-		class Item56
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={11217.152,291.40668,4270.7573};
-					special="NONE";
-					id=302;
-					side="EAST";
-					vehicle="ZSU_INS";
-					leader=1;
-					skill=0.60000002;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-					description="Rog Group";
-				};
-			};
-		};
-		class Item57
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={11259.429,290.21375,4304.3525};
-					special="NONE";
-					id=303;
-					side="EAST";
-					vehicle="ZSU_INS";
-					leader=1;
-					skill=0.60000002;
-					description="Rog Group";
-				};
-			};
-		};
-		class Item58
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=11;
-				class Item0
-				{
-					position[]={10293.469,362.50293,12068.046};
-					special="NONE";
-					id=309;
-					side="EAST";
-					vehicle="Ins_Lopotev";
-					rank="CORPORAL";
-					skill=0.69749445;
-					text="BLK1";
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item1
-				{
-					position[]={10295.924,362.73804,12060.314};
-					special="NONE";
-					id=310;
-					side="EAST";
-					vehicle="RU_Soldier";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item2
-				{
-					position[]={10284.876,361.83459,12063.26};
-					special="NONE";
-					id=311;
-					side="EAST";
-					vehicle="RU_Soldier_AA";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item3
-				{
-					position[]={10295.434,362.63715,12057.122};
-					special="NONE";
-					id=312;
-					side="EAST";
-					vehicle="RU_Soldier_AT";
-					leader=1;
-					rank="CAPTAIN";
-					skill=0.69749445;
-					init="nul=[this,""BlkMtnPatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item4
-				{
-					position[]={10289.051,362.15421,12069.152};
-					special="NONE";
-					id=313;
-					side="EAST";
-					vehicle="RU_Soldier_GL";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item5
-				{
-					position[]={10307.586,362.26108,12070.011};
-					special="NONE";
-					id=314;
-					side="EAST";
-					vehicle="RUS_Soldier1";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item6
-				{
-					position[]={10301.08,362.51022,12069.396};
-					special="NONE";
-					id=315;
-					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item7
-				{
-					position[]={10291.138,362.18613,12070.502};
-					special="NONE";
-					id=316;
-					side="EAST";
-					vehicle="RUS_Soldier_TL";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item8
-				{
-					position[]={10291.506,362.52621,12058.228};
-					special="NONE";
-					id=317;
-					side="EAST";
-					vehicle="RUS_Soldier_GL";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item9
-				{
-					position[]={10269.223,362.4137,12047.001};
-					special="NONE";
-					id=324;
-					side="EAST";
-					vehicle="2S6M_Tunguska";
-					rank="CORPORAL";
-					skill=0.69749445;
-				};
-				class Item10
-				{
-					position[]={10258.989,364.22842,12001.494};
-					special="NONE";
-					id=325;
-					side="EAST";
-					vehicle="ZSU_INS";
-					rank="CORPORAL";
-					skill=0.69749445;
-				};
-			};
-		};
-		class Item59
-		{
-			side="EAST";
-			class Vehicles
-			{
 				items=14;
 				class Item0
 				{
-					position[]={3713.842,402,5984.5083};
+					position[]={3714.207,422.65671,5984.5293};
 					special="NONE";
-					id=326;
+					id=286;
 					side="EAST";
 					vehicle="RU_Soldier_Marksman";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.69749445;
-					init="nul=[this,""greenpatrol"",""random"",""nomove"",""min:"",1,""max:"",2] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
-					position[]={3715.3271,422.65671,5984.4297};
+					position[]={3715.1238,422.65671,5984.958};
 					special="NONE";
-					id=327;
+					id=287;
 					side="EAST";
 					vehicle="RU_Soldier_Marksman";
 					rank="CORPORAL";
@@ -3138,9 +2768,9 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3713.4976,402.63889,5986.0747};
+					position[]={3714.1265,402.63889,5985.4873};
 					special="NONE";
-					id=328;
+					id=288;
 					side="EAST";
 					vehicle="RU_Soldier_SniperH";
 					rank="CORPORAL";
@@ -3149,9 +2779,9 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3712.7883,422.65671,5982.8398};
+					position[]={3714.3708,422.65671,5984.0786};
 					special="NONE";
-					id=329;
+					id=289;
 					side="EAST";
 					vehicle="RU_Soldier_Sniper";
 					rank="CORPORAL";
@@ -3160,9 +2790,9 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={3715.0327,422.65671,5982.8604};
+					position[]={3714.8906,422.65671,5984.3628};
 					special="NONE";
-					id=330;
+					id=290;
 					side="EAST";
 					vehicle="RU_Soldier_SniperH";
 					rank="CORPORAL";
@@ -3173,59 +2803,64 @@ class Mission
 				{
 					position[]={3735.0652,402.49173,5993.6655};
 					special="NONE";
-					id=331;
+					id=291;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					rank="CORPORAL";
 					skill=0.69749445;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item6
 				{
 					position[]={3691.9919,402,5958.1597};
 					special="NONE";
-					id=332;
+					id=292;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					rank="CORPORAL";
 					skill=0.69749445;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item7
 				{
 					position[]={3692.2351,402,6004.9019};
 					special="NONE";
-					id=333;
+					id=293;
 					side="EAST";
 					vehicle="Igla_AA_pod_East";
 					rank="CORPORAL";
 					skill=0.69749445;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item8
 				{
 					position[]={3700.8994,402,5991.1309};
 					azimut=50;
 					special="NONE";
-					id=334;
+					id=294;
 					side="EAST";
 					vehicle="2S6M_Tunguska";
 					rank="CORPORAL";
 					skill=0.69749445;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item9
 				{
 					position[]={3721.8193,402,5968.4541};
 					azimut=40;
 					special="NONE";
-					id=335;
+					id=295;
 					side="EAST";
 					vehicle="ZSU_INS";
 					rank="CORPORAL";
 					skill=0.69749445;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item10
 				{
 					position[]={3712.8501,402,5970.4531};
 					special="NONE";
-					id=336;
+					id=296;
 					side="EAST";
 					vehicle="Ins_Soldier_2";
 					rank="CORPORAL";
@@ -3234,9 +2869,9 @@ class Mission
 				};
 				class Item11
 				{
-					position[]={3712.9231,402,5984.5981};
+					position[]={3713.6533,402,5984.4775};
 					special="NONE";
-					id=337;
+					id=297;
 					side="EAST";
 					vehicle="Ins_Soldier_2";
 					rank="CORPORAL";
@@ -3247,173 +2882,27 @@ class Mission
 				{
 					position[]={3726.5557,401.88696,6005.2285};
 					special="NONE";
-					id=338;
+					id=298;
 					side="EAST";
 					vehicle="KORD_high";
 					rank="CORPORAL";
 					skill=0.69749445;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item13
 				{
 					position[]={3720.6047,401.37564,6010.4878};
 					special="NONE";
-					id=339;
+					id=299;
 					side="EAST";
 					vehicle="KORD_high";
 					rank="CORPORAL";
 					skill=0.69749445;
-				};
-			};
-		};
-		class Item60
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=14;
-				class Item0
-				{
-					position[]={4228.3452,339,10393.077};
-					special="NONE";
-					id=373;
-					side="GUER";
-					vehicle="Soldier_TL_PMC";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.59999996;
-					init="nul=[this,""patrolMarker"",""random"",""min:"",1,""max:"",1] execVM ""ups.sqf"";";
-				};
-				class Item1
-				{
-					position[]={4230.3452,339,10388.077};
-					id=374;
-					side="GUER";
-					vehicle="Soldier_Sniper_PMC";
-					rank="SERGEANT";
-					skill=0.46666664;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item2
-				{
-					position[]={4232.3452,339,10388.077};
-					id=375;
-					side="GUER";
-					vehicle="Soldier_AT_PMC";
-					rank="CORPORAL";
-					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item3
-				{
-					position[]={4234.3452,339,10388.077};
-					id=376;
-					side="GUER";
-					vehicle="Soldier_Bodyguard_AA12_PMC";
-					rank="CORPORAL";
-					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item4
-				{
-					position[]={4236.3452,339,10388.077};
-					id=377;
-					side="GUER";
-					vehicle="Soldier_GL_PMC";
-					skill=0.2;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item5
-				{
-					position[]={4199.3613,338.90088,10374.437};
-					special="NONE";
-					id=378;
-					side="GUER";
-					vehicle="Soldier_GL_PMC";
-					rank="CORPORAL";
-					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item6
-				{
-					position[]={4206.3613,338.91727,10369.437};
-					id=381;
-					side="GUER";
-					vehicle="Soldier_M4A3_PMC";
-					skill=0.2;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item7
-				{
-					position[]={4202.3613,338.90033,10369.437};
-					id=379;
-					side="GUER";
-					vehicle="Soldier_GL_M16A2_PMC";
-					rank="CORPORAL";
-					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item8
-				{
-					position[]={4204.3613,338.90927,10369.437};
-					id=380;
-					side="GUER";
-					vehicle="Soldier_M4A3_PMC";
-					skill=0.2;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item9
-				{
-					position[]={4216.918,338.89648,10347.145};
-					special="NONE";
-					id=382;
-					side="GUER";
-					vehicle="Soldier_TL_PMC";
-					rank="LIEUTENANT";
-					skill=0.59999996;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item10
-				{
-					position[]={4219.918,338.90543,10342.145};
-					id=383;
-					side="GUER";
-					vehicle="Soldier_Sniper_KSVK_PMC";
-					rank="SERGEANT";
-					skill=0.46666664;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item11
-				{
-					position[]={4221.918,338.9241,10342.145};
-					id=384;
-					side="GUER";
-					vehicle="Soldier_AT_PMC";
-					rank="SERGEANT";
-					skill=0.46666664;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item12
-				{
-					position[]={4223.918,338.93661,10342.145};
-					id=385;
-					side="GUER";
-					vehicle="Soldier_MG_PMC";
-					rank="CORPORAL";
-					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item13
-				{
-					position[]={4225.918,338.94727,10342.145};
-					id=386;
-					side="GUER";
-					vehicle="Soldier_PMC";
-					skill=0.2;
 					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 			};
 		};
-		class Item61
+		class Item55
 		{
 			side="EAST";
 			class Vehicles
@@ -3421,19 +2910,19 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={2802.2876,266.39801,9693.9102};
-					id=387;
+					position[]={7273.146,293.89606,7592.5625};
+					id=333;
 					side="EAST";
 					vehicle="RU_Soldier_SL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul=[this,""patrolME"",""random"",""nomove"",""min:"",2,""max:"",5] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[this,""patrolME"",""delete:10800"",""min:"",2,""max:"",3] execVM ""ups.sqf"";";
 				};
 				class Item1
 				{
-					position[]={2797.2876,266.02054,9688.9102};
-					id=388;
+					position[]={7268.146,293.86649,7587.5625};
+					id=334;
 					side="EAST";
 					vehicle="BMP3";
 					rank="SERGEANT";
@@ -3442,8 +2931,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={2805.2876,266.42477,9688.9102};
-					id=389;
+					position[]={7276.146,293.91425,7587.5625};
+					id=335;
 					side="EAST";
 					vehicle="RU_Soldier_MG";
 					rank="SERGEANT";
@@ -3452,8 +2941,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={2807.2876,266.52075,9688.9102};
-					id=390;
+					position[]={7278.146,293.96796,7587.5625};
+					id=336;
 					side="EAST";
 					vehicle="RU_Soldier_AT";
 					rank="CORPORAL";
@@ -3462,8 +2951,8 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={2809.2876,266.61676,9688.9102};
-					id=391;
+					position[]={7280.146,294.03195,7587.5625};
+					id=337;
 					side="EAST";
 					vehicle="RU_Soldier_LAT";
 					rank="CORPORAL";
@@ -3472,8 +2961,8 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={2811.2876,266.71277,9688.9102};
-					id=392;
+					position[]={7282.146,294.09595,7587.5625};
+					id=338;
 					side="EAST";
 					vehicle="RU_Soldier_GL";
 					skill=0.2;
@@ -3481,47 +2970,37 @@ class Mission
 				};
 			};
 		};
-		class Item62
+		class Item56
 		{
 			side="EAST";
 			class Vehicles
 			{
-				items=4;
+				items=3;
 				class Item0
 				{
-					position[]={2790.4819,265.17673,9665.0811};
-					id=393;
+					position[]={7261.3403,294.08749,7563.7349};
+					id=339;
 					side="EAST";
 					vehicle="T90";
 					leader=1;
 					rank="CAPTAIN";
 					skill=0.73333329;
-					init="nul=[this,""patrolME"",""random"",""nomove"",""min:"",2,""max:"",4] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[this,""patrolME"",""delete:10800"",""min:"",2,""max:"",3] execVM ""ups.sqf"";";
 				};
 				class Item1
 				{
-					position[]={2792.0916,264.99564,9650.0303};
-					id=395;
-					side="EAST";
-					vehicle="T90";
-					rank="SERGEANT";
-					skill=0.46666664;
-					init="nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item2
-				{
-					position[]={2785.46,264.81754,9651.5068};
-					id=394;
+					position[]={7256.3188,293.60846,7550.1602};
+					id=340;
 					side="EAST";
 					vehicle="T90";
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					init="nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
 				};
-				class Item3
+				class Item2
 				{
-					position[]={2791.9326,264.96524,9648.085};
-					id=409;
+					position[]={7271.3364,294.04492,7549.4893};
+					id=354;
 					side="EAST";
 					vehicle="T90";
 					rank="LIEUTENANT";
@@ -3530,7 +3009,7 @@ class Mission
 				};
 			};
 		};
-		class Item63
+		class Item57
 		{
 			side="EAST";
 			class Vehicles
@@ -3538,19 +3017,19 @@ class Mission
 				items=13;
 				class Item0
 				{
-					position[]={2777.7136,264.4483,9638.0547};
-					id=396;
+					position[]={7248.5723,291.77472,7536.708};
+					id=341;
 					side="EAST";
 					vehicle="RU_Soldier_SL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul=[this,""patrolME"",""random"",""nomove"",""min:"",2,""max:"",6] execVM ""ups.sqf"", nul=[10800,10800,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[this,""patrolME"",""delete:10800"",""min:"",2,""max:"",3] execVM ""ups.sqf"";";
 				};
 				class Item1
 				{
-					position[]={2772.7136,264.23471,9633.0547};
-					id=397;
+					position[]={7243.5723,290.57376,7531.708};
+					id=342;
 					side="EAST";
 					vehicle="Kamaz";
 					rank="SERGEANT";
@@ -3559,8 +3038,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={2780.7136,264.45126,9633.0547};
-					id=398;
+					position[]={7251.5723,291.38266,7531.708};
+					id=343;
 					side="EAST";
 					vehicle="RU_Soldier_MG";
 					rank="SERGEANT";
@@ -3569,8 +3048,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={2782.7136,264.50403,9633.0547};
-					id=399;
+					position[]={7253.5723,291.55704,7531.708};
+					id=344;
 					side="EAST";
 					vehicle="RU_Soldier_AT";
 					rank="SERGEANT";
@@ -3579,8 +3058,8 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={2784.7136,264.55203,9633.0547};
-					id=400;
+					position[]={7255.5723,291.72772,7531.708};
+					id=345;
 					side="EAST";
 					vehicle="RU_Soldier_LAT";
 					rank="CORPORAL";
@@ -3589,8 +3068,8 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={2786.7136,264.60004,9633.0547};
-					id=401;
+					position[]={7257.5723,291.89838,7531.708};
+					id=346;
 					side="EAST";
 					vehicle="RU_Soldier_GL";
 					rank="CORPORAL";
@@ -3599,8 +3078,8 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={2788.7136,264.65036,9633.0547};
-					id=402;
+					position[]={7259.5723,292.05023,7531.708};
+					id=347;
 					side="EAST";
 					vehicle="RU_Soldier_Marksman";
 					rank="CORPORAL";
@@ -3609,8 +3088,8 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={2790.7136,264.70105,9633.0547};
-					id=403;
+					position[]={7261.5723,292.19785,7531.708};
+					id=348;
 					side="EAST";
 					vehicle="RU_Soldier_MG";
 					rank="CORPORAL";
@@ -3619,8 +3098,8 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={2792.7136,264.75171,9633.0547};
-					id=404;
+					position[]={7263.5723,292.34723,7531.708};
+					id=349;
 					side="EAST";
 					vehicle="RU_Soldier_LAT";
 					rank="CORPORAL";
@@ -3629,8 +3108,8 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={2794.7136,264.80237,9633.0547};
-					id=405;
+					position[]={7265.5723,292.49655,7531.708};
+					id=350;
 					side="EAST";
 					vehicle="RU_Soldier_AR";
 					skill=0.2;
@@ -3638,8 +3117,8 @@ class Mission
 				};
 				class Item10
 				{
-					position[]={2796.7136,264.76376,9628.0547};
-					id=406;
+					position[]={7267.5723,292.03735,7526.708};
+					id=351;
 					side="EAST";
 					vehicle="RU_Soldier_AT";
 					skill=0.2;
@@ -3647,8 +3126,8 @@ class Mission
 				};
 				class Item11
 				{
-					position[]={2798.7136,264.81122,9628.0547};
-					id=407;
+					position[]={7269.5723,292.18936,7526.708};
+					id=352;
 					side="EAST";
 					vehicle="RU_Soldier_GL";
 					skill=0.2;
@@ -3656,8 +3135,8 @@ class Mission
 				};
 				class Item12
 				{
-					position[]={2800.7136,264.85995,9628.0547};
-					id=408;
+					position[]={7271.5723,292.33093,7526.708};
+					id=353;
 					side="EAST";
 					vehicle="RU_Soldier";
 					skill=0.2;
@@ -3665,82 +3144,7 @@ class Mission
 				};
 			};
 		};
-		class Item64
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=6;
-				class Item0
-				{
-					position[]={10278.863,363.43549,12046.442};
-					special="NONE";
-					id=318;
-					side="EAST";
-					vehicle="Igla_AA_pod_East";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item1
-				{
-					position[]={10289.8,363.9353,12043.518};
-					special="NONE";
-					id=321;
-					side="EAST";
-					vehicle="KORD_high";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item2
-				{
-					position[]={10253.576,360.47699,12037.483};
-					special="NONE";
-					id=319;
-					side="EAST";
-					vehicle="D30_RU";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item3
-				{
-					position[]={10261.93,364.44617,12009.225};
-					special="NONE";
-					id=322;
-					side="EAST";
-					vehicle="KORD_high";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item4
-				{
-					position[]={10265.522,360.15692,12055.71};
-					special="NONE";
-					id=323;
-					side="EAST";
-					vehicle="2b14_82mm";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-				class Item5
-				{
-					position[]={10309.609,361.98907,12062.332};
-					special="NONE";
-					id=320;
-					side="EAST";
-					vehicle="KORD_high";
-					rank="CORPORAL";
-					skill=0.69749445;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
-				};
-			};
-		};
-		class Item65
+		class Item58
 		{
 			side="GUER";
 			class Vehicles
@@ -3749,88 +3153,81 @@ class Mission
 				class Item0
 				{
 					position[]={4275.2031,338.99026,10362.22};
-					id=410;
+					id=355;
 					side="GUER";
 					vehicle="Soldier_TL_PMC";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul=[this,""patrolMarker"",""random"",""min:"",1,""max:"",2] execVM ""ups.sqf"";";
+					init="nul=[this,""patrolMarker"",""delete:10800"",""min:"",1,""max:"",2] execVM ""ups.sqf"";";
 				};
 				class Item1
 				{
 					position[]={4267.2031,338.98999,10357.22};
-					id=411;
+					id=356;
 					side="GUER";
 					vehicle="ArmoredSUV_PMC";
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item2
 				{
 					position[]={4267.2031,338.98999,10350.22};
-					id=412;
+					id=357;
 					side="GUER";
 					vehicle="ArmoredSUV_PMC";
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item3
 				{
 					position[]={4277.2031,338.99292,10357.22};
-					id=413;
+					id=358;
 					side="GUER";
 					vehicle="Soldier_Sniper_PMC";
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item4
 				{
 					position[]={4279.2031,338.99561,10357.22};
-					id=414;
+					id=359;
 					side="GUER";
 					vehicle="Soldier_Bodyguard_M4_PMC";
 					rank="CORPORAL";
 					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item5
 				{
 					position[]={4281.2031,338.99826,10357.22};
-					id=415;
+					id=360;
 					side="GUER";
 					vehicle="Soldier_MG_PKM_PMC";
 					rank="CORPORAL";
 					skill=0.33333331;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item6
 				{
 					position[]={4283.2031,338.99942,10357.22};
-					id=416;
+					id=361;
 					side="GUER";
 					vehicle="Soldier_GL_PMC";
 					skill=0.2;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item7
 				{
 					position[]={4285.2031,338.99677,10357.22};
-					id=417;
+					id=362;
 					side="GUER";
 					vehicle="Soldier_GL_PMC";
 					skill=0.2;
-					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=135;
+		items=133;
 		class Item0
 		{
 			position[]={4689.0762,339,10277.31};
@@ -4868,7 +4265,7 @@ class Mission
 		{
 			position[]={6539.8867,392.40085,5604.709};
 			special="NONE";
-			id=228;
+			id=222;
 			side="EMPTY";
 			vehicle="RUSpecialWeaponsBox";
 			leader=1;
@@ -4879,7 +4276,7 @@ class Mission
 		{
 			position[]={6539.7759,392.133,5602.5273};
 			special="NONE";
-			id=229;
+			id=223;
 			side="EMPTY";
 			vehicle="RUBasicWeaponsBox";
 			leader=1;
@@ -4890,7 +4287,7 @@ class Mission
 		{
 			position[]={11469.614,221,7506.8208};
 			special="NONE";
-			id=266;
+			id=251;
 			side="EMPTY";
 			vehicle="RUSpecialWeaponsBox";
 			leader=1;
@@ -4901,7 +4298,7 @@ class Mission
 		{
 			position[]={11464.31,221,7506.9175};
 			special="NONE";
-			id=267;
+			id=252;
 			side="EMPTY";
 			vehicle="RUBasicWeaponsBox";
 			leader=1;
@@ -4912,7 +4309,7 @@ class Mission
 		{
 			position[]={11256.034,290.87558,4289.0313};
 			special="NONE";
-			id=304;
+			id=283;
 			side="EMPTY";
 			vehicle="RUSpecialWeaponsBox";
 			leader=1;
@@ -4923,7 +4320,7 @@ class Mission
 		{
 			position[]={11255.924,291.06372,4286.8496};
 			special="NONE";
-			id=305;
+			id=284;
 			side="EMPTY";
 			vehicle="RUBasicWeaponsBox";
 			leader=1;
@@ -4935,7 +4332,7 @@ class Mission
 			position[]={11787.499,158.8,12828.125};
 			azimut=110;
 			special="NONE";
-			id=306;
+			id=285;
 			side="EMPTY";
 			vehicle="C130J";
 			skill=0.2;
@@ -4944,40 +4341,44 @@ class Mission
 		};
 		class Item100
 		{
-			position[]={10294.396,362.65652,12059.274};
-			special="NONE";
-			id=307;
-			side="EMPTY";
-			vehicle="Land_fortified_nest_big";
-			skill=0.60000002;
-		};
-		class Item101
-		{
-			position[]={10290.747,362.21735,12070.025};
-			special="NONE";
-			id=308;
-			side="EMPTY";
-			vehicle="Fort_Barracks_USMC";
-			skill=0.60000002;
-		};
-		class Item102
-		{
 			position[]={4636.8779,9,2520.8462};
 			azimut=110;
 			special="NONE";
-			id=340;
+			id=300;
 			side="EMPTY";
 			vehicle="C130J";
 			skill=0.2;
 			text="c130Drop_1";
 			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"", handle = [this] execVM ""scripts\c130cargo.sqf"";";
 		};
-		class Item103
+		class Item101
 		{
 			position[]={5181.7095,8.6320953,2338.9663};
 			azimut=15;
 			special="NONE";
-			id=341;
+			id=301;
+			side="EMPTY";
+			vehicle="M1A1";
+			skill=0.60000002;
+			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item102
+		{
+			position[]={5194.5708,8.2333307,2335.186};
+			azimut=15;
+			special="NONE";
+			id=302;
+			side="EMPTY";
+			vehicle="M1A2_TUSK_MG";
+			skill=0.60000002;
+			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item103
+		{
+			position[]={5149.1792,8.9348831,2348.8022};
+			azimut=15;
+			special="NONE";
+			id=303;
 			side="EMPTY";
 			vehicle="M1A1";
 			skill=0.60000002;
@@ -4985,10 +4386,10 @@ class Mission
 		};
 		class Item104
 		{
-			position[]={5194.5708,8.2333307,2335.186};
+			position[]={5134.3101,8.7369804,2352.7603};
 			azimut=15;
 			special="NONE";
-			id=342;
+			id=304;
 			side="EMPTY";
 			vehicle="M1A2_TUSK_MG";
 			skill=0.60000002;
@@ -4996,300 +4397,278 @@ class Mission
 		};
 		class Item105
 		{
-			position[]={5149.1792,8.9348831,2348.8022};
-			azimut=15;
-			special="NONE";
-			id=343;
-			side="EMPTY";
-			vehicle="M1A1";
-			skill=0.60000002;
-			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"";";
-		};
-		class Item106
-		{
-			position[]={5134.3101,8.7369804,2352.7603};
-			azimut=15;
-			special="NONE";
-			id=344;
-			side="EMPTY";
-			vehicle="M1A2_TUSK_MG";
-			skill=0.60000002;
-			init="handle = [this, 3600, 0, 0, TRUE] execVM ""vehicle.sqf"";";
-		};
-		class Item107
-		{
 			position[]={6894.4932,394.45581,11443.816};
 			special="NONE";
-			id=345;
+			id=305;
 			side="EMPTY";
 			vehicle="RUSpecialWeaponsBox";
 			leader=1;
 			skill=0.60000002;
 			description="Zub Group";
 		};
-		class Item108
+		class Item106
 		{
 			position[]={6894.3823,394.46426,11441.635};
 			special="NONE";
-			id=346;
+			id=306;
 			side="EMPTY";
 			vehicle="RUBasicWeaponsBox";
 			leader=1;
 			skill=0.60000002;
 			description="Zub Group";
 		};
-		class Item109
+		class Item107
 		{
 			position[]={4557.8784,339,10269.93};
 			azimut=330;
-			id=347;
+			id=307;
 			side="EMPTY";
 			vehicle="M1135_ATGMV_EP1";
 			skill=0.60000002;
 		};
-		class Item110
+		class Item108
 		{
 			position[]={4572.3364,339,10277.521};
 			azimut=330;
-			id=348;
+			id=308;
 			side="EMPTY";
 			vehicle="M1126_ICV_mk19_EP1";
 			skill=0.60000002;
 		};
-		class Item111
+		class Item109
 		{
 			position[]={4562.5771,339,10292.703};
 			azimut=330;
-			id=349;
+			id=309;
 			side="EMPTY";
 			vehicle="M1128_MGS_EP1";
 			skill=0.60000002;
 		};
-		class Item112
+		class Item110
 		{
 			position[]={4549.5649,339,10284.75};
 			azimut=330;
-			id=350;
+			id=310;
 			side="EMPTY";
 			vehicle="M1126_ICV_M2_EP1";
 			skill=0.60000002;
 		};
-		class Item113
+		class Item111
 		{
 			position[]={4540.167,339,10300.654};
 			azimut=330;
 			special="NONE";
-			id=351;
+			id=311;
 			side="EMPTY";
 			vehicle="BAF_FV510_D";
 			skill=0.60000002;
 		};
-		class Item114
+		class Item112
 		{
 			position[]={4552.4565,339,10306.437};
 			azimut=330;
 			special="NONE";
-			id=352;
+			id=312;
 			side="EMPTY";
 			vehicle="BAF_FV510_W";
 			skill=0.60000002;
 		};
-		class Item115
+		class Item113
 		{
 			position[]={4531.8535,339,10314.389};
 			azimut=330;
 			special="NONE";
-			id=353;
+			id=313;
 			side="EMPTY";
 			vehicle="Offroad_DSHKM_Gue";
 			skill=0.60000002;
 		};
-		class Item116
+		class Item114
 		{
 			position[]={4544.1431,339,10320.534};
 			azimut=330;
 			special="NONE";
-			id=354;
+			id=314;
 			side="EMPTY";
 			vehicle="Offroad_DSHKM_TK_GUE_EP1";
 			skill=0.60000002;
 		};
-		class Item117
+		class Item115
 		{
 			position[]={4759.5693,339,10253.502};
 			azimut=330;
 			special="NONE";
-			id=355;
+			id=315;
 			side="EMPTY";
 			vehicle="BAF_ATV_D";
 			skill=0.60000002;
 		};
-		class Item118
+		class Item116
 		{
 			position[]={4765.7144,339,10243.02};
 			azimut=330;
 			special="NONE";
-			id=356;
+			id=316;
 			side="EMPTY";
 			vehicle="BAF_ATV_D";
 			skill=0.60000002;
 		};
-		class Item119
+		class Item117
 		{
 			position[]={4524.2656,339,10326.318};
 			azimut=330;
 			special="NONE";
-			id=357;
+			id=317;
 			side="EMPTY";
 			vehicle="BAF_Jackal2_GMG_D";
 			skill=0.60000002;
 		};
-		class Item120
+		class Item118
 		{
 			position[]={4536.1934,339,10333.908};
 			azimut=330;
 			special="NONE";
-			id=358;
+			id=318;
 			side="EMPTY";
 			vehicle="BAF_Jackal2_GMG_W";
 			skill=0.60000002;
 		};
-		class Item121
+		class Item119
 		{
 			position[]={4516.313,339,10340.414};
 			azimut=330;
 			special="NONE";
-			id=359;
+			id=319;
 			side="EMPTY";
 			vehicle="BAF_Jackal2_L2A1_W";
 			skill=0.60000002;
 		};
-		class Item122
+		class Item120
 		{
 			position[]={4528.9644,339,10346.921};
 			azimut=330;
 			special="NONE";
-			id=360;
+			id=320;
 			side="EMPTY";
 			vehicle="BAF_Jackal2_L2A1_D";
 			skill=0.60000002;
 		};
-		class Item123
+		class Item121
 		{
 			position[]={4513.7832,339,10357.042};
 			azimut=330;
 			special="NONE";
-			id=361;
+			id=321;
 			side="EMPTY";
 			vehicle="AAV";
 			skill=0.60000002;
 		};
-		class Item124
+		class Item122
 		{
 			position[]={4577.7588,339,10253.666};
 			azimut=330;
 			special="NONE";
-			id=362;
+			id=322;
 			side="EMPTY";
 			vehicle="CH_47F_EP1";
 			skill=0.60000002;
 		};
-		class Item125
+		class Item123
 		{
 			position[]={4513.7832,339,10233.063};
 			azimut=330;
 			special="NONE";
-			id=363;
+			id=323;
 			side="EMPTY";
 			vehicle="Ka60_PMC";
 			skill=0.60000002;
 		};
-		class Item126
+		class Item124
 		{
 			position[]={4500.7705,339,10254.027};
 			azimut=330;
 			special="NONE";
-			id=364;
+			id=324;
 			side="EMPTY";
 			vehicle="BAF_Merlin_HC3_D";
 			skill=0.60000002;
 		};
-		class Item127
+		class Item125
 		{
 			position[]={4490.2886,339,10271.738};
 			azimut=330;
 			special="NONE";
-			id=365;
+			id=325;
 			side="EMPTY";
 			vehicle="MH6J_EP1";
 			skill=0.60000002;
 		};
-		class Item128
+		class Item126
 		{
 			position[]={4468.6016,339,10284.389};
 			azimut=330;
 			special="NONE";
-			id=366;
+			id=326;
 			side="EMPTY";
 			vehicle="MV22";
 			skill=0.60000002;
 		};
-		class Item129
+		class Item127
 		{
 			position[]={4450.167,339,10298.486};
 			azimut=330;
 			special="NONE";
-			id=367;
+			id=327;
 			side="EMPTY";
 			vehicle="UH1H_TK_EP1";
 			skill=0.60000002;
 		};
-		class Item130
+		class Item128
 		{
 			position[]={4466.5391,339,10308.923};
 			azimut=330;
 			special="NONE";
-			id=368;
+			id=328;
 			side="EMPTY";
 			vehicle="UH1H_TK_GUE_EP1";
 			skill=0.60000002;
 		};
-		class Item131
+		class Item129
 		{
 			position[]={4456.2285,339,10326.721};
 			azimut=330;
 			special="NONE";
-			id=369;
+			id=329;
 			side="EMPTY";
 			vehicle="AW159_Lynx_BAF";
 			skill=0.60000002;
 		};
-		class Item132
+		class Item130
 		{
 			position[]={4524.8159,339,10215.704};
 			azimut=330;
 			special="NONE";
-			id=370;
+			id=330;
 			side="EMPTY";
 			vehicle="Ka137_PMC";
 			skill=0.60000002;
 		};
-		class Item133
+		class Item131
 		{
 			position[]={4593.5776,339,10235.808};
 			azimut=330;
 			special="NONE";
-			id=371;
+			id=331;
 			side="EMPTY";
 			vehicle="BAF_ATV_D";
 			skill=0.60000002;
 		};
-		class Item134
+		class Item132
 		{
 			position[]={4600.311,339,10224.042};
 			azimut=330;
 			special="NONE";
-			id=372;
+			id=332;
 			side="EMPTY";
 			vehicle="BAF_ATV_W";
 			skill=0.60000002;
@@ -5297,7 +4676,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=56;
+		items=54;
 		class Item0
 		{
 			position[]={15298.26,264.03619,15331.15};
@@ -5691,17 +5070,6 @@ class Mission
 		};
 		class Item51
 		{
-			position[]={10291.743,362.85123,12051.508};
-			name="BlkMtnPatrol";
-			markerType="ELLIPSE";
-			type="Empty";
-			fillName="Border";
-			a=125;
-			b=125;
-			drawBorder=1;
-		};
-		class Item52
-		{
 			position[]={6534.6855,390.67786,5603.5615};
 			name="ZubPatrol";
 			markerType="ELLIPSE";
@@ -5711,7 +5079,7 @@ class Mission
 			b=125;
 			drawBorder=1;
 		};
-		class Item53
+		class Item52
 		{
 			position[]={11461.069,225.41637,7465.1021};
 			name="FactoryPatrol";
@@ -5722,7 +5090,7 @@ class Mission
 			b=200;
 			drawBorder=1;
 		};
-		class Item54
+		class Item53
 		{
 			position[]={11245.482,291.45233,4290.043};
 			name="RogPatrol";
@@ -5732,18 +5100,6 @@ class Mission
 			a=125;
 			b=125;
 			drawBorder=1;
-		};
-		class Item55
-		{
-			position[]={9815.9199,6.0127869,1879.4004};
-			name="patrolMarker_1";
-			markerType="RECTANGLE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="BDiagonal";
-			a=400;
-			b=1000;
-			angle=-213.353;
 		};
 	};
 	class Sensors
