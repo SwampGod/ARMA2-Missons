@@ -1,0 +1,5 @@
+respawn="BASE";
+respawndelay =15;
+debriefing=1;
+showGPS=1;
+loadScreen = "swamp.jpg";
