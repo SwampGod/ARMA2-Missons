@@ -19,10 +19,16 @@ class Mission
 		"CAAir_E",
 		"caweapons_e",
 		"caweapons_kord",
-		"CAWheeled",
 		"caweapons_e_ammoboxes",
 		"camisc_e_wf",
-		"camisc3"
+		"camisc3",
+		"ca_modules_functions",
+		"cawheeled_d_baf",
+		"cawheeled_pmc_armoredsuv",
+		"CAAir_E_AH6J",
+		"CAAir_BAF",
+		"CAWheeled_E_SCUD",
+		"CAWheeled_E_LandRover"
 	};
 	addOnsAuto[]=
 	{
@@ -37,19 +43,25 @@ class Mission
 		"CAAir_E",
 		"caweapons_e",
 		"caweapons_kord",
-		"CAWheeled",
+		"ca_modules_functions",
+		"CAWheeled_E_SCUD",
+		"CAWheeled_E_LandRover",
 		"ca_pmc",
 		"CAWheeled_E_stryker",
 		"caair_pmc_ka60",
 		"caweapons_e_ammoboxes",
 		"camisc_e_wf",
 		"camisc3",
+		"cawheeled_pmc_armoredsuv",
+		"CAWheeled_D_BAF",
+		"CAAir_E_AH6J",
+		"CAAir_BAF",
 		"zargabad"
 	};
 	randomSeed=4980151;
 	class Intel
 	{
-		briefingName="Coop - Swamp's Zargabad is BAD!! 0.01";
+		briefingName="Coop - Swamp's Zargabad is Bad! - 0.04";
 		briefingDescription="Created by Swamp";
 		startWeather=0.25;
 		forecastWeather=0;
@@ -59,7 +71,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=43;
+		items=50;
 		class Item0
 		{
 			side="EAST";
@@ -937,11 +949,12 @@ class Mission
 				items=20;
 				class Item0
 				{
-					position[]={3157.3206,6.6764073,-14.916016};
+					position[]={3154.854,6.6996093,-19.84375};
+					special="NONE";
 					id=88;
 					side="WEST";
 					vehicle="GER_Soldier_TL_EP1";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -1015,6 +1028,7 @@ class Mission
 				class Item7
 				{
 					position[]={3165.3247,6.674099,-15.391602};
+					special="NONE";
 					id=106;
 					side="WEST";
 					vehicle="GER_Soldier_Medic_EP1";
@@ -1035,7 +1049,7 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={3161.9595,7.2257113,-40.509766};
+					position[]={3166.5371,6.8185582,-25.530273};
 					id=103;
 					side="GUER";
 					vehicle="Soldier_GL_PMC";
@@ -1046,7 +1060,7 @@ class Mission
 				};
 				class Item10
 				{
-					position[]={3163.9595,7.197175,-40.509766};
+					position[]={3168.5371,6.854156,-25.530273};
 					id=104;
 					side="GUER";
 					vehicle="Soldier_Engineer_PMC";
@@ -1057,7 +1071,7 @@ class Mission
 				};
 				class Item11
 				{
-					position[]={3165.9595,7.2352881,-40.509766};
+					position[]={3170.5371,6.9294233,-25.530273};
 					id=105;
 					side="GUER";
 					vehicle="Soldier_Medic_PMC";
@@ -1209,6 +1223,7 @@ class Mission
 					rank="COLONEL";
 					skill=0.60000002;
 					text="Aziz";
+					init="nul = [group this,[50],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf"";";
 				};
 			};
 		};
@@ -1230,7 +1245,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					text="Aziz_Guards1";
-					init="nul = [this,""triggerAZIZ"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul = [group this,[50],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf"";";
 				};
 				class Item1
 				{
@@ -1303,7 +1318,7 @@ class Mission
 				items=7;
 				class Item0
 				{
-					position[]={3746.0938,26.792866,4344.6206};
+					position[]={3764.5195,26.847647,4340.5859};
 					special="NONE";
 					id=129;
 					side="EAST";
@@ -1312,7 +1327,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					text="Aziz_Guards2";
-					init="nul = [this,""triggerAZIZ"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul = [group this,[50],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf"";";
 				};
 				class Item1
 				{
@@ -1386,7 +1401,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					text="Aziz_Guards3";
-					init="nul = [this,""triggerAZIZ"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul = [group this,[50],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf"";";
 				};
 				class Item1
 				{
@@ -1449,7 +1464,7 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=21;
+				items=15;
 				class Item0
 				{
 					position[]={3959.0237,11.047729,2769.79};
@@ -1462,7 +1477,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					text="Truck_Guards1";
-					init="nul = [this,""triggerTRUCK"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul=[this,""triggerTRUCK"",""repeated"",15,900] execVM ""murk_spawn.sqf"";";
 				};
 				class Item1
 				{
@@ -1535,64 +1550,6 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={3963.2837,11.154657,2779.5244};
-					id=156;
-					side="EAST";
-					vehicle="Igla_AA_pod_TK_EP1";
-					skill=0.60000002;
-				};
-				class Item10
-				{
-					position[]={3960.6262,10.949785,2761.957};
-					azimut=210;
-					special="NONE";
-					id=157;
-					side="EAST";
-					vehicle="AGS_TK_EP1";
-					skill=0.60000002;
-				};
-				class Item11
-				{
-					position[]={3957.4521,11.083014,2773.6934};
-					azimut=270;
-					special="NONE";
-					id=158;
-					side="EAST";
-					vehicle="KORD_high_TK_EP1";
-					skill=0.60000002;
-				};
-				class Item12
-				{
-					position[]={3990.0032,10.933846,2772.9551};
-					azimut=50;
-					special="NONE";
-					id=159;
-					side="EAST";
-					vehicle="KORD_high_TK_EP1";
-					skill=0.60000002;
-				};
-				class Item13
-				{
-					position[]={3991.1843,10.85168,2768.084};
-					azimut=50;
-					special="NONE";
-					id=160;
-					side="EAST";
-					vehicle="Igla_AA_pod_TK_EP1";
-					skill=0.60000002;
-				};
-				class Item14
-				{
-					position[]={3988.5273,11.038774,2778.0488};
-					azimut=5;
-					special="NONE";
-					id=161;
-					side="EAST";
-					vehicle="ZU23_TK_EP1";
-					skill=0.60000002;
-				};
-				class Item15
-				{
 					position[]={3971.0337,11.05026,2772.8623};
 					id=162;
 					side="EAST";
@@ -1600,7 +1557,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 				};
-				class Item16
+				class Item10
 				{
 					position[]={3974.0337,10.924579,2767.8623};
 					id=163;
@@ -1609,7 +1566,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 				};
-				class Item17
+				class Item11
 				{
 					position[]={3984.0337,10.886818,2767.8623};
 					id=168;
@@ -1618,7 +1575,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.33333331;
 				};
-				class Item18
+				class Item12
 				{
 					position[]={3982.0337,10.886902,2767.8623};
 					id=167;
@@ -1627,7 +1584,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.33333331;
 				};
-				class Item19
+				class Item13
 				{
 					position[]={3980.0337,10.888982,2767.8623};
 					id=166;
@@ -1636,7 +1593,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.33333331;
 				};
-				class Item20
+				class Item14
 				{
 					position[]={3978.0337,10.894571,2767.8623};
 					id=165;
@@ -1680,7 +1637,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; ";
 				};
 				class Item1
 				{
@@ -1753,7 +1710,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; ";
 				};
 				class Item1
 				{
@@ -1826,7 +1783,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; ";
 				};
 				class Item1
 				{
@@ -1914,7 +1871,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; ";
 				};
 				class Item1
 				{
@@ -2123,7 +2080,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; ";
 				};
 			};
 		};
@@ -2142,7 +2099,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; ";
 				};
 				class Item1
 				{
@@ -2172,7 +2129,7 @@ class Mission
 					leader=1;
 					rank="CAPTAIN";
 					skill=0.73333329;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul = [this,""triggerPalace"",""repeated"",4,900] execVM ""murk_spawn.sqf"";";
 				};
 				class Item1
 				{
@@ -2201,7 +2158,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul = [this,""triggerPalace"",""repeated"",4,900] execVM ""murk_spawn.sqf"";";
 				};
 				class Item1
 				{
@@ -2291,7 +2248,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+					init="nul = [this,""triggerPalace"",""repeated"",4,900] execVM ""murk_spawn.sqf"";";
 				};
 				class Item1
 				{
@@ -2373,7 +2330,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2393,7 +2349,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2413,7 +2368,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2433,7 +2387,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2453,7 +2406,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2473,7 +2425,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2493,7 +2444,6 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2522,7 +2472,7 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					position[]={4276.0264,17,4127.0669};
@@ -2534,6 +2484,16 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					init="nul = [this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+				class Item1
+				{
+					position[]={4276.375,17,4128.3359};
+					azimut=245;
+					id=254;
+					side="EAST";
+					vehicle="ZU23_TK_EP1";
+					rank="SERGEANT";
+					skill=0.46666664;
 				};
 			};
 		};
@@ -2557,26 +2517,335 @@ class Mission
 		};
 		class Item42
 		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2063.0571,0.94727623,-1527.7266};
+					special="NONE";
+					id=244;
+					side="LOGIC";
+					vehicle="LocationLogic";
+					leader=1;
+					skill=0.60000002;
+					text="server";
+				};
+			};
+		};
+		class Item43
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4265.9834,17,4148.5337};
+					id=251;
+					side="EAST";
+					vehicle="TK_Soldier_SniperH_EP1";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+					init="nul=[this,""triggerPalace"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item44
+		{
 			side="WEST";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={4513.6187,18.65143,3942.6602};
-					azimut=315;
-					id=244;
+					position[]={4796.9316,39.104431,4648.1416};
+					azimut=150;
+					special="NONE";
+					id=253;
 					side="WEST";
-					vehicle="HMMWV_MK19";
+					vehicle="GER_Soldier_TL_EP1";
+					player="PLAYER COMMANDER";
 					leader=1;
-					skill=0.95958561;
+					rank="SERGEANT";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item45
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={3960.6262,10.949785,2761.957};
+					azimut=210;
+					special="NONE";
+					id=157;
+					side="EAST";
+					vehicle="AGS_TK_EP1";
+					leader=1;
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={3991.1843,10.85168,2768.084};
+					azimut=50;
+					special="NONE";
+					id=160;
+					side="EAST";
+					vehicle="Igla_AA_pod_TK_EP1";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={3957.4521,11.083014,2773.6934};
+					azimut=270;
+					special="NONE";
+					id=158;
+					side="EAST";
+					vehicle="KORD_high_TK_EP1";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={3963.2837,11.154657,2779.5244};
+					id=156;
+					side="EAST";
+					vehicle="Igla_AA_pod_TK_EP1";
+					skill=0.60000002;
+				};
+				class Item4
+				{
+					position[]={3988.5273,11.038774,2778.0488};
+					azimut=5;
+					special="NONE";
+					id=161;
+					side="EAST";
+					vehicle="ZU23_TK_EP1";
+					skill=0.60000002;
+				};
+				class Item5
+				{
+					position[]={3990.0032,10.933846,2772.9551};
+					azimut=50;
+					special="NONE";
+					id=159;
+					side="EAST";
+					vehicle="KORD_high_TK_EP1";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item46
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={4073.0496,39.935261,5841.1577};
+					azimut=235;
+					special="NONE";
+					id=256;
+					side="EAST";
+					vehicle="MAZ_543_SCUD_TK_EP1";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.59999996;
+					text="ScudB";
+					init="nul=[this,""Patrol_Everything"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",1] execVM ""ups.sqf"";";
+				};
+				class Item1
+				{
+					position[]={4115.6274,40.486694,5807.7241};
+					id=261;
+					side="EAST";
+					vehicle="T72_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item2
+				{
+					position[]={4120.6274,40.456207,5807.7241};
+					id=262;
+					side="EAST";
+					vehicle="T72_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item3
+				{
+					position[]={4073.8787,40.871597,5796.9482};
+					azimut=235;
+					special="NONE";
+					id=267;
+					side="EAST";
+					vehicle="ZSU_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+			};
+		};
+		class Item47
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={4057.8523,38.69799,5880.1177};
+					azimut=235;
+					special="NONE";
+					id=257;
+					side="EAST";
+					vehicle="MAZ_543_SCUD_TK_EP1";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.59999996;
+					text="ScudC";
+					init="nul=[this,""Patrol_Everything"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",1] execVM ""ups.sqf"";";
+				};
+				class Item1
+				{
+					position[]={4060.8918,37.211811,5917.9717};
+					azimut=235;
+					special="NONE";
+					id=263;
+					side="EAST";
+					vehicle="Ural_ZU23_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item2
+				{
+					position[]={4066.4182,38.230457,5898.9067};
+					azimut=235;
+					special="NONE";
+					id=264;
+					side="EAST";
+					vehicle="LandRover_SPG9_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item3
+				{
+					position[]={4079.405,39.345844,5870.1704};
+					azimut=235;
+					special="NONE";
+					id=265;
+					side="EAST";
+					vehicle="ZSU_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+			};
+		};
+		class Item48
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={4018.6165,37.172138,5899.1831};
+					azimut=235;
+					special="NONE";
+					id=255;
+					side="EAST";
+					vehicle="MAZ_543_SCUD_TK_EP1";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.59999996;
+					text="ScudA";
+					init="nul=[this,""Patrol_Everything"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",1] execVM ""ups.sqf"";";
+				};
+				class Item1
+				{
+					position[]={4004.801,36.501854,5910.2349};
+					azimut=235;
+					special="NONE";
+					id=268;
+					side="EAST";
+					vehicle="ZSU_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item2
+				{
+					position[]={3985.1829,36.814976,5895.3145};
+					azimut=235;
+					special="NONE";
+					id=269;
+					side="EAST";
+					vehicle="UAZ_AGS30_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+			};
+		};
+		class Item49
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={4102.3384,38.287529,5899.1831};
+					azimut=235;
+					special="NONE";
+					id=258;
+					side="EAST";
+					vehicle="MAZ_543_SCUD_TK_EP1";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.59999996;
+					text="ScudD";
+					init="nul=[this,""Patrol_Everything"",""random"",""nomove"",""delete:10800"",""trigger"",""min:"",1,""max:"",1] execVM ""ups.sqf"";";
+				};
+				class Item1
+				{
+					position[]={4113.1411,39.367645,5857.46};
+					id=259;
+					side="EAST";
+					vehicle="T72_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item2
+				{
+					position[]={4118.1411,39.335499,5857.46};
+					id=260;
+					side="EAST";
+					vehicle="T72_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item3
+				{
+					position[]={4157.3237,38.428192,5880.3936};
+					azimut=235;
+					special="NONE";
+					id=266;
+					side="EAST";
+					vehicle="ZSU_TK_EP1";
+					rank="LIEUTENANT";
+					skill=0.59999996;
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=19;
+		items=26;
 		class Item0
 		{
 			position[]={3153.5728,6.6371121,-12.450195};
@@ -2586,7 +2855,7 @@ class Mission
 			vehicle="FlagCarrierIONblack_PMC";
 			skill=0.60000002;
 			text="base_flag";
-			init="this addaction [""Teleport to Mobile HQ"", ""teleport\teleport_mhq.sqf""]; this addaction [""Teleport to Blackhawk"", ""teleport\teleport_blackhawk.sqf""]; this allowDamage false;";
+			init="this addaction [""Teleport to Mobile HQ"", ""teleport\teleport_mhq.sqf""]; this addaction [""Teleport to Merlin"", ""teleport\teleport_merlin.sqf""]; this addaction [""Teleport to KA60"", ""teleport\teleport_blackhawk.sqf""]; this allowDamage false;";
 		};
 		class Item1
 		{
@@ -2783,10 +3052,83 @@ class Mission
 			skill=0.59999996;
 			text="missionaziz3";
 		};
+		class Item19
+		{
+			position[]={3175.7107,6.7366567,-8.4072266};
+			special="NONE";
+			id=245;
+			side="EMPTY";
+			vehicle="ArmoredSUV_PMC";
+			skill=0.60000002;
+			init="handle = [this, 900, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item20
+		{
+			position[]={3164.2117,6.642477,-8.734375};
+			special="NONE";
+			id=246;
+			side="EMPTY";
+			vehicle="BAF_Jackal2_GMG_D";
+			skill=0.60000002;
+			init="handle = [this, 900, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item21
+		{
+			position[]={3159.8928,6.6807981,-9.0224609};
+			special="NONE";
+			id=247;
+			side="EMPTY";
+			vehicle="BAF_Jackal2_L2A1_D";
+			skill=0.60000002;
+			init="handle = [this, 900, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item22
+		{
+			position[]={3147.3218,6.796236,-26.516602};
+			special="NONE";
+			id=248;
+			side="EMPTY";
+			vehicle="AH6J_EP1";
+			skill=0.60000002;
+			init="handle = [this, 900, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item23
+		{
+			position[]={3190.9136,7.1042914,-18.949219};
+			special="NONE";
+			id=249;
+			side="EMPTY";
+			vehicle="BAF_Merlin_HC3_D";
+			skill=0.60000002;
+			text="merlin";
+			init="handle = [this, 900, 0, 0, TRUE] execVM ""vehicle.sqf"";";
+		};
+		class Item24
+		{
+			position[]={3152.1426,6.6532803,-16.083008};
+			special="NONE";
+			id=250;
+			side="EMPTY";
+			vehicle="USVehicleBox_EP1";
+			skill=0.60000002;
+			text="base_ammo";
+			init="this allowDamage false; null = this execVM ""ammo\ammo.sqf""; this addAction [""Save Loadout"",""scripts\saveloadout.sqf"",nil,1,true,true,"""",""player distance base_ammo<5.5""];";
+		};
+		class Item25
+		{
+			position[]={3914.8379,16.344765,4020.8779};
+			special="NONE";
+			id=252;
+			side="EMPTY";
+			vehicle="USVehicleBox_EP1";
+			skill=0.60000002;
+			text="base_ammo_1";
+			init="this allowDamage false; null = this execVM ""ammo\ammo.sqf""; this addAction [""Save Loadout"",""scripts\saveloadout.sqf"",nil,1,true,true,"""",""player distance base_ammo<5.5""];";
+		};
 	};
 	class Markers
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			position[]={4025.2788,16.28989,4223.96};
@@ -2841,7 +3183,7 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={3758.5095,26.846703,4338.8779};
+			position[]={3756.7612,26.790773,4344.1235};
 			name="obj_2";
 			type="mil_warning";
 			colorName="ColorRed";
@@ -2853,10 +3195,17 @@ class Mission
 			type="mil_warning";
 			colorName="ColorRed";
 		};
+		class Item9
+		{
+			position[]={3154.499,6.6645093,-16.365234};
+			name="respawn_xxx";
+			type="mil_dot";
+			colorName="ColorGreen";
+		};
 	};
 	class Sensors
 	{
-		items=7;
+		items=11;
 		class Item0
 		{
 			position[]={3977.5251,10.892374,2764.7739};
@@ -2880,7 +3229,7 @@ class Mission
 			interruptable=1;
 			type="END1";
 			age="UNKNOWN";
-			expCond="obj_1 && obj_2 && obj_3;";
+			expCond="obj_1 && obj_2 && obj_3 && obj_4 && obj_5 && obj_6 && obj_7;";
 			expActiv="ForceEnd;";
 			class Effects
 			{
@@ -2903,8 +3252,8 @@ class Mission
 		class Item3
 		{
 			position[]={3961.4663,11.027966,2767.1978};
-			a=300;
-			b=300;
+			a=100;
+			b=100;
 			activationBy="WEST";
 			interruptable=1;
 			age="UNKNOWN";
@@ -2915,19 +3264,6 @@ class Mission
 			};
 		};
 		class Item4
-		{
-			position[]={3757.1248,26.85655,4339.8213};
-			a=300;
-			b=300;
-			activationBy="WEST";
-			interruptable=1;
-			age="UNKNOWN";
-			expActiv="catch_trigger = ""triggerAZIZ""; publicVariable ""catch_trigger"";";
-			class Effects
-			{
-			};
-		};
-		class Item5
 		{
 			position[]={4242.0151,17.165586,4158.4883};
 			rectangular=1;
@@ -2941,15 +3277,86 @@ class Mission
 			{
 			};
 		};
-		class Item6
+		class Item5
 		{
 			position[]={4240.2227,17.167902,4152.3789};
-			a=300;
-			b=300;
+			a=200;
+			b=200;
 			activationBy="WEST";
 			interruptable=1;
 			age="UNKNOWN";
 			expActiv="catch_trigger = ""triggerPalace""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			position[]={5039.9438,9.6135616,3891.3271};
+			a=0;
+			b=0;
+			activationBy="ALPHA";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Camera Mode";
+			expActiv="player exec ""camera.sqs""";
+			class Effects
+			{
+			};
+		};
+		class Item7
+		{
+			position[]={4025.4641,41.555962,5766.0981};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			name="Scud_Alpha";
+			expCond="!alive ScudA";
+			expActiv="hint ""Scud launcher Alpha has been destroyed!""; ""4"" objStatus ""DONE""; tskobj_4 setTaskState ""SUCCEEDED""; player setCurrentTask tskobj_5; obj_4 = true; publicVariable ""obj_4"";";
+			class Effects
+			{
+			};
+		};
+		class Item8
+		{
+			position[]={4052.2,41.39006,5763.2627};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			name="Scud_Beta";
+			expCond="!alive ScudB";
+			expActiv="hint ""Scud launcher Beta has been destroyed!""; ""5"" objStatus ""DONE""; tskobj_5 setTaskState ""SUCCEEDED""; player setCurrentTask tskobj_6; obj_5 = true; publicVariable ""obj_5"";";
+			class Effects
+			{
+			};
+		};
+		class Item9
+		{
+			position[]={4041.2625,41.458126,5765.2876};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			name="Scud_Charlie";
+			expCond="!alive ScudC";
+			expActiv="hint ""Scud launcher Charle has been destroyed!""; ""6"" objStatus ""DONE""; tskobj_6 setTaskState ""SUCCEEDED""; player setCurrentTask tskobj_7; obj_6 = true; publicVariable ""obj_6"";";
+			class Effects
+			{
+			};
+		};
+		class Item10
+		{
+			position[]={4066.3777,41.261673,5766.0981};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			name="Scud_Delta";
+			expCond="!alive ScudD";
+			expActiv="hint ""Scud launcher Delta has been destroyed!""; ""7"" objStatus ""DONE""; tskobj_7 setTaskState ""SUCCEEDED""; player setCurrentTask tskobj_8; obj_7 = true; publicVariable ""obj_7"";";
 			class Effects
 			{
 			};

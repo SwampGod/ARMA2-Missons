@@ -28,11 +28,28 @@ if (isServer) then
     PublicVariable "azizobjdest";
     nul = [azizObjects,azizobjdest,25] execvm "mover.sqf";
 };
-"obj_2" setmarkerpos (getpos azizobjdest);  
-"obj_1" setmarkerpos (getpos objdest);  
+"obj_2" setmarkerpos (getpos azizobjdest);
+"obj_2_patrol" setmarkerpos (getpos azizobjdest);   
+"obj_1" setmarkerpos (getpos objdest);
+"obj_1_patrol" setmarkerpos (getpos objdest);
+
+
+// Execute the mission settings script
+[] execVM "mission_settings\init.sqf";
+// Force your desired view distance and grass level at the start of the mission
+// players can still change it client-side through the script
+setViewDistance 2000;
+setTerrainGrid 50;
+
+// AHP VARIABLES
+AHP_Debug = TRUE;
+// INITIALIZE AHP 
+_nul = [] execVM "ahp\ahp_init.sqf";
+
+
+execVM "revive\revive_init.sqf";
 
 execVM "briefing.sqf";
-
 
 
 // START - MURK SPAWN STUFF //

@@ -9,18 +9,20 @@ clearWeaponCargo _this;
 _this addBackpackCargo ["BAF_AssaultPack_ATAmmo",5];
 
 // Rifles
-_this addWeaponCargo ["AK_47_M", 5];
-_this addWeaponCargo ["AK_47_S", 5];
-_this addWeaponCargo ["AKS_74_pso", 5];
-_this addWeaponCargo ["AKS_74_U", 5];
+
+//_this addWeaponCargo ["AK_47_M", 5];
+//_this addWeaponCargo ["AK_47_S", 5];
+//_this addWeaponCargo ["AKS_74_pso", 5];
+//_this addWeaponCargo ["AKS_74_U", 5];
+
 _this addWeaponCargo ["M16A2", 5];
 _this addWeaponCargo ["M16A2GL", 5];
 _this addWeaponCargo ["M4A1", 5];
 _this addWeaponCargo ["M79_EP1", 5];
-_this addWeaponCargo ["Mk13_EP1", 5];
-_this addWeaponCargo ["Sa58V_RCO_EP1", 5];
-_this addWeaponCargo ["FN_FAL_ANPVS4", 5];
-_this addWeaponCargo ["M110_NVG_EP1", 5];
+//_this addWeaponCargo ["Mk13_EP1", 5];
+//_this addWeaponCargo ["Sa58V_RCO_EP1", 5];
+//_this addWeaponCargo ["FN_FAL_ANPVS4", 5];
+//_this addWeaponCargo ["M110_NVG_EP1", 5];
 _this addWeaponCargo ["M14_EP1", 5];
 _this addWeaponCargo ["M4A3_RCO_GL_EP1", 5];
 _this addWeaponCargo ["M4A3_CCO_EP1", 5];

@@ -33,8 +33,24 @@ waitUntil { !isNil {player} };
 waitUntil { player == player };
  
 player createDiaryRecord ["Diary", ["*The Note Title*", "*The Note Message*"]];
- 
-tskobj_3 = player createSimpleTask["The the Palace"];
+
+tskobj_7 = player createSimpleTask["Hunt Down Scud Launcher Delta"];
+tskobj_7 setSimpleTaskDescription ["Hunt Down Scud Launcher Delta.", "Kill Delta", "Scud Delta"];
+tskobj_7 setSimpleTaskDestination (getMarkerPos "obj_7");
+
+tskobj_6 = player createSimpleTask["Hunt Down Scud Launcher Charlie"];
+tskobj_6 setSimpleTaskDescription ["Hunt Down Scud Launcher Charlie.", "Kill Charlie", "Scud Charlie"];
+tskobj_6 setSimpleTaskDestination (getMarkerPos "obj_6");
+
+tskobj_5 = player createSimpleTask["Hunt Down Scud Launcher Beta"];
+tskobj_5 setSimpleTaskDescription ["Hunt Down Scud Launcher Beta.", "Kill Beta", "Scud Beta"];
+tskobj_5 setSimpleTaskDestination (getMarkerPos "obj_5");
+
+tskobj_4 = player createSimpleTask["Hunt Down Scud Launcher Alpha"];
+tskobj_4 setSimpleTaskDescription ["Hunt Down Scud Launcher Alpha.", "Kill Alpha", "Scud Alpha"];
+tskobj_4 setSimpleTaskDestination (getMarkerPos "obj_4");
+
+tskobj_3 = player createSimpleTask["The Palace"];
 tskobj_3 setSimpleTaskDescription ["Clear all enemy from the palace.", "Clear the Palace", "Government Palace"];
 tskobj_3 setSimpleTaskDestination (getMarkerPos "obj_3");
  

@@ -36,7 +36,7 @@ _this addMagazineCargo ["30Rnd_545x39_AK", 50];
 _this addMagazineCargo ["20Rnd_762x51_FNFAL", 50]; 
 
 // Sniper Rifles
-_this addWeaponCargo ["BAF_AS50_scoped", 5];
+//_this addWeaponCargo ["BAF_AS50_scoped", 5];
 
 // BAF ammo
 _this addMagazineCargo ["10Rnd_762x54_SVD", 50];
