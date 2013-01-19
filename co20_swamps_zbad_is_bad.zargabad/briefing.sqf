@@ -32,7 +32,22 @@
 waitUntil { !isNil {player} };
 waitUntil { player == player };
  
-player createDiaryRecord ["Diary", ["*The Note Title*", "*The Note Message*"]];
+//player createDiaryRecord ["Diary", ["*The Note Title*", "*The Note Message*"]];
+tskobj_11 = player createSimpleTask["Destroy Oil Well"];
+tskobj_11 setSimpleTaskDescription ["Destroy the oil well.", "Destroy Oil Well", "Location of Oil wells"];
+tskobj_11 setSimpleTaskDestination (getMarkerPos "obj_11_marker");
+
+tskobj_10 = player createSimpleTask["Destroy Oil Well"];
+tskobj_10 setSimpleTaskDescription ["Destroy the oil well.", "Destroy Oil Well", "Location of Oil wells"];
+tskobj_10 setSimpleTaskDestination (getMarkerPos "obj_10_marker");
+ 
+tskobj_9 = player createSimpleTask["Destroy Oil Well"];
+tskobj_9 setSimpleTaskDescription ["Destroy the oil well.", "Destroy Oil Well", "Location of Oil wells"];
+tskobj_9 setSimpleTaskDestination (getMarkerPos "obj_9_marker");
+ 
+tskobj_8 = player createSimpleTask["Destroy Oil Well"];
+tskobj_8 setSimpleTaskDescription ["Destroy the oil well.", "Destroy Oil Well", "Location of Oil wells"];
+tskobj_8 setSimpleTaskDestination (getMarkerPos "obj_8_marker");
 
 tskobj_7 = player createSimpleTask["Hunt Down Scud Launcher Delta"];
 tskobj_7 setSimpleTaskDescription ["Hunt Down Scud Launcher Delta.", "Kill Delta", "Scud Delta"];

@@ -46,8 +46,8 @@ AHP_Debug = TRUE;
 // INITIALIZE AHP 
 _nul = [] execVM "ahp\ahp_init.sqf";
 
-
-execVM "revive\revive_init.sqf";
+/* Initialises the revive script */
+server execVM "revive_init.sqf";
 
 execVM "briefing.sqf";
 
