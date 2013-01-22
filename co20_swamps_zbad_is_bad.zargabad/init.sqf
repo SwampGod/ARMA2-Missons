@@ -51,6 +51,7 @@ server execVM "revive_init.sqf";
 
 execVM "briefing.sqf";
 
+player setVariable ["BIS_noCoreConversations", true];
 
 // START - MURK SPAWN STUFF //
 catch_trigger = "none";
@@ -62,4 +63,15 @@ Mission_capture = [];
 // END - MURK SPAWN STUFF //
 
 
-
+[] spawn {
+  while {not isnull ScudA} do { "SKUDA" setmarkerpos getpos ScudA; sleep 5; };
+};
+[] spawn {
+  while {not isnull ScudB} do { "SKUDB" setmarkerpos getpos ScudB; sleep 5; };
+};
+[] spawn {
+  while {not isnull ScudC} do { "SKUDC" setmarkerpos getpos ScudC; sleep 5; };
+};
+[] spawn {
+  while {not isnull ScudD} do { "SKUDD" setmarkerpos getpos ScudD; sleep 5; };
+};

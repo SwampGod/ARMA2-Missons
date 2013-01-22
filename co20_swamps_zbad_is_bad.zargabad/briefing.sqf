@@ -33,6 +33,15 @@ waitUntil { !isNil {player} };
 waitUntil { player == player };
  
 //player createDiaryRecord ["Diary", ["*The Note Title*", "*The Note Message*"]];
+
+tskobj_13 = player createSimpleTask ["Find evidence."];
+tskobj_13 setSimpleTaskDescription ["Our agent left the evidence in a blue folder near his bed. Recover the documents.", "Find evidence.", "Search for Evidence"];
+tskobj_13 setSimpleTaskDestination (getMarkerPos "obj_13_marker");
+
+tskobj_12 = player createSimpleTask["Destroy Radio Tower"];
+tskobj_12 setSimpleTaskDescription ["Cut the enemys communications ability. Target the airfield radio tower.", "Destroy Radio Tower", "Location of Radio Tower"];
+tskobj_12 setSimpleTaskDestination (getMarkerPos "obj_12_marker");
+
 tskobj_11 = player createSimpleTask["Destroy Oil Well"];
 tskobj_11 setSimpleTaskDescription ["Destroy the oil well.", "Destroy Oil Well", "Location of Oil wells"];
 tskobj_11 setSimpleTaskDestination (getMarkerPos "obj_11_marker");
@@ -51,19 +60,19 @@ tskobj_8 setSimpleTaskDestination (getMarkerPos "obj_8_marker");
 
 tskobj_7 = player createSimpleTask["Hunt Down Scud Launcher Delta"];
 tskobj_7 setSimpleTaskDescription ["Hunt Down Scud Launcher Delta.", "Kill Delta", "Scud Delta"];
-tskobj_7 setSimpleTaskDestination (getMarkerPos "obj_7");
+//tskobj_7 setSimpleTaskDestination (getMarkerPos "SKUDD");
 
 tskobj_6 = player createSimpleTask["Hunt Down Scud Launcher Charlie"];
 tskobj_6 setSimpleTaskDescription ["Hunt Down Scud Launcher Charlie.", "Kill Charlie", "Scud Charlie"];
-tskobj_6 setSimpleTaskDestination (getMarkerPos "obj_6");
+//tskobj_6 setSimpleTaskDestination (getMarkerPos "SKUDC");
 
 tskobj_5 = player createSimpleTask["Hunt Down Scud Launcher Beta"];
 tskobj_5 setSimpleTaskDescription ["Hunt Down Scud Launcher Beta.", "Kill Beta", "Scud Beta"];
-tskobj_5 setSimpleTaskDestination (getMarkerPos "obj_5");
+//tskobj_5 setSimpleTaskDestination (getMarkerPos "SKUDB");
 
 tskobj_4 = player createSimpleTask["Hunt Down Scud Launcher Alpha"];
 tskobj_4 setSimpleTaskDescription ["Hunt Down Scud Launcher Alpha.", "Kill Alpha", "Scud Alpha"];
-tskobj_4 setSimpleTaskDestination (getMarkerPos "obj_4");
+//tskobj_4 setSimpleTaskDestination (getMarkerPos "SKUDA");
 
 tskobj_3 = player createSimpleTask["The Palace"];
 tskobj_3 setSimpleTaskDescription ["Clear all enemy from the palace.", "Clear the Palace", "Government Palace"];

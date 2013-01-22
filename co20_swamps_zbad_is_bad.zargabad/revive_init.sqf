@@ -62,7 +62,7 @@ NORRN_player_units = playableUnits;
 _max_respawns 					= (paramsArray select 1);			//array no.38 - Number of lives per unit
 _JIP_respawns					= [2000,0];			//array no.63 - 0 - off or the number of lives players receive when they join in progress , JIP time after the mission starts 
 _revive_timer 					= 1;	 			//array no.7  - Whether you want to limit the amount of timer a player has while unconscious
-_revive_time_limit 				= 200;				//array no.27 - Amount of time a player remains unconscious before respawning or dying
+_revive_time_limit 				= 30;				//array no.27 - Amount of time a player remains unconscious before respawning or dying
 _revive_damage 					= 0;				//array no.37 - Unit's level of damage following revive
 _unconscious_markers 			= 1;				//array no. 4 - Whether a marker appears on the game map at the location of the unconscious unit
 _caseVAC						= [1, ["MASH_EP1","M113Ambul_TK_EP1"]];	//array no.64 - Allows units to be taken to a hospital etc to be revived
@@ -140,7 +140,7 @@ _visible_timer 					= 1;				//array no.41 - view a cound-down timer while uncons
 _unconscious_music 				= 0;				//array no.46 - music must appear as unc_theme in music.hpp
 // ==================================================================
 // RESPAWN DIALOG OPTIONS
-_nearest_teammate_dialog 		= 10;				//array no.3  - whether a respawn dialog appears when there are no players within this distance  
+_nearest_teammate_dialog 		= 1;				//array no.3  - whether a respawn dialog appears when there are no players within this distance  
 _all_dead_dialog 				= 1;				//array no.1  - whether a respawn dialog appears when all players are unconscious (_all_dead_player = 1)  
 _respawn_button_timer 			= 120;				//array no.25 - Time until respawn button appears (0 = approx. 12 seconds), NB: Set to a high number like 100000 seconds if you do not want
 _distance_to_friend 			= 1;				//array no.26 - If the closest friendly unit is further than this distance away trigger respawn dialog 

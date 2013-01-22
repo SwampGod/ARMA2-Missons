@@ -180,10 +180,12 @@ _this addWeaponCargo ["ItemGPS", 5];
 _this addWeaponCargo ["ItemMAP", 5];
 _this addWeaponCargo ["ItemCompass", 5];
 _this addWeaponCargo ["ItemWatch", 5];
+_this addWeaponCargo ["LaserDesignator", 20];
+_this addMagazineCargo ["LaserBatteries", 20];
 
 // Grenades & Satchels
 _this addMagazineCargo ["HandGrenade_West", 50];
-_this addMagazineCargo ["PipeBomb", 5];
+_this addMagazineCargo ["PipeBomb", 50];
 _this addMagazineCargo ["SmokeShell",50];
 _this addMagazineCargo ["Mine", 50];
 
