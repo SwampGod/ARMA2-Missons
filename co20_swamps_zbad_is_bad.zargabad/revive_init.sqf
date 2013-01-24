@@ -107,7 +107,7 @@ _medic_3						= "";				//array no.78 - NOT IMPLEMENTED
 _medic_4						= "";				//array no.79 - NOT IMPLEMENTED	
 //========================================================
 // MEDPACK AND BLEEDING OPTIONS
-_medpacks						= 1;				//array no.80 - Whether you want to give the units a limited number of revive kits 0/1 - no/yes
+_medpacks						= 0;				//array no.80 - Whether you want to give the units a limited number of revive kits 0/1 - no/yes
 _stabilisation					= 0;				//array no.81 - NOT IMPLEMENTED
 _bleeding 						= 0;				//array no.82 - Make units bleed and require bandages
 _medic_medpacks 				= 30;				//array no.83 - No of medpacks for units specified in the _medic variables - they are required for reviving units		
@@ -143,7 +143,7 @@ _unconscious_music 				= 0;				//array no.46 - music must appear as unc_theme in
 _nearest_teammate_dialog 		= 1;				//array no.3  - whether a respawn dialog appears when there are no players within this distance  
 _all_dead_dialog 				= 1;				//array no.1  - whether a respawn dialog appears when all players are unconscious (_all_dead_player = 1)  
 _respawn_button_timer 			= 120;				//array no.25 - Time until respawn button appears (0 = approx. 12 seconds), NB: Set to a high number like 100000 seconds if you do not want
-_distance_to_friend 			= 1;				//array no.26 - If the closest friendly unit is further than this distance away trigger respawn dialog 
+_distance_to_friend 			= 20;				//array no.26 - If the closest friendly unit is further than this distance away trigger respawn dialog 
 _all_dead_player 				= 1;				//array no.56
 _all_dead_distance 				= 2;			//array no.57 - whether a respawn dialog appears when all players within a specified distance are unconscious (_all_dead_player = 1)
 // ==================================================================

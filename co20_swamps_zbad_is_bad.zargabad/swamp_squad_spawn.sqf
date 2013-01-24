@@ -76,7 +76,7 @@ switch (_type) do
 		_dudes = [
 
 			"LandRover_MG_TK_INS_EP1",
-			"GRAD_TK_EP1"
+			"LandRover_MG_TK_INS_EP1"
 		];
 	};
 

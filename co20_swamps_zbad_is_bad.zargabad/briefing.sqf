@@ -34,7 +34,11 @@ waitUntil { player == player };
  
 //player createDiaryRecord ["Diary", ["*The Note Title*", "*The Note Message*"]];
 
-tskobj_13 = player createSimpleTask ["Find evidence."];
+tskobj_14 = player createSimpleTask["Recapture Forward Operations Base"];
+tskobj_14 setSimpleTaskDescription ["Destroy all enemy forces and recapture our Forward Operations Base.", "Capture FOB", "FOB"];
+tskobj_14 setSimpleTaskDestination (getMarkerPos "obj_FOB");
+
+tskobj_13 = player createSimpleTask ["Find evidence"];
 tskobj_13 setSimpleTaskDescription ["Our agent left the evidence in a blue folder near his bed. Recover the documents.", "Find evidence.", "Search for Evidence"];
 tskobj_13 setSimpleTaskDestination (getMarkerPos "obj_13_marker");
 

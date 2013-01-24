@@ -27,12 +27,21 @@ if (isServer) then
     azizobjdest = (_azizobjplaces) select _random;
     PublicVariable "azizobjdest";
     nul = [azizObjects,azizobjdest,25] execvm "mover.sqf";
+
+    _objplaces2 = [missionFOB1, missionFOB2, missionFOB3, missionFOB4, missionFOB5, missionFOB6];
+	_random2 = floor(random count _objplaces2);
+    objdest2 = (_objplaces2) select _random2;
+    PublicVariable "objdest2";
+    nul = [fobobjects,objdest2,75] execvm "mover.sqf";
+	
+
 };
+"obj_FOB" setmarkerpos (getpos objdest2);
+"FOB_DUDES" setmarkerpos (getpos objdest2);
 "obj_2" setmarkerpos (getpos azizobjdest);
 "obj_2_patrol" setmarkerpos (getpos azizobjdest);   
 "obj_1" setmarkerpos (getpos objdest);
 "obj_1_patrol" setmarkerpos (getpos objdest);
-
 
 // Execute the mission settings script
 [] execVM "mission_settings\init.sqf";
@@ -59,7 +68,8 @@ Mission_capture = [];
 	sleep 10;
 	copyToClipboard str(Mission_capture);
 //	"PROCESSING DONE..." hintC "MISSION CAPTURING IS DONE!!!";
-	"TESTING!!!!" hintC "This mission is under beta testing.";
+
+	"TESTING!!!!" hintC "Press 'J' to get objectives!!";
 // END - MURK SPAWN STUFF //
 
 
@@ -75,3 +85,5 @@ Mission_capture = [];
 [] spawn {
   while {not isnull ScudD} do { "SKUDD" setmarkerpos getpos ScudD; sleep 5; };
 };
+
+
