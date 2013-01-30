@@ -1,5 +1,18 @@
 waitUntil {(isDedicated) || !(isNull player)};
 
+player setVariable ["BIS_noCoreConversations", true];
+
+// START - MURK SPAWN STUFF //
+catch_trigger = "none";
+Mission_capture = [];
+	sleep 10;
+	copyToClipboard str(Mission_capture);
+//	"PROCESSING DONE..." hintC "MISSION CAPTURING IS DONE!!!";
+
+	"TESTING!!!!" hintC "Press 'J' to get objectives!! You can also teleport using the flagpole at spawn.";
+// END - MURK SPAWN STUFF //
+
+
 if (isServer) then
 {
 	camoDeployed=false;
@@ -8,15 +21,15 @@ if (isServer) then
 	publicVariable "camoDeployedBH";
 //	rallyDeployed=false;
 //	publicVariable "rallyDeployed";
-	camoDeployedR=false;
-	publicVariable "camoDeployedR";
+//	camoDeployedR=false;
+//	publicVariable "camoDeployedR";
 //	rallyMoved=false;
 //	publicVariable "rallyMoved";
 };
 
 if (isServer) then
 {
-    _objplaces = [missionammo1, missionammo2, missionammo3];
+    _objplaces = [missionammo1, missionammo2, missionammo3, missionammo4];
 	_random = floor(random count _objplaces);
     objdest = (_objplaces) select _random;
     PublicVariable "objdest";
@@ -34,8 +47,14 @@ if (isServer) then
     PublicVariable "objdest2";
     nul = [fobobjects,objdest2,75] execvm "mover.sqf";
 	
-
+    _objplaces15 = [missionROADBLOCK1, missionROADBLOCK2, missionROADBLOCK3, missionROADBLOCK4, missionROADBLOCK5];
+	_random15 = floor(random count _objplaces15);
+    objdest15 = (_objplaces15) select _random15;
+    PublicVariable "objdest15";
+    nul = [ROADBLOCKobjects,objdest15,75] execvm "mover.sqf";
 };
+"obj_ROADBLOCK" setmarkerpos (getpos objdest15);
+"FOB" setmarkerpos (getpos objdest2);
 "obj_FOB" setmarkerpos (getpos objdest2);
 "FOB_DUDES" setmarkerpos (getpos objdest2);
 "obj_2" setmarkerpos (getpos azizobjdest);
@@ -51,26 +70,18 @@ setViewDistance 2000;
 setTerrainGrid 50;
 
 // AHP VARIABLES
-AHP_Debug = TRUE;
+AHP_Debug = False;
 // INITIALIZE AHP 
 _nul = [] execVM "ahp\ahp_init.sqf";
 
 /* Initialises the revive script */
 server execVM "revive_init.sqf";
 
+
+
 execVM "briefing.sqf";
 
-player setVariable ["BIS_noCoreConversations", true];
 
-// START - MURK SPAWN STUFF //
-catch_trigger = "none";
-Mission_capture = [];
-	sleep 10;
-	copyToClipboard str(Mission_capture);
-//	"PROCESSING DONE..." hintC "MISSION CAPTURING IS DONE!!!";
-
-	"TESTING!!!!" hintC "Press 'J' to get objectives!!";
-// END - MURK SPAWN STUFF //
 
 
 [] spawn {
@@ -86,4 +97,19 @@ Mission_capture = [];
   while {not isnull ScudD} do { "SKUDD" setmarkerpos getpos ScudD; sleep 5; };
 };
 
-
+// JIP Objective Syncing
+if (isNil "obj_1_var") then {obj_1_var = false};
+if (isNil "obj_2_var") then {obj_2_var = false};
+if (isNil "obj_3_var") then {obj_3_var = false};
+if (isNil "obj_4_var") then {obj_4_var = false};
+if (isNil "obj_5_var") then {obj_5_var = false};
+if (isNil "obj_6_var") then {obj_6_var = false};
+if (isNil "obj_7_var") then {obj_7_var = false};
+if (isNil "obj_8_var") then {obj_8_var = false};
+if (isNil "obj_9_var") then {obj_9_var = false};
+if (isNil "obj_10_var") then {obj_10_var = false};
+if (isNil "obj_11_var") then {obj_11_var = false};
+if (isNil "obj_12_var") then {obj_12_var = false};
+if (isNil "obj_13_var") then {obj_13_var = false};
+if (isNil "obj_14_var") then {obj_14_var = false};
+if (isNil "obj_15_var") then {obj_15_var = false};

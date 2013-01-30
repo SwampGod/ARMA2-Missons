@@ -42,7 +42,7 @@ waitUntil {T_INIT};
 // GENERAL REVIVE OPTIONS  (Off = 0, On = 1)
 _mission_end_function 			= 0;				//array no.0  - mission ends when all players are unconscious
 _call_out_function 				= 0;				//array no.6  - whether a unit calls out while unconscious
-_water_dialog 					= 0;				//array no.45 - whether a dialog appears when a unit dies in water so that it can auto wash ashore 
+_water_dialog 					= 1;				//array no.45 - whether a dialog appears when a unit dies in water so that it can auto wash ashore 
 _unconscious_drag 				= 1;				//array no.39 - whether a unit can drag the bodies of unconscious players 
 _load_wounded					= 1;				//array no.61 - allows you to load unconscious units on vehicles
 _altUnc_animation 				= 0;				//array no.54 - use alternate revive animation
@@ -72,12 +72,12 @@ _dualTimer						= 0;				//array no.67 - NOT IMPLEMENTED - normal units can only 
 _deadSpectator_cam 				= 0;				//array no.92 - leave as 0 - whether a unit can spectate other friendly units when it has run out of lives
 // ==================================================================
 // RESPAWN OPTIONS
-_no_respawn_points 				= 1;				//array no.12 - no of respawn points (Max number 4)  
+_no_respawn_points 				= 2;				//array no.12 - no of respawn points (Max number 4)  
 _Base_1 						= "BASE";			//array no.13 - spawn position names  
-_Base_2 						= "";		//array no.14
+_Base_2 						= "FOB";		//array no.14
 _Base_3 						= "";		//array no.15
 _Base_4 						= "";		//array no.16 
-_Base_free_respawn 				= [1,1,1,1];		//array no.36 - select whether to allow respawning at spawn points even if enemy troops are present (options OFF = 0, ON = 1) 
+_Base_free_respawn 				= [1,0,0,0];		//array no.36 - select whether to allow respawning at spawn points even if enemy troops are present (options OFF = 0, ON = 1) 
 _respawn_at_base_addWeapons 	= 0;				//array no.11 - unit respawns with weapons it commenced the mission with  
 _respawn_at_base_magazines 		= [];				//array no.34 - If using the respawn_at_base_addWeapons option then place the magazine and weapon 
 _respawn_at_base_weapons 		= [];				//array no.35   types in the following arrays, if left blank respawns with weapons from mission start
@@ -94,11 +94,11 @@ _mobile_man2					= objNull;			//array no.71 - NOT IMPLEMENTED
 // ==================================================================
 // UNITS THAT CAN REVIVE/UNITS THAT CAN BE REVIVED
 _can_revive 					= "soldierWB";		//array no.18 
-_can_revive_2 					= "";				//array no.19
+_can_revive_2 					= "SoldierGB";				//array no.19
 _can_revive_3					= "";				//array no.72 - NOT IMPLEMENTED
 _can_revive_4					= "";				//array no.73 - NOT IMPLEMENTED
 _can_be_revived 				= "soldierWB";		//array no.20  
-_can_be_revived_2 				= "";				//array no.21 
+_can_be_revived_2 				= "SoldierGB";				//array no.21 
 _can_be_revived_3				= "";				//array no.74 - NOT IMPLEMENTED 
 _can_be_revived_4 				= "";				//array no.75 - NOT IMPLEMENTED
 _medic_1						= "BAF_Soldier_Medic_MTP";	//array no.76 - Used in conjunction with medpacks and bleeding	
@@ -143,7 +143,7 @@ _unconscious_music 				= 0;				//array no.46 - music must appear as unc_theme in
 _nearest_teammate_dialog 		= 1;				//array no.3  - whether a respawn dialog appears when there are no players within this distance  
 _all_dead_dialog 				= 1;				//array no.1  - whether a respawn dialog appears when all players are unconscious (_all_dead_player = 1)  
 _respawn_button_timer 			= 120;				//array no.25 - Time until respawn button appears (0 = approx. 12 seconds), NB: Set to a high number like 100000 seconds if you do not want
-_distance_to_friend 			= 20;				//array no.26 - If the closest friendly unit is further than this distance away trigger respawn dialog 
+_distance_to_friend 			= 30;				//array no.26 - If the closest friendly unit is further than this distance away trigger respawn dialog 
 _all_dead_player 				= 1;				//array no.56
 _all_dead_distance 				= 2;			//array no.57 - whether a respawn dialog appears when all players within a specified distance are unconscious (_all_dead_player = 1)
 // ==================================================================

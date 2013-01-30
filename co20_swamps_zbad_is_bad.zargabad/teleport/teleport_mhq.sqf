@@ -2,9 +2,9 @@ _unit = _this select 1;
 if ( !alive mhq ) then {
     hint "The MHQ is currently destroyed.";
 } else {
-if ( isEngineOn mhq ) then {
-    hint "You cannot teleport to MHQ when MHQ engine is on.";
-} else {
+//if ( isEngineOn mhq ) then {
+//    hint "You cannot teleport to MHQ when MHQ engine is on.";
+//} else {
 if ((getPosATL mhq select 2) > 1) then {
     hint "You cannot teleport to MHQ when MHQ is being air lifted.";
 } else {
