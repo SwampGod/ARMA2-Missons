@@ -1,0 +1,24 @@
+﻿Respawn = "BASE";
+RespawnDelay = 5;
+RespawnDialog = 0;
+
+
+class Header
+{
+  gameType = Coop;
+  minPlayers = 1;
+  maxPlayers = 24;
+};
+
+debriefing=1;
+showGPS=1;
+loadScreen = "swamp.jpg";
+onLoadMission = "Swamp's Run like Hell!!";
+OnLoadMissionTime = FALSE;
+
+
+#include "mission_settings\dialog\common.hpp"
+#include "mission_settings\dialog\mission_settings.hpp"
+#include "R3F_revive\dlg_attente_reanimation.h"
+
+DisabledAI = true;
