@@ -30,7 +30,8 @@ class Mission
 		"CACharacters_BAF",
 		"caweapons_kord",
 		"caweapons",
-		"CAMisc"
+		"CAMisc",
+		"CAWheeled_E_stryker"
 	};
 	addOnsAuto[]=
 	{
@@ -61,6 +62,7 @@ class Mission
 		"CAWater",
 		"CAWheeled2_LAV25",
 		"CAMisc",
+		"CAWheeled_E_stryker",
 		"chernarus"
 	};
 	randomSeed=6190263;
@@ -79,7 +81,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=52;
+		items=76;
 		class Item0
 		{
 			side="LOGIC";
@@ -479,7 +481,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -593,7 +595,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -646,7 +648,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -699,7 +701,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -736,7 +738,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -789,7 +791,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -810,18 +812,18 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={4973.4033,181.99001,12515.862};
+					position[]={4978.3721,181.98784,12520.311};
 					id=86;
 					side="EAST";
 					vehicle="RUS_Soldier_TL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
-					position[]={4976.4033,181.99001,12510.862};
+					position[]={4981.3721,181.99001,12515.311};
 					id=87;
 					side="EAST";
 					vehicle="RUS_Soldier_GL";
@@ -830,7 +832,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={4978.4033,181.99001,12510.862};
+					position[]={4983.3721,181.99001,12515.311};
 					id=88;
 					side="EAST";
 					vehicle="RUS_Soldier_Marksman";
@@ -839,7 +841,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={4980.4033,181.99001,12510.862};
+					position[]={4985.3721,181.99001,12515.311};
 					id=89;
 					side="EAST";
 					vehicle="RUS_Soldier3";
@@ -848,7 +850,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={4982.4033,181.99001,12510.862};
+					position[]={4987.3721,181.99001,12515.311};
 					id=90;
 					side="EAST";
 					vehicle="RUS_Soldier1";
@@ -857,7 +859,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={4984.4033,181.99001,12510.862};
+					position[]={4989.3721,181.99001,12515.311};
 					id=91;
 					side="EAST";
 					vehicle="RUS_Soldier2";
@@ -881,7 +883,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
-					init="0=[this, 20, true, 180] execVM ""scripts\housepos.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -954,6 +956,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -1006,6 +1009,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
+					init="nul=[group this,[1000],[60,300],6,[0,0],0.1,FALSE,[""Land_Water_Tank"",""Land_Vez""]] execVM ""ahp\ahp.sqf""; nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -1096,6 +1100,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.59999996;
+					init="nul=[10800,0,true] execVM ""cly_removedead.sqf"";";
 				};
 				class Item1
 				{
@@ -2428,6 +2433,7 @@ class Mission
 					vehicle="UAZ_MG_INS";
 					leader=1;
 					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock1"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2441,11 +2447,13 @@ class Mission
 				{
 					position[]={1449.4327,412.21307,14145.188};
 					azimut=90;
+					special="NONE";
 					id=293;
 					side="EAST";
 					vehicle="SearchLight_RUS";
 					leader=1;
 					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock1"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2654,11 +2662,13 @@ class Mission
 				{
 					position[]={1462.5511,413.17874,14156.809};
 					azimut=90;
+					special="NONE";
 					id=291;
 					side="EAST";
 					vehicle="KORD_high";
 					leader=1;
 					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock1"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
@@ -2672,18 +2682,494 @@ class Mission
 				{
 					position[]={1462.6897,412.95139,14145.886};
 					azimut=90;
+					special="NONE";
 					id=292;
 					side="EAST";
 					vehicle="KORD_high";
 					leader=1;
 					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock1"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item52
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2374.5046,251.03917,9611.4795};
+					azimut=57.219398;
+					id=311;
+					side="EAST";
+					vehicle="UAZ_MG_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock2"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item53
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2377.1943,250.94093,9598.9531};
+					azimut=57.219398;
+					special="NONE";
+					id=314;
+					side="EAST";
+					vehicle="SearchLight_RUS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock2"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item54
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2381.9333,251.25452,9615.8271};
+					azimut=57.219398;
+					special="NONE";
+					id=312;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock2"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item55
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2387.9629,251.26376,9606.7119};
+					azimut=57.219398;
+					special="NONE";
+					id=313;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock2"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item56
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1879.3256,244.76418,11982.898};
+					azimut=-23.316401;
+					id=322;
+					side="EAST";
+					vehicle="UAZ_MG_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock3"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item57
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1892.1217,244.78084,11983.497};
+					azimut=-23.316401;
+					special="NONE";
+					id=325;
+					side="EAST";
+					vehicle="SearchLight_RUS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock3"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item58
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1876.2594,244.74376,11990.94};
+					azimut=-23.316401;
+					special="NONE";
+					id=323;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock3"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item59
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1886.2335,244.74614,11995.392};
+					azimut=-23.316401;
+					special="NONE";
+					id=324;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock3"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item60
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4753.1812,328.64804,8734.2607};
+					azimut=277.08301;
+					id=333;
+					side="EAST";
+					vehicle="UAZ_MG_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock4"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item61
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4759.145,328.83722,8745.5977};
+					azimut=277.08301;
+					special="NONE";
+					id=336;
+					side="EAST";
+					vehicle="SearchLight_RUS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock4"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item62
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4744.6938,328.25647,8735.6875};
+					azimut=277.08301;
+					special="NONE";
+					id=334;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock4"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item63
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4745.9043,328.32477,8746.5439};
+					azimut=277.08301;
+					special="NONE";
+					id=335;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock4"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item64
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1889.2679,267.58112,7546.96};
+					azimut=-23.4988;
+					id=358;
+					side="EAST";
+					vehicle="UAZ_MG_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock222"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item65
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1902.062,267.33401,7547.5923};
+					azimut=-23.4988;
+					special="NONE";
+					id=361;
+					side="EAST";
+					vehicle="SearchLight_RUS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock222"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item66
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1886.1747,268.10562,7554.9917};
+					azimut=-23.4988;
+					special="NONE";
+					id=359;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock222"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item67
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1896.1428,268.13123,7559.4751};
+					azimut=-23.4988;
+					special="NONE";
+					id=360;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock222"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item68
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11634.588,5.5250778,3398.2056};
+					azimut=254.244;
+					id=369;
+					side="EAST";
+					vehicle="UAZ_MG_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock233"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item69
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11635.683,5.791049,3410.9688};
+					azimut=254.244;
+					special="NONE";
+					id=372;
+					side="EAST";
+					vehicle="SearchLight_RUS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock233"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item70
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11626.21,5.4987884,3396.2217};
+					azimut=254.244;
+					special="NONE";
+					id=370;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock233"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item71
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11623.109,5.7727051,3406.7021};
+					azimut=254.244;
+					special="NONE";
+					id=371;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock233"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item72
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13213.554,5.1900001,3970.2571};
+					azimut=50.309399;
+					id=380;
+					side="EAST";
+					vehicle="UAZ_MG_INS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock244"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item73
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13217.732,5.1900001,3958.1458};
+					azimut=50.309399;
+					special="NONE";
+					id=383;
+					side="EAST";
+					vehicle="SearchLight_RUS";
+					leader=1;
+					skill=0.60000002;
+					init="nul = [this,""murk_trigger_roadblock244"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item74
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13220.404,5.1900001,3975.4668};
+					azimut=50.309399;
+					special="NONE";
+					id=381;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock244"",""once""] execVM ""murk_spawn.sqf"";";
+				};
+			};
+		};
+		class Item75
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13227.489,5.1900001,3967.1433};
+					azimut=50.309399;
+					special="NONE";
+					id=382;
+					side="EAST";
+					vehicle="KORD_high";
+					leader=1;
+					skill=0.60000002;
+					init=" nul = [this,""murk_trigger_roadblock244"",""once""] execVM ""murk_spawn.sqf"";";
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=80;
+		items=141;
 		class Item0
 		{
 			position[]={2308.165,521.18372,15328.921};
@@ -3518,10 +4004,612 @@ class Mission
 			leader=1;
 			skill=0.46666664;
 		};
+		class Item80
+		{
+			position[]={2373.6792,250.92807,9603.7178};
+			azimut=57.219433;
+			id=315;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item81
+		{
+			position[]={2372.0825,250.92607,9606.2012};
+			azimut=57.219433;
+			id=316;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item82
+		{
+			position[]={2375.3201,250.92911,9601.1709};
+			azimut=57.219433;
+			id=317;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item83
+		{
+			position[]={2376.7834,250.92946,9598.7275};
+			azimut=237.21944;
+			id=318;
+			side="EMPTY";
+			vehicle="Land_GuardShed";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item84
+		{
+			position[]={2374.9033,250.87515,9597.5449};
+			azimut=237.21944;
+			id=319;
+			side="EMPTY";
+			vehicle="Barrels";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item85
+		{
+			position[]={2378.7224,250.93005,9595.3301};
+			azimut=237.21944;
+			id=320;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item86
+		{
+			position[]={2373.1343,250.82474,9596.4883};
+			azimut=237.21944;
+			id=321;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item87
+		{
+			position[]={1886.8405,244.78255,11980.81};
+			azimut=-23.31637;
+			id=326;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item88
+		{
+			position[]={1884.1267,244.78362,11979.637};
+			azimut=-23.31637;
+			id=327;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item89
+		{
+			position[]={1889.6221,244.78148,11982.006};
+			azimut=-23.31637;
+			id=328;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item90
+		{
+			position[]={1892.274,244.78345,11983.048};
+			azimut=156.68372;
+			id=329;
+			side="EMPTY";
+			vehicle="Land_GuardShed";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item91
+		{
+			position[]={1893.1327,244.79436,11981.001};
+			azimut=156.68372;
+			id=330;
+			side="EMPTY";
+			vehicle="Barrels";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item92
+		{
+			position[]={1895.9474,244.7811,11984.403};
+			azimut=156.68372;
+			id=331;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item93
+		{
+			position[]={1893.8837,244.80403,11979.081};
+			azimut=156.68372;
+			id=332;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item94
+		{
+			position[]={4758.7896,328.82425,8739.6875};
+			azimut=277.0827;
+			id=337;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item95
+		{
+			position[]={4758.4238,328.82504,8736.7539};
+			azimut=277.0827;
+			id=338;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item96
+		{
+			position[]={4759.1563,328.82297,8742.6914};
+			azimut=277.0827;
+			id=339;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item97
+		{
+			position[]={4759.6055,328.84982,8745.5107};
+			azimut=457.08276;
+			id=340;
+			side="EMPTY";
+			vehicle="Land_GuardShed";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item98
+		{
+			position[]={4761.8096,328.91525,8745.2148};
+			azimut=457.08276;
+			id=341;
+			side="EMPTY";
+			vehicle="Barrels";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item99
+		{
+			position[]={4760.2974,329.05429,8749.3613};
+			azimut=457.08276;
+			id=342;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item100
+		{
+			position[]={4763.8462,328.97882,8744.8887};
+			azimut=457.08276;
+			id=343;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item101
+		{
+			position[]={2882.334,270.82651,9706.1377};
+			special="NONE";
+			id=344;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1";
+		};
+		class Item102
+		{
+			position[]={2565.8865,194,5060.6504};
+			special="NONE";
+			id=345;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1";
+		};
+		class Item103
+		{
+			position[]={4780.0361,339,10232.995};
+			special="NONE";
+			id=346;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_1";
+		};
+		class Item104
+		{
+			position[]={11245.558,189.16173,12174.004};
+			special="NONE";
+			id=347;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_2";
+		};
+		class Item105
+		{
+			position[]={12679.308,5.9899998,9661.7207};
+			special="NONE";
+			id=348;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_3";
+		};
+		class Item106
+		{
+			position[]={10381.657,6.3185763,2061.8584};
+			special="NONE";
+			id=349;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_4";
+		};
+		class Item107
+		{
+			position[]={7017.3955,6.0127869,2596.1445};
+			special="NONE";
+			id=350;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_5";
+		};
+		class Item108
+		{
+			position[]={11449.306,221,7530.9727};
+			special="NONE";
+			id=351;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_6";
+		};
+		class Item109
+		{
+			position[]={5140.7139,8.9637108,2348.2256};
+			special="NONE";
+			id=352;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_7";
+		};
+		class Item110
+		{
+			position[]={1983.2451,5.9269123,2216.5764};
+			special="NONE";
+			id=353;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_8";
+		};
+		class Item111
+		{
+			position[]={10062.548,245.18054,5453.9458};
+			special="NONE";
+			id=354;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_1_3_1";
+		};
+		class Item112
+		{
+			position[]={6538.0894,322.07889,6099.0894};
+			special="NONE";
+			id=355;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_2";
+		};
+		class Item113
+		{
+			position[]={9121.2656,223.9478,3802.9744};
+			special="NONE";
+			id=356;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_3";
+		};
+		class Item114
+		{
+			position[]={1913.332,261,7440.2251};
+			special="NONE";
+			id=357;
+			side="EMPTY";
+			vehicle="HeliHCivil";
+			skill=0.60000002;
+			text="RepairPoint1_4";
+		};
+		class Item115
+		{
+			position[]={1896.7939,267.30548,7544.8926};
+			azimut=-23.498726;
+			id=362;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item116
+		{
+			position[]={1894.0859,267.30392,7543.7168};
+			azimut=-23.498726;
+			id=363;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item117
+		{
+			position[]={1899.573,267.30878,7546.1011};
+			azimut=-23.498726;
+			id=364;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item118
+		{
+			position[]={1902.2203,267.30673,7547.1514};
+			azimut=156.50125;
+			id=365;
+			side="EMPTY";
+			vehicle="Land_GuardShed";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item119
+		{
+			position[]={1903.0835,267.17722,7545.1045};
+			azimut=156.50125;
+			id=366;
+			side="EMPTY";
+			vehicle="Barrels";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item120
+		{
+			position[]={1905.8835,267.27716,7548.5151};
+			azimut=156.50125;
+			id=367;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item121
+		{
+			position[]={1903.8409,267.05869,7543.188};
+			azimut=156.50125;
+			id=368;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item122
+		{
+			position[]={11637.647,5.6660171,3405.3862};
+			azimut=254.24391;
+			id=373;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item123
+		{
+			position[]={11638.447,5.5895233,3402.5444};
+			azimut=254.24391;
+			id=374;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item124
+		{
+			position[]={11636.821,5.7289796,3408.3032};
+			azimut=254.24391;
+			id=375;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item125
+		{
+			position[]={11636.14,5.7906017,3411.0647};
+			azimut=434.2439;
+			id=376;
+			side="EMPTY";
+			vehicle="Land_GuardShed";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item126
+		{
+			position[]={11638.287,5.7911482,3411.6418};
+			azimut=434.2439;
+			id=377;
+			side="EMPTY";
+			vehicle="Barrels";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item127
+		{
+			position[]={11635.282,5.8760223,3414.8806};
+			azimut=434.2439;
+			id=378;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item128
+		{
+			position[]={11640.285,5.7897644,3412.1372};
+			azimut=434.2439;
+			id=379;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item129
+		{
+			position[]={13213.668,5.1900001,3962.4524};
+			azimut=50.309395;
+			id=384;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item130
+		{
+			position[]={13211.784,5.1900001,3964.7258};
+			azimut=50.309395;
+			id=385;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item131
+		{
+			position[]={13215.604,5.1900001,3960.1216};
+			azimut=50.309395;
+			id=386;
+			side="EMPTY";
+			vehicle="Hedgehog_EP1";
+			skill=0.60000002;
+		};
+		class Item132
+		{
+			position[]={13217.35,5.1900001,3957.8721};
+			azimut=230.3094;
+			id=387;
+			side="EMPTY";
+			vehicle="Land_GuardShed";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item133
+		{
+			position[]={13215.627,5.1938667,3956.4717};
+			azimut=230.3094;
+			id=388;
+			side="EMPTY";
+			vehicle="Barrels";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item134
+		{
+			position[]={13219.684,5.1907783,3954.7324};
+			azimut=230.3094;
+			id=389;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item135
+		{
+			position[]={13213.997,5.1977224,3955.2102};
+			azimut=230.3094;
+			id=390;
+			side="EMPTY";
+			vehicle="Barrel4";
+			leader=1;
+			skill=0.46666664;
+		};
+		class Item136
+		{
+			position[]={6262.1294,301,7731.5259};
+			azimut=135;
+			special="NONE";
+			id=391;
+			side="EMPTY";
+			vehicle="M1126_ICV_mk19_EP1";
+			leader=1;
+			skill=0.46666664;
+			description="Team Leader";
+		};
+		class Item137
+		{
+			position[]={4756.5151,8.7569866,2591.834};
+			azimut=205;
+			special="NONE";
+			id=392;
+			side="EMPTY";
+			vehicle="M1126_ICV_mk19_EP1";
+			leader=1;
+			skill=0.46666664;
+			description="Team Leader";
+		};
+		class Item138
+		{
+			position[]={10329.293,6.0127869,1615.9744};
+			azimut=40;
+			special="NONE";
+			id=393;
+			side="EMPTY";
+			vehicle="M1126_ICV_mk19_EP1";
+			leader=1;
+			skill=0.46666664;
+			description="Team Leader";
+		};
+		class Item139
+		{
+			position[]={12015.025,158.85703,12645.331};
+			azimut=30;
+			special="NONE";
+			id=394;
+			side="EMPTY";
+			vehicle="M1126_ICV_mk19_EP1";
+			leader=1;
+			skill=0.46666664;
+			description="Team Leader";
+		};
+		class Item140
+		{
+			position[]={12062.233,158.85699,12634.283};
+			azimut=20;
+			special="NONE";
+			id=395;
+			side="EMPTY";
+			vehicle="M1126_ICV_mk19_EP1";
+			leader=1;
+			skill=0.46666664;
+			description="Team Leader";
+		};
 	};
 	class Markers
 	{
-		items=26;
+		items=69;
 		class Item0
 		{
 			position[]={2284.4448,522.45776,15342.824};
@@ -3531,7 +4619,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={1884.4323,244.75929,11987.467};
+			position[]={1893.1732,244.85242,11969.257};
 			name="jeep_patrol1";
 			type="Empty";
 		};
@@ -3578,7 +4666,7 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={4982.5337,181.99001,12514.964};
+			position[]={4987.5024,181.99001,12519.412};
 			name="Checkpoint1";
 			text="Checkpoint 1";
 			type="waypoint";
@@ -3710,10 +4798,282 @@ class Mission
 			name="NME_Spawn_Patrol";
 			type="Empty";
 		};
+		class Item26
+		{
+			position[]={2882.1943,270.82968,9706.3818};
+			name="repair_point_marker1";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item27
+		{
+			position[]={2565.8284,194,5060.8955};
+			name="repair_point_marker1_1";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item28
+		{
+			position[]={4780.2231,339,10233.321};
+			name="repair_point_marker1_1_1";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item29
+		{
+			position[]={11245.745,189.15253,12174.33};
+			name="repair_point_marker1_1_2";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item30
+		{
+			position[]={12679.495,5.9899998,9662.0469};
+			name="repair_point_marker1_1_3";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item31
+		{
+			position[]={10381.845,6.3028049,2062.1846};
+			name="repair_point_marker1_1_4";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item32
+		{
+			position[]={7017.583,6.0127869,2596.4707};
+			name="repair_point_marker1_1_5";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item33
+		{
+			position[]={11449.493,221,7531.2988};
+			name="repair_point_marker1_1_6";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item34
+		{
+			position[]={5140.9014,8.947403,2348.5518};
+			name="repair_point_marker1_1_7";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item35
+		{
+			position[]={1983.4326,5.9252253,2216.9026};
+			name="repair_point_marker1_1_8";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item36
+		{
+			position[]={6162.4795,301.73688,7801.0586};
+			name="snipers_marker1";
+			type="Empty";
+		};
+		class Item37
+		{
+			position[]={11008.355,224.40327,12410.509};
+			name="snipers_marker1_1";
+			type="Empty";
+		};
+		class Item38
+		{
+			position[]={8762.7285,213.99001,11646.359};
+			name="snipers_marker1_2";
+			type="Empty";
+		};
+		class Item39
+		{
+			position[]={12659.202,6.0073733,9714.4697};
+			name="snipers_marker1_3";
+			type="Empty";
+		};
+		class Item40
+		{
+			position[]={10062.735,245.18884,5454.272};
+			name="repair_point_marker1_1_3_1";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item41
+		{
+			position[]={10042.442,254.11011,5506.6948};
+			name="snipers_marker1_3_1";
+			type="Empty";
+		};
+		class Item42
+		{
+			position[]={9625.9004,297.84656,8826.0957};
+			name="snipers_marker1_4";
+			type="Empty";
+		};
+		class Item43
+		{
+			position[]={10424.796,116.57784,9855.2188};
+			name="snipers_marker1_5";
+			type="Empty";
+		};
+		class Item44
+		{
+			position[]={13159.305,6,7012.7793};
+			name="snipers_marker1_6";
+			type="Empty";
+		};
+		class Item45
+		{
+			position[]={13402.324,6,6184.4614};
+			name="snipers_marker1_7";
+			type="Empty";
+		};
+		class Item46
+		{
+			position[]={7157.6885,293.99081,7710.6138};
+			name="snipers_marker1_2_1";
+			type="Empty";
+		};
+		class Item47
+		{
+			position[]={10666.378,210.99001,8019.6279};
+			name="snipers_marker1_2_2";
+			type="Empty";
+		};
+		class Item48
+		{
+			position[]={12005.737,53.982506,9063.6406};
+			name="snipers_marker1_2_3";
+			type="Empty";
+		};
+		class Item49
+		{
+			position[]={12144.223,6.1095805,3511.0715};
+			name="snipers_marker1_2_4";
+			type="Empty";
+		};
+		class Item50
+		{
+			position[]={10246.791,6.0860095,2038.9036};
+			name="snipers_marker1_2_5";
+			type="Empty";
+		};
+		class Item51
+		{
+			position[]={4431.5347,5.9899998,2484.2473};
+			name="snipers_marker1_2_6";
+			type="Empty";
+		};
+		class Item52
+		{
+			position[]={3387.6763,194.15192,3979.4197};
+			name="snipers_marker1_2_7";
+			type="Empty";
+		};
+		class Item53
+		{
+			position[]={5953.8667,267.46762,10311.513};
+			name="snipers_marker1_2_8";
+			type="Empty";
+		};
+		class Item54
+		{
+			position[]={7480.3047,213.86185,5153.5801};
+			name="snipers_marker1_2_9";
+			type="Empty";
+		};
+		class Item55
+		{
+			position[]={5837.0391,134.76797,4765.7329};
+			name="snipers_marker1_2_10";
+			type="Empty";
+		};
+		class Item56
+		{
+			position[]={8491.1133,359.68735,6675.7456};
+			name="snipers_marker1_2_11";
+			type="Empty";
+		};
+		class Item57
+		{
+			position[]={9165.4248,222.74551,3861.832};
+			name="snipers_marker1_2_12";
+			type="Empty";
+		};
+		class Item58
+		{
+			position[]={6537.9497,322.08005,6099.3335};
+			name="repair_point_marker1_2";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item59
+		{
+			position[]={9121.126,223.94655,3803.2185};
+			name="repair_point_marker1_3";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item60
+		{
+			position[]={1913.1924,261,7440.4692};
+			name="repair_point_marker1_4";
+			text="Repair Point";
+			type="FOB";
+		};
+		class Item61
+		{
+			position[]={13371.468,6,5452.4199};
+			name="snipers_marker1_2_2_1";
+			type="Empty";
+		};
+		class Item62
+		{
+			position[]={11311.685,253.99776,5498.3901};
+			name="snipers_marker1_2_2_2";
+			type="Empty";
+		};
+		class Item63
+		{
+			position[]={1324.5654,331,13415.459};
+			name="snipers_marker1_2_2_3";
+			type="Empty";
+		};
+		class Item64
+		{
+			position[]={4745.8721,270.56259,6821.0703};
+			name="snipers_marker1_2_2_4";
+			type="Empty";
+		};
+		class Item65
+		{
+			position[]={4550.2861,287.44086,6443.8179};
+			name="snipers_marker1_2_2_5";
+			type="Empty";
+		};
+		class Item66
+		{
+			position[]={6574.4849,322.39355,6109.8228};
+			name="snipers_marker1_2_2_6";
+			type="Empty";
+		};
+		class Item67
+		{
+			position[]={12982.68,5.4937181,3795.1406};
+			name="END_DUDES";
+			type="Empty";
+		};
+		class Item68
+		{
+			position[]={8030.2646,6,3284.8716};
+			name="snipers_marker1_2_2_7";
+			type="Empty";
+		};
 	};
 	class Sensors
 	{
-		items=18;
+		items=68;
 		class Item0
 		{
 			position[]={2228.9131,497.3129,15158.73};
@@ -3733,6 +5093,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint1";
@@ -3750,7 +5113,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint1NME";
-			expActiv="nul=[""checkpoint1NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint1NMEspawnlocation"", EAST, 5, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint1NMEspawnlocation"", EAST, 1, ""UPS""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint1NMEspawnlocation"", EAST, 3, ""UPS""] execVM ""swamp_squad_spawn.sqf"";";
+			expActiv="nul=[""checkpoint1NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint1NMEspawnlocation"", EAST, 5, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint1NMEspawnlocation"", EAST, 1, ""UPS""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint1NMEspawnlocation"", EAST, 3, ""UPS""] execVM ""swamp_squad_spawn.sqf"";";
 			class Effects
 			{
 			};
@@ -3761,6 +5124,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint2";
@@ -3778,7 +5144,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint2NME";
-			expActiv="nul=[""checkpoint2NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint2NMEspawnlocation"", EAST, 4, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; ";
+			expActiv="nul=[""checkpoint2NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint2NMEspawnlocation"", EAST, 4, ""AHP""] execVM ""swamp_squad_spawn.sqf""; ";
 			class Effects
 			{
 			};
@@ -3789,6 +5155,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint3";
@@ -3806,7 +5175,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint3NME";
-			expActiv="nul=[""checkpoint3NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 5, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 5, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 1, ""UPS""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 2, ""UPS""] execVM ""swamp_squad_spawn.sqf"";";
+			expActiv="nul=[""checkpoint3NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 5, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 5, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 1, ""UPS""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint3NMEspawnlocation"", EAST, 2, ""UPS""] execVM ""swamp_squad_spawn.sqf"";";
 			class Effects
 			{
 			};
@@ -3817,6 +5186,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint4";
@@ -3834,7 +5206,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint4NME";
-			expActiv="nul=[""checkpoint4NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint4NMEspawnlocation"", EAST, 5, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; ";
+			expActiv="nul=[""checkpoint4NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint4NMEspawnlocation"", EAST, 5, ""AHP""] execVM ""swamp_squad_spawn.sqf""; ";
 			class Effects
 			{
 			};
@@ -3845,6 +5217,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint5";
@@ -3862,7 +5237,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint5NME";
-			expActiv="nul=[""checkpoint5NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint5NMEspawnlocation"", EAST, 4, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; ";
+			expActiv="nul=[""checkpoint5NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint5NMEspawnlocation"", EAST, 4, ""AHP""] execVM ""swamp_squad_spawn.sqf""; ";
 			class Effects
 			{
 			};
@@ -3873,6 +5248,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint6";
@@ -3890,7 +5268,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint6NME";
-			expActiv="nul=[""checkpoint6NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint6NMEspawnlocation"", EAST, 5, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; ";
+			expActiv="nul=[""checkpoint6NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint6NMEspawnlocation"", EAST, 5, ""AHP""] execVM ""swamp_squad_spawn.sqf""; ";
 			class Effects
 			{
 			};
@@ -3901,6 +5279,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint7";
@@ -3918,7 +5299,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint7NME";
-			expActiv="nul=[""checkpoint7NMEspawnlocation"", EAST, 0, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint7NMEspawnlocation"", EAST, 5, ""PATROL""] execVM ""swamp_squad_spawn.sqf""; ";
+			expActiv="nul=[""checkpoint7NMEspawnlocation"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf""; nul=[""checkpoint7NMEspawnlocation"", EAST, 5, ""AHP""] execVM ""swamp_squad_spawn.sqf""; ";
 			class Effects
 			{
 			};
@@ -3929,6 +5310,9 @@ class Mission
 			a=30;
 			b=30;
 			activationBy="WEST";
+			timeoutMin=30;
+			timeoutMid=30;
+			timeoutMax=30;
 			interruptable=1;
 			age="UNKNOWN";
 			name="checkpoint8";
@@ -3964,6 +5348,719 @@ class Mission
 			age="UNKNOWN";
 			name="extraction";
 			expActiv="taskhint [""Extraction point reached!\nGood job!"", [0.600000,0.839215,0.466666,1], ""taskDone""]; ""9"" objStatus ""DONE""; checkpointBOAT setTaskState ""SUCCEEDED""; checkpointBOAT_var = true; publicVariable ""checkpointBOAT_var""; ""checkpointBOAT"" setmarkertype ""EMPTY"";";
+			class Effects
+			{
+			};
+		};
+		class Item18
+		{
+			position[]={1457.4771,412.65204,14151.114};
+			a=1000;
+			b=1000;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock1""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item19
+		{
+			position[]={2380.748,251.12982,9608.29};
+			a=1000;
+			b=1000;
+			angle=-32.780602;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock2""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item20
+		{
+			position[]={1882.9751,244.75385,11990.099};
+			a=1000;
+			b=1000;
+			angle=-113.316;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock3""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item21
+		{
+			position[]={4750.4307,328.51822,8740.71};
+			a=1000;
+			b=1000;
+			angle=187.08299;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock4""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item22
+		{
+			position[]={2882.4832,270.8327,9706.1904};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item23
+		{
+			position[]={2565.708,194,5060.6211};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item24
+		{
+			position[]={4779.9395,339,10232.803};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_1";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item25
+		{
+			position[]={11245.461,189.16711,12173.812};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_2";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item26
+		{
+			position[]={12679.211,5.9899998,9661.5283};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_3";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item27
+		{
+			position[]={10381.561,6.3277507,2061.666};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_4";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item28
+		{
+			position[]={7017.2988,6.0127869,2595.9521};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_5";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item29
+		{
+			position[]={11449.209,221,7530.7803};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_6";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item30
+		{
+			position[]={5140.6172,8.9733353,2348.0332};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_7";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item31
+		{
+			position[]={1983.1484,5.927681,2216.384};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_8";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item32
+		{
+			position[]={6163.3179,301.043,7786.479};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1";
+			expActiv="nul=[""snipers_marker1"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item33
+		{
+			position[]={11009.193,223.79424,12395.93};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_1";
+			expActiv="nul=[""snipers_marker1_1"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item34
+		{
+			position[]={8763.5664,213.99001,11631.78};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2";
+			expActiv="nul=[""snipers_marker1_2"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item35
+		{
+			position[]={12660.04,6.0031886,9699.8906};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_3";
+			expActiv="nul=[""snipers_marker1_3"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item36
+		{
+			position[]={10062.451,245.17517,5453.7534};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_1_3_1";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item37
+		{
+			position[]={10043.28,250.42126,5492.1157};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_3_1";
+			expActiv="nul=[""snipers_marker1_3_1"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item38
+		{
+			position[]={9626.7393,296.45755,8811.5156};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_4";
+			expActiv="nul=[""snipers_marker1_4"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item39
+		{
+			position[]={10425.635,117.12524,9840.6387};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_5";
+			expActiv="nul=[""snipers_marker1_5"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item40
+		{
+			position[]={13160.144,6,6998.1992};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_6";
+			expActiv="nul=[""snipers_marker1_6"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item41
+		{
+			position[]={13403.163,6,6169.8813};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_7";
+			expActiv="nul=[""snipers_marker1_7"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item42
+		{
+			position[]={7158.5264,293.98999,7696.0347};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_1";
+			expActiv="nul=[""snipers_marker1_2_1"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item43
+		{
+			position[]={10667.216,210.99001,8005.0488};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2";
+			expActiv="nul=[""snipers_marker1_2_2"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item44
+		{
+			position[]={12006.575,53.974186,9049.0615};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_3";
+			expActiv="nul=[""snipers_marker1_2_3"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item45
+		{
+			position[]={12145.061,6.1828799,3496.4924};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_4";
+			expActiv="nul=[""snipers_marker1_2_4"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item46
+		{
+			position[]={10247.629,6.5822401,2024.3245};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_5";
+			expActiv="nul=[""snipers_marker1_2_5"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item47
+		{
+			position[]={4432.3726,5.9801698,2469.6682};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_6";
+			expActiv="nul=[""snipers_marker1_2_6"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item48
+		{
+			position[]={3388.5142,191.83582,3964.8406};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_7";
+			expActiv="nul=[""snipers_marker1_2_7"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item49
+		{
+			position[]={5954.7046,267.69553,10296.934};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_8";
+			expActiv="nul=[""snipers_marker1_2_8"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item50
+		{
+			position[]={7481.1426,213.86911,5139.001};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_9";
+			expActiv="nul=[""snipers_marker1_2_9"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item51
+		{
+			position[]={5837.877,135.30743,4751.1538};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_10";
+			expActiv="nul=[""snipers_marker1_2_10"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item52
+		{
+			position[]={8491.9512,360.17984,6661.1665};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_11";
+			expActiv="nul=[""snipers_marker1_2_11"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item53
+		{
+			position[]={9166.2627,222.57066,3847.2529};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_12";
+			expActiv="nul=[""snipers_marker1_2_12"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item54
+		{
+			position[]={6538.2383,322.07892,6099.1421};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_2";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item55
+		{
+			position[]={9121.4141,223.94873,3803.0271};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_3";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item56
+		{
+			position[]={1913.4805,261,7440.2778};
+			a=9;
+			b=9;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="repairpoint_trigger1_4";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item57
+		{
+			position[]={1893.4221,267.80142,7552.6055};
+			a=1000;
+			b=1000;
+			angle=-113.499;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock222""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item58
+		{
+			position[]={11629.547,5.6692452,3403.0823};
+			a=1000;
+			b=1000;
+			angle=164.244;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock233""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item59
+		{
+			position[]={13220.136,5.1900001,3967.8418};
+			a=1000;
+			b=1000;
+			angle=-39.690636;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="catch_trigger = ""murk_trigger_roadblock2""; publicVariable ""catch_trigger"";";
+			class Effects
+			{
+			};
+		};
+		class Item60
+		{
+			position[]={13372.306,6,5437.8408};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_1";
+			expActiv="nul=[""snipers_marker1_2_2_1"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item61
+		{
+			position[]={11312.522,253.55406,5483.811};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_2";
+			expActiv="nul=[""snipers_marker1_2_2_2"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item62
+		{
+			position[]={1325.4033,331,13400.881};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_3";
+			expActiv="nul=[""snipers_marker1_2_2_3"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item63
+		{
+			position[]={4746.71,269.64493,6806.4922};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_4";
+			expActiv="nul=[""snipers_marker1_2_2_4"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item64
+		{
+			position[]={4551.124,288.26538,6429.2397};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_5";
+			expActiv="nul=[""snipers_marker1_2_2_5"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item65
+		{
+			position[]={6575.3228,322.2377,6095.2446};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_6";
+			expActiv="nul=[""snipers_marker1_2_2_6"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item66
+		{
+			position[]={12983.518,5.3780751,3780.5625};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_7";
+			expActiv="nul=[""END_DUDES"", EAST, 0, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item67
+		{
+			position[]={8031.1025,6,3270.2935};
+			a=800;
+			b=800;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="snipers_trigger1_2_2_8";
+			expActiv="nul=[""snipers_marker1_2_2_7"", EAST, 666, ""AHP""] execVM ""swamp_squad_spawn.sqf"";";
 			class Effects
 			{
 			};

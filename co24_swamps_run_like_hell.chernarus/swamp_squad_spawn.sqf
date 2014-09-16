@@ -32,7 +32,7 @@ switch (_type) do
     case 1:
     {
 		_dudes = [
-			"UAZ_RU",
+			"UAZ_MG_INS",
 			"GRAD_RU"
 			];
 
@@ -90,6 +90,11 @@ switch (_type) do
 			];
 
     };
+	
+	case 666:
+	{
+		_dudes = ["RU_Soldier_Sniper","MVD_Soldier_AT","RU_Soldier_Spotter"];
+	};
 
 };
 

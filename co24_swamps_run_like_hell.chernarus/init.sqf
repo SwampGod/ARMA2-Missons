@@ -117,6 +117,14 @@ if (isServer) then
 	"checkpoint8NMEspawnlocation" setmarkerpos (getpos objdest8);
 
 
+hintC "You can teleport to vehicles using the flagpole at spawn. Checkpoints DO NOT need to be cleared, only held for 30 seconds.";
+	
+// START - MURK SPAWN STUFF //
+catch_trigger = "none";
+Mission_capture = [];
+	sleep 10;
+	copyToClipboard str(Mission_capture);
+// END - MURK SPAWN STUFF //
 
 execVM "briefing.sqf";
 
@@ -131,4 +139,3 @@ if (isNil "checkpoint7_var") then {checkpoint7_var = false};
 if (isNil "checkpoint8_var") then {checkpoint8_var = false};
 
 
-hintC "You can teleport to vehicles using the flagpole at spawn. Checkpoints DO NOT need to be cleared, only reached.";
