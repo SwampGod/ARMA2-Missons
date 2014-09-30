@@ -59,13 +59,13 @@ GVAR(create_bike) =
 #ifdef __OWN_SIDE_WEST__
 switch (true) do {
 	case (__OAVer): {
-		["ATV_US_EP1","M1030_US_DES_EP1"]
+		["MMT_USMC","M1030","ATV_US_EP1","M1030_US_DES_EP1"]
 	};
 	case (__ACEVer): {
 		["MMT_USMC","M1030","ACE_ATV_Honda"]
 	};
 	case (__COVer): {
-		["MMT_USMC","M1030"]
+		["MMT_USMC","M1030","ATV_US_EP1","M1030_US_DES_EP1"]
 	};
 };
 #endif

@@ -92,7 +92,7 @@ class Params {
 	class GVAR(RespawnTime) {
 		title = "Respawn time (in seconds):";
 		values[] = {4,10,20,30,60,120,240,300};
-		default = 10;
+		default = 4;
 		texts[] = {"4","10","20","30","60","120","240","300"};
 	};
 	
@@ -115,7 +115,7 @@ class Params {
 	class GVAR(InitialViewDistance) {
 		title = "Initial Viewdistance:";
 		values[] = {1000,1500,2000,2500,3000,3500,4000,4500,5000};
-		default = 2500;
+		default = 3000;
 		texts[] = {"1000 m","1500 m","2000 m","2500 m","3000 m","3500 m","4000 m","4500 m","5000 m"};
 	};
 	
@@ -209,7 +209,7 @@ class Params {
 #ifndef __TT__
 		default = 300;
 #else
-		default = 300;
+		default = 0;
 #endif
 		texts[] = {"0 Minutes","5 Minutes","10 Minutes","30 Minutes","60 Minutes"};
 	};
@@ -373,7 +373,7 @@ class Params {
 	class GVAR(WithRecapture) {
 		title = "Enemy recaptures targets:";
 		values[] = {0,1};
-		default = 1;
+		default = 0;
 		texts[] = {"Yes","No"};
 	};
 	
@@ -402,7 +402,7 @@ class Params {
 	class GVAR(ArtiOperatorMaxDist) {
 		title = "ArtiOp. max. strike dist:";
 		values[] = {500,1000,2000,3000,5000,10000000};
-		default = 500;
+		default = 1000;
 		texts[] = {"500 m","1000 m","2000 m","3000 m","5000 m","Infinite"};
 	};
 	
@@ -499,7 +499,7 @@ class Params {
 	class GVAR(playernames_state) {
 		title = "Default player name state:";
 		values[] = {0,1,2,3};
-		default = 0;
+		default = 1;
 		texts[] = {"Off","Names", "Roles", "Health"};
 	};
 
@@ -678,7 +678,7 @@ class Params {
 #ifdef __A2ONLY__
 		default = 0;
 #else
-		default = 1;
+		default = 0;
 #endif
 		texts[] = {"Yes","No"};
 	};

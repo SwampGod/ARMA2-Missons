@@ -122,7 +122,7 @@ if (isNil "x_ranked_weapons") then {
 				],
 				// capain launchers
 				[
-					["Mk13_EP1",5]
+					["Mk13_EP1",5],["BAF_NLAW_Launcher",5]
 				],
 				// major launchers
 				[

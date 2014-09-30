@@ -19,11 +19,11 @@ if (GVAR(with_ranked)) then {
 				if (_index < count _parray) then {
 					if (score player < (_parray select _index)) then {
 						_rank = switch (_parray select _index) do {
-							case (GVAR(points_needed) select 1): {"Sergeant"};
-							case (GVAR(points_needed) select 2): {"Lieutenant"};
-							case (GVAR(points_needed) select 3): {"Captain"};
-							case (GVAR(points_needed) select 4): {"Major"};
-							case (GVAR(points_needed) select 5): {"Colonel"};
+							case (GVAR(points_needed) select 1): {"PRIVATE"};
+							case (GVAR(points_needed) select 2): {"CORPORAL"};
+							case (GVAR(points_needed) select 3): {"SERGEANT"};
+							case (GVAR(points_needed) select 4): {"LIEUTENANT"};
+							case (GVAR(points_needed) select 5): {"CAPTAIN"};
 						};
 						(format ["You have to be at least %1 to create a %2",_rank,_create_bike]) call FUNC(GlobalChat);
 						_exitit = true;
