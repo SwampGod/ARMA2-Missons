@@ -15,7 +15,6 @@ if (GVAR(player_side) == west) then {
 //Start - OA Stuff
 	__amc(Dragon_EP1,10)
 	__amc(STINGER,4)
-	__amc(US_Backpack_EP1,6)
 	__awc(BAF_NLAW_Launcher,1)
 	__awc(Binocular,1)
 	__awc(Binocular_Vector,1)
@@ -112,6 +111,9 @@ if (GVAR(player_side) == west) then {
 	__awc(STINGER,1)
 	__awc(UZI_EP1,1)
 	__awc(UZI_SD_EP1,1)
+	__awc(PMC_AS50_scoped,1)
+	__awc(PMC_AS50_TWS,1)
+	__awc(AA12_PMC,1)
 
 	__amc(HandGrenade_West,30)
 	__amc(HandGrenade_West,50)
@@ -209,6 +211,12 @@ if (GVAR(player_side) == west) then {
 	__amc(75Rnd_545x39_RPK,50)
 	__amc(7Rnd_45ACP_1911,30)
 	__amc(8Rnd_B_Beneli_74Slug,50)
+//PMC AMMO				
+	__amc(20Rnd_B_AA12_Pellets,20)
+	__amc(20Rnd_B_AA12_74Slug,20)
+	__amc(20Rnd_B_AA12_HE,20)
+	__amc(5Rnd_127x99_AS50,20)
+	__amc(10Rnd_127x99_m107,20)
 
 	if (GVAR(without_nvg) == 1) then {
 		__awc(NVGoggles,1)

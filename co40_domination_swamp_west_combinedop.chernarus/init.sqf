@@ -2,6 +2,14 @@
 diag_log format ["############################# %1 #############################", missionName];
 diag_log [diag_frameno, diag_ticktime, time, "Executing Dom init.sqf"];
 
+player setVariable ["BIS_noCoreConversations", true];
+
+// AHP VARIABLES
+//AHP_Debug = False;
+AHP_Debug = TRUE;
+// INITIALIZE AHP 
+_nul = [] execVM "ahp\ahp_init.sqf";
+
 // Short Takeoff for C-130 at northern airfield
 [c130Drop] execVM "scripts\sto_init.sqf";
 

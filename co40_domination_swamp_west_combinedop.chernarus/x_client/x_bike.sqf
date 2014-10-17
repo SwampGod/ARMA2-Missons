@@ -7,6 +7,7 @@ if (!X_Client) exitWith {};
 _create_bike = (_this select 3) select 0;
 _b_mode = (_this select 3) select 1;
 
+/*
 if (GVAR(with_ranked)) then {
 	_exitit = false;
 	_dosearch = true;
@@ -19,11 +20,11 @@ if (GVAR(with_ranked)) then {
 				if (_index < count _parray) then {
 					if (score player < (_parray select _index)) then {
 						_rank = switch (_parray select _index) do {
-							case (GVAR(points_needed) select 1): {"PRIVATE"};
-							case (GVAR(points_needed) select 2): {"CORPORAL"};
-							case (GVAR(points_needed) select 3): {"SERGEANT"};
-							case (GVAR(points_needed) select 4): {"LIEUTENANT"};
-							case (GVAR(points_needed) select 5): {"CAPTAIN"};
+							case (GVAR(points_needed) select 1): {"Sergeant"};
+							case (GVAR(points_needed) select 2): {"Lieutenant"};
+							case (GVAR(points_needed) select 3): {"Captain"};
+							case (GVAR(points_needed) select 4): {"Major"};
+							case (GVAR(points_needed) select 5): {"Colonel"};
 						};
 						(format ["You have to be at least %1 to create a %2",_rank,_create_bike]) call FUNC(GlobalChat);
 						_exitit = true;
@@ -40,6 +41,7 @@ if (GVAR(with_ranked)) then {
 		};
 	};
 };
+*/
 if (_exitit) exitWith {};
 
 _disp_name = [_create_bike,0] call FUNC(GetDisplayName);

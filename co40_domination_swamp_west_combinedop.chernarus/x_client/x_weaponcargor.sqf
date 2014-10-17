@@ -40,7 +40,7 @@ if (isNil "x_ranked_weapons") then {
 				],
 				// colonel rifles (...)
 				[
-					["Sa58V_RCO_EP1",5]
+					["Sa58V_RCO_EP1",5],["AA12_PMC",5]
 				]
 			],
 			[
@@ -70,7 +70,7 @@ if (isNil "x_ranked_weapons") then {
 				],
 				// colonel sniper rifles
 				[
-					["m107_TWS_EP1",5]
+					["m107_TWS_EP1",5],["PMC_AS50_scoped",5],["PMC_AS50_TWS",5]
 				]
 			],
 			[
@@ -420,7 +420,7 @@ if (isNil "x_ranked_weapons") then {
 				//__amc(8Rnd_B_Beneli_74Slug,50)
 				__amc(5Rnd_762x51_M24,6)
 				__amc(20Rnd_762x51_DMR,50)
-				__amc(10Rnd_127x99_M107,3)
+				__amc(10Rnd_127x99_M107,12)
 				__amc(20Rnd_762x51_B_SCAR,30)
 				__amc(20rnd_762x51_SB_SCAR,30)
 				__amc(100Rnd_762x51_M240,30)
@@ -446,6 +446,7 @@ if (isNil "x_ranked_weapons") then {
 				__amc(Dragon_EP1,10)
 				__amc(MAAWS_HEAT,2)
 				__amc(MAAWS_HEDP,2)
+				__amc(NLAW,6)
 				__amc(Pipebomb,5)
 				__amc(Mine,10)
 				__amc(Laserbatteries,20)
@@ -461,6 +462,12 @@ if (isNil "x_ranked_weapons") then {
 				__amc(IR_Strobe_Target,3)
 				__amc(IR_Strobe_Marker,3)
 				__amc(IRStrobe,3)
+//PMC AMMO				
+				__amc(20Rnd_B_AA12_Pellets,20)
+				__amc(20Rnd_B_AA12_74Slug,20)
+				__amc(20Rnd_B_AA12_HE,20)
+				__amc(5Rnd_127x99_AS50,20)
+				__amc(10Rnd_127x99_m107,20)
 				
 				__amc(30Rnd_9x19_UZI,30)
 				__amc(30Rnd_9x19_UZI_SD,30)
@@ -504,6 +511,7 @@ if (isNil "x_ranked_weapons") then {
 				__amc(Laserbatteries,20)
 				__amc(JAVELIN,1)
 				__amc(STINGER,2)
+
 			} else {
 				{
 					_weapons = _x;

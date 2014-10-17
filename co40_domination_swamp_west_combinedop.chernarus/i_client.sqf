@@ -104,7 +104,7 @@ GVAR(current_truck_cargo_array) = 0;
 #ifdef __OWN_SIDE_WEST__
 GVAR(check_ammo_load_vecs) = switch (true) do {
 	case (__OAVer): {["M1133_MEV_EP1","UH60M_EP1","UH1H_TK_GUE_EP1","BMP2_HQ_TK_EP1","Mi17_TK_EP1","CH_47F_BAF","BAF_Merlin_HC3_D"]};
-	case (__COVer): {["LAV25_HQ","MH60S","M1133_MEV_EP1","UH60M_EP1","UH1H_TK_GUE_EP1","BMP2_HQ_TK_EP1","Mi17_TK_EP1","CH_47F_BAF","Ka60_PMC","BAF_Merlin_HC3_D","UH1Y","Offroad_DSHKM_Gue","BAF_FV510_D","BAF_FV510_W","Offroad_DSHKM_TK_GUE_EP1"]};
+	case (__COVer): {["LAV25_HQ","CH_47F_EP1","MH60S","M1133_MEV_EP1","UH60M_EP1","UH1H_TK_GUE_EP1","BMP2_HQ_TK_EP1","Mi17_TK_EP1","CH_47F_BAF","Ka60_PMC","BAF_Merlin_HC3_D","UH1Y","Offroad_DSHKM_Gue","BAF_FV510_D","BAF_FV510_W","Offroad_DSHKM_TK_GUE_EP1"]};
 };
 #endif
 #ifdef __OWN_SIDE_EAST__
@@ -451,7 +451,7 @@ switch (true) do {
 		["LAV25_HQ","HMMWV","HMMWV_Armored","MTVR","HMMWV_Ambulance","MtvrReammo","MtvrRefuel","MtvrRepair","ACE_MTVRRepair","ACE_MTVRReammo","ACE_MTVRRefuel"]
 	};
 	case (__COVer): {
-		["LAV25_HQ","HMMWV","HMMWV_Armored","MTVR","HMMWV_Ambulance","MtvrReammo","MtvrRefuel","MtvrRepair"]
+		["LAV25_HQ","HMMWV","HMMWV_Armored","MTVR","HMMWV_Ambulance","MtvrReammo","MtvrRefuel","MtvrRepair","HMMWV_Avenger","HMMWV_MK19","HMMWV_TOW","Offroad_DSHKM_Gue","Offroad_DSHKM_TK_GUE_EP1","BAF_Jackal2_GMG_D","BAF_Jackal2_GMG_W","BAF_Jackal2_L2A1_W","BAF_Jackal2_L2A1_D","LandRover_Special_CZ_EP1"]
 	};
 };
 #endif
